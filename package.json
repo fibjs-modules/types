@@ -1,0 +1,20 @@
+{
+  "name": "@fibjs/types",
+  "version": "1.0.0",
+  "description": "types for fibjs runtime",
+  "types": "DefinitelyTyped/index.d.ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/types.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/types/issues"
+  },
+  "homepage": "https://github.com/fibjs-modules/types#readme"
+}
