@@ -224,7 +224,7 @@ declare module "global" {
 		 * 
 		 * 
 		 */
-		export const global: Object;
+		export const global: Fibjs.AnyObject;
 		
 		/**
 		 * 

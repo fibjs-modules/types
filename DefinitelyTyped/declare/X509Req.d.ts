@@ -148,7 +148,7 @@ declare class Class_X509Req extends Class__object {
 	 * 
 	 * @async
 	 */
-	sign(issuer: string, key: Class_PKey, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_X509Cert>/** = function (err: Error, result: Class_X509Cert) {}*/): Class_X509Cert;
+	sign(issuer: string, key: Class_PKey, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_X509Cert>/** = function (err: Error, result: Class_X509Cert) {}*/): Class_X509Cert;
 
 } /** endof class */
 

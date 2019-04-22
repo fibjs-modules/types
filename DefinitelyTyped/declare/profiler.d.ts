@@ -417,7 +417,7 @@ declare module "profiler" {
 		 * 
 		 * 
 		 */
-		export function diff(test: Function): object;
+		export function diff(test: Function): Fibjs.AnyObject;
 	
 		/**
 		 * 

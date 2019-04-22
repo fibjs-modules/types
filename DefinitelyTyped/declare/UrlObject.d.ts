@@ -219,7 +219,7 @@ declare class Class_UrlObject extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(args: object);
+	constructor(args: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -253,7 +253,7 @@ declare class Class_UrlObject extends Class__object {
 	 * 
 	 * 
 	 */
-	format(args: object): void;
+	format(args: Fibjs.AnyObject): void;
 
 	/**
 	 * 

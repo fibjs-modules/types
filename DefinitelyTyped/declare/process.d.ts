@@ -236,7 +236,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export const versions: Object;
+		export const versions: Fibjs.AnyObject;
 		
 		/**
 		 * 
@@ -252,7 +252,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export const env: Object;
+		export const env: Fibjs.AnyObject;
 		
 		/**
 		 * 
@@ -417,7 +417,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function memoryUsage(): object;
+		export function memoryUsage(): Fibjs.AnyObject;
 	
 		/**
 		 * 
@@ -449,7 +449,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function open(command: string, args: any[], opts?: object/** = v8::Object::New(isolate)*/): Class_SubProcess;
+		export function open(command: string, args: any[], opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_SubProcess;
 	
 		/**
 		 * 
@@ -469,7 +469,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function open(command: string, opts?: object/** = v8::Object::New(isolate)*/): Class_SubProcess;
+		export function open(command: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_SubProcess;
 	
 		/**
 		 * 
@@ -490,7 +490,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function start(command: string, args: any[], opts?: object/** = v8::Object::New(isolate)*/): Class_SubProcess;
+		export function start(command: string, args: any[], opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_SubProcess;
 	
 		/**
 		 * 
@@ -510,7 +510,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function start(command: string, opts?: object/** = v8::Object::New(isolate)*/): Class_SubProcess;
+		export function start(command: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_SubProcess;
 	
 		/**
 		 * 
@@ -531,7 +531,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function run(command: string, args: any[], opts?: object/** = v8::Object::New(isolate)*/): number;
+		export function run(command: string, args: any[], opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): number;
 	
 		/**
 		 * 
@@ -551,7 +551,7 @@ declare module "process" {
 		 * 
 		 * 
 		 */
-		export function run(command: string, opts?: object/** = v8::Object::New(isolate)*/): number;
+		export function run(command: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): number;
 	
 	} /** end of `module process` */
 	export = process

@@ -275,7 +275,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function inspect(obj: object, options?: object/** = v8::Object::New(isolate)*/): string;
+		export function inspect(obj: Fibjs.AnyObject, options?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): string;
 	
 		/**
 		 * 
@@ -686,7 +686,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function pick(v: any, ...objs: any[]): object;
+		export function pick(v: any, ...objs: any[]): Fibjs.AnyObject;
 	
 		/**
 		 * 
@@ -699,7 +699,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function omit(v: any, ...keys: any[]): object;
+		export function omit(v: any, ...keys: any[]): Fibjs.AnyObject;
 	
 		/**
 		 * 
@@ -978,7 +978,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function buildInfo(): object;
+		export function buildInfo(): Fibjs.AnyObject;
 	
 	} /** end of `module util` */
 	export = util

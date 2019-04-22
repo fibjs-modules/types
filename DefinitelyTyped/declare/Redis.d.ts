@@ -93,7 +93,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	mset(kvs: object): void;
+	mset(kvs: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -111,7 +111,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	msetNX(kvs: object): void;
+	msetNX(kvs: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -386,7 +386,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	sub(map: object): void;
+	sub(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -427,7 +427,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	unsub(map: object): void;
+	unsub(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -448,7 +448,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	psub(map: object): void;
+	psub(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -489,7 +489,7 @@ declare class Class_Redis extends Class__object {
 	 * 
 	 * 
 	 */
-	unpsub(map: object): void;
+	unpsub(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 

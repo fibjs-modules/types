@@ -78,7 +78,7 @@ declare class Class_HttpCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	add(map: object): void;
+	add(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -99,7 +99,7 @@ declare class Class_HttpCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	set(map: object): void;
+	set(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 

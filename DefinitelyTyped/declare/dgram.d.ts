@@ -239,7 +239,7 @@ declare module "dgram" {
 		 * 
 		 * 
 		 */
-		export function createSocket(opts: object): Class_DgramSocket;
+		export function createSocket(opts: Fibjs.AnyObject): Class_DgramSocket;
 	
 		/**
 		 * 
@@ -261,7 +261,7 @@ declare module "dgram" {
 		 * 
 		 * 
 		 */
-		export function createSocket(opts: object, callback: Function): Class_DgramSocket;
+		export function createSocket(opts: Fibjs.AnyObject, callback: Function): Class_DgramSocket;
 	
 		/**
 		 * 

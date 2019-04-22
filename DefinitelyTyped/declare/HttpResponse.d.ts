@@ -83,7 +83,7 @@ declare class Class_HttpResponse extends Class_HttpMessage {
 	 * 
 	 * 
 	 */
-	writeHead(statusCode: number, statusMessage: string, headers?: object/** = v8::Object::New(isolate)*/): void;
+	writeHead(statusCode: number, statusMessage: string, headers?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 
@@ -94,7 +94,7 @@ declare class Class_HttpResponse extends Class_HttpMessage {
 	 * 
 	 * 
 	 */
-	writeHead(statusCode: number, headers?: object/** = v8::Object::New(isolate)*/): void;
+	writeHead(statusCode: number, headers?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 

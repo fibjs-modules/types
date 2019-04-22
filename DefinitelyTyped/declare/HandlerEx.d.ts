@@ -84,7 +84,7 @@ declare class Class_HandlerEx extends Class_Handler {
 	 * 
 	 * 
 	 */
-	onerror(hdlrs: object): void;
+	onerror(hdlrs: Fibjs.AnyObject): void;
 
 } /** endof class */
 

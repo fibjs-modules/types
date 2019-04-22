@@ -381,7 +381,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function userInfo(options?: object/** = v8::Object::New(isolate)*/): object;
+		export function userInfo(options?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Fibjs.AnyObject;
 	
 		/**
 		 * 
@@ -391,7 +391,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function networkInterfaces(): object;
+		export function networkInterfaces(): Fibjs.AnyObject;
 	
 		/**
 		 * 
@@ -471,7 +471,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function memoryUsage(): object;
+		export function memoryUsage(): Fibjs.AnyObject;
 	
 	} /** end of `module os` */
 	export = os

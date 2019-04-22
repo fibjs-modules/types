@@ -150,7 +150,7 @@ declare class Class_WebSocket extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	constructor(url: string, opts?: object/** = v8::Object::New(isolate)*/);
+	constructor(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

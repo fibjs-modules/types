@@ -218,7 +218,7 @@ declare module "url" {
 		 * 
 		 * 
 		 */
-		export function format(args: object): string;
+		export function format(args: Fibjs.AnyObject): string;
 	
 		/**
 		 * 

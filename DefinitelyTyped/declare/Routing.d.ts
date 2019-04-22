@@ -37,7 +37,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	constructor(map?: object/** = v8::Object::New(isolate)*/);
+	constructor(map?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 
@@ -48,7 +48,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	constructor(method: string, map: object);
+	constructor(method: string, map: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -70,7 +70,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	append(map: object): Class_Routing;
+	append(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -106,7 +106,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	all(map: object): Class_Routing;
+	all(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -129,7 +129,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	get(map: object): Class_Routing;
+	get(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -152,7 +152,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	post(map: object): Class_Routing;
+	post(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -175,7 +175,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	del(map: object): Class_Routing;
+	del(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -198,7 +198,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	put(map: object): Class_Routing;
+	put(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -221,7 +221,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	patch(map: object): Class_Routing;
+	patch(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 
@@ -244,7 +244,7 @@ declare class Class_Routing extends Class_Handler {
 	 * 
 	 * 
 	 */
-	find(map: object): Class_Routing;
+	find(map: Fibjs.AnyObject): Class_Routing;
 
 	/**
 	 * 

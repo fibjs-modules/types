@@ -56,7 +56,7 @@ declare class Class_RedisHash extends Class__object {
 	 * 
 	 * 
 	 */
-	mset(kvs: object): void;
+	mset(kvs: Fibjs.AnyObject): void;
 
 	/**
 	 * 

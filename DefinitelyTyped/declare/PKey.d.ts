@@ -147,7 +147,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(jsonKey: object);
+	constructor(jsonKey: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -261,7 +261,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	importKey(jsonKey: object): void;
+	importKey(jsonKey: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -302,7 +302,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	exportJson(): object;
+	exportJson(): Fibjs.AnyObject;
 
 	/**
 	 * 

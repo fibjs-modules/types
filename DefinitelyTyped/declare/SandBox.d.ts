@@ -37,7 +37,7 @@ declare class Class_SandBox extends Class__object {
 	 * @type Object
 	 */
 	
-	global: object
+	global: Fibjs.AnyObject
 	
 	/**
 	 * class prop 
@@ -50,7 +50,7 @@ declare class Class_SandBox extends Class__object {
 	 * @type Object
 	 */
 	
-	modules: object
+	modules: Fibjs.AnyObject
 	
 	
 	
@@ -62,7 +62,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: object);
+	constructor(mods: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -73,7 +73,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: object, require: Function);
+	constructor(mods: Fibjs.AnyObject, require: Function);
 
 	/**
 	 * 
@@ -84,7 +84,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: object, global: object);
+	constructor(mods: Fibjs.AnyObject, global: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -96,7 +96,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: object, require: Function, global: object);
+	constructor(mods: Fibjs.AnyObject, require: Function, global: Fibjs.AnyObject);
 
 	/**
 	 * 
@@ -117,7 +117,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	add(mods: object): void;
+	add(mods: Fibjs.AnyObject): void;
 
 	/**
 	 * 

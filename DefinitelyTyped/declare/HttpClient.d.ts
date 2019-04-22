@@ -166,7 +166,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	request(method: string, url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	request(method: string, url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 	/**
 	 * 
@@ -188,7 +188,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	get(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	get(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 	/**
 	 * 
@@ -210,7 +210,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	post(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	post(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 	/**
 	 * 
@@ -232,7 +232,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	del(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	del(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 	/**
 	 * 
@@ -254,7 +254,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	put(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	put(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 	/**
 	 * 
@@ -276,7 +276,7 @@ declare class Class_HttpClient extends Class__object {
 	 * 
 	 * @async
 	 */
-	patch(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
+	patch(url: string, opts?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 
 } /** endof class */
 

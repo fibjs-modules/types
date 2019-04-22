@@ -37,7 +37,7 @@ declare class Class_RedisSortedSet extends Class__object {
 	 * 
 	 * 
 	 */
-	add(sms: object): number;
+	add(sms: Fibjs.AnyObject): number;
 
 	/**
 	 * 

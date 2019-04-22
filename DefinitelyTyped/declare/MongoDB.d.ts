@@ -49,7 +49,7 @@ declare class Class_MongoDB extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: object): object;
+	runCommand(cmd: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -61,7 +61,7 @@ declare class Class_MongoDB extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: string, arg: any): object;
+	runCommand(cmd: string, arg: any): Fibjs.AnyObject;
 
 	/**
 	 * 

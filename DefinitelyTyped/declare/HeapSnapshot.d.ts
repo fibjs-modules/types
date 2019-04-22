@@ -74,7 +74,7 @@ declare class Class_HeapSnapshot extends Class__object {
 	 * 
 	 * 
 	 */
-	diff(before: Class_HeapSnapshot): object;
+	diff(before: Class_HeapSnapshot): Fibjs.AnyObject;
 
 	/**
 	 * 

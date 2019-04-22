@@ -87,7 +87,7 @@ declare class Class_Service extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	constructor(name: string, worker: Function, event?: object/** = v8::Object::New(isolate)*/);
+	constructor(name: string, worker: Function, event?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

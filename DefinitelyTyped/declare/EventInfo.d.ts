@@ -73,7 +73,7 @@ declare class Class_EventInfo extends Class__object {
 	 * @type Object
 	 */
 	
-	target: object
+	target: Fibjs.AnyObject
 	
 	
 	

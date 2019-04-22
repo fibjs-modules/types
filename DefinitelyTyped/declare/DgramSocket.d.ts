@@ -48,7 +48,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	bind(opts: object, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
+	bind(opts: Fibjs.AnyObject, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 

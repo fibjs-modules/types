@@ -39,7 +39,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	find(query?: object/** = v8::Object::New(isolate)*/, projection?: object/** = v8::Object::New(isolate)*/): Class_MongoCursor;
+	find(query?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, projection?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_MongoCursor;
 
 	/**
 	 * 
@@ -51,7 +51,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	findOne(query?: object/** = v8::Object::New(isolate)*/, projection?: object/** = v8::Object::New(isolate)*/): object;
+	findOne(query?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/, projection?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -62,7 +62,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	findAndModify(query: object): object;
+	findAndModify(query: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -82,7 +82,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	insert(document: object): void;
+	insert(document: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -92,7 +92,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	save(document: object): void;
+	save(document: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -105,7 +105,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	update(query: object, document: object, upsert?: boolean/** = false*/, multi?: boolean/** = false*/): void;
+	update(query: Fibjs.AnyObject, document: Fibjs.AnyObject, upsert?: boolean/** = false*/, multi?: boolean/** = false*/): void;
 
 	/**
 	 * 
@@ -117,7 +117,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	update(query: object, document: object, options: object): void;
+	update(query: Fibjs.AnyObject, document: Fibjs.AnyObject, options: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -127,7 +127,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	remove(query: object): void;
+	remove(query: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -138,7 +138,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: object): object;
+	runCommand(cmd: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -150,7 +150,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: string, arg?: object/** = v8::Object::New(isolate)*/): object;
+	runCommand(cmd: string, arg?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -169,7 +169,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	ensureIndex(keys: object, options?: object/** = v8::Object::New(isolate)*/): void;
+	ensureIndex(keys: Fibjs.AnyObject, options?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 
@@ -179,7 +179,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	reIndex(): object;
+	reIndex(): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -190,7 +190,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	dropIndex(name: string): object;
+	dropIndex(name: string): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -200,7 +200,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	dropIndexes(): object;
+	dropIndexes(): Fibjs.AnyObject;
 
 	/**
 	 * 

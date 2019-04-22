@@ -243,7 +243,7 @@ declare module "querystring" {
 		 * 
 		 * 
 		 */
-		export function parse(str: string, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: object/** = v8::Object::New(isolate)*/): Class_HttpCollection;
+		export function parse(str: string, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): Class_HttpCollection;
 	
 		/**
 		 * 
@@ -257,7 +257,7 @@ declare module "querystring" {
 		 * 
 		 * 
 		 */
-		export function stringify(obj: object, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: object/** = v8::Object::New(isolate)*/): string;
+		export function stringify(obj: Fibjs.AnyObject, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: Fibjs.AnyObject/** = v8::Object::New(isolate)*/): string;
 	
 	} /** end of `module querystring` */
 	export = querystring

@@ -285,7 +285,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export function info(): object;
+		export function info(): Fibjs.AnyObject;
 	
 		/**
 		 * 

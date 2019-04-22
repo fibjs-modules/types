@@ -49,7 +49,7 @@ module.exports = function (defs, baseFolder) {
             "Boolean": "boolean",
             "String": "string",
             "Date": "Date",
-            "Object": 'Object',
+            "Object": 'Fibjs.AnyObject',
             "Iterator": 'Iterable<any>',
             "Array": "any[]",
             "TypedArray": "ArrayLike<any>",

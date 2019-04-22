@@ -137,7 +137,7 @@ declare class Class_LruCache extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	set(map: object): void;
+	set(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 

@@ -146,7 +146,7 @@ declare class Class_HttpServer extends Class_TcpServer {
 	 * 
 	 * 
 	 */
-	onerror(hdlrs: object): void;
+	onerror(hdlrs: Fibjs.AnyObject): void;
 
 	/**
 	 * 

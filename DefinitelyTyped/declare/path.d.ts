@@ -231,7 +231,7 @@ declare module "path" {
 		 * 
 		 * 
 		 */
-		export const posix: Object;
+		export const posix: Fibjs.AnyObject;
 		
 		/**
 		 * 
@@ -240,7 +240,7 @@ declare module "path" {
 		 * 
 		 * 
 		 */
-		export const win32: Object;
+		export const win32: Fibjs.AnyObject;
 		
 		
 		

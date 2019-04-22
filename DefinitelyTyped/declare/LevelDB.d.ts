@@ -81,7 +81,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * 
 	 */
-	mset(map: object): void;
+	mset(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 

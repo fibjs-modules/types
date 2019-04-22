@@ -236,7 +236,7 @@ declare module "fs" {
 		 * 
 		 * 
 		 */
-		export const constants: Object;
+		export const constants: Fibjs.AnyObject;
 		
 		
 		

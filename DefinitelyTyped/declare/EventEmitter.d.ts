@@ -59,7 +59,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	on(ev: string, func: Function): object;
+	on(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -70,7 +70,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	on(map: object): object;
+	on(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -82,7 +82,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	addListener(ev: string, func: Function): object;
+	addListener(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -93,7 +93,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	addListener(map: object): object;
+	addListener(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -105,7 +105,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependListener(ev: string, func: Function): object;
+	prependListener(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -116,7 +116,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependListener(map: object): object;
+	prependListener(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -128,7 +128,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	once(ev: string, func: Function): object;
+	once(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -139,7 +139,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	once(map: object): object;
+	once(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -151,7 +151,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependOnceListener(ev: string, func: Function): object;
+	prependOnceListener(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -162,7 +162,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependOnceListener(map: object): object;
+	prependOnceListener(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -174,7 +174,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(ev: string, func: Function): object;
+	off(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -185,7 +185,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(ev: string): object;
+	off(ev: string): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -196,7 +196,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(map: object): object;
+	off(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -208,7 +208,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(ev: string, func: Function): object;
+	removeListener(ev: string, func: Function): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -219,7 +219,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(ev: string): object;
+	removeListener(ev: string): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -230,7 +230,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(map: object): object;
+	removeListener(map: Fibjs.AnyObject): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -241,7 +241,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeAllListeners(evs?: any[]/** = v8::Array::New(isolate)*/): object;
+	removeAllListeners(evs?: any[]/** = v8::Array::New(isolate)*/): Fibjs.AnyObject;
 
 	/**
 	 * 

@@ -218,7 +218,7 @@ declare module "bson" {
 		 * 
 		 * 
 		 */
-		export function encode(data: object): Class_Buffer;
+		export function encode(data: Fibjs.AnyObject): Class_Buffer;
 	
 		/**
 		 * 
@@ -229,7 +229,7 @@ declare module "bson" {
 		 * 
 		 * 
 		 */
-		export function decode(data: Class_Buffer): object;
+		export function decode(data: Class_Buffer): Fibjs.AnyObject;
 	
 	} /** end of `module bson` */
 	export = bson

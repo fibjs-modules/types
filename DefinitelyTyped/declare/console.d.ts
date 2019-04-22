@@ -392,7 +392,7 @@ declare module "console" {
 		 * 
 		 * 
 		 */
-		export function add(cfg: object): void;
+		export function add(cfg: Fibjs.AnyObject): void;
 	
 		/**
 		 * 

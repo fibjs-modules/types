@@ -30,6 +30,9 @@ declare namespace Fibjs {
 		<T = T_RESP, T_CALLBACK_RESP = any, T_THIS = any>(this: T_THIS, err: Error, result?: T): T_CALLBACK_RESP | void
 	}
 
+    interface AnyObject {
+        [k: string]: any
+    }
 
     export interface ReadableStream extends Class_EventEmitter {
         readable: boolean;

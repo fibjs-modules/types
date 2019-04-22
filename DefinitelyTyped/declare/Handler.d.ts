@@ -47,7 +47,7 @@ declare class Class_Handler extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(map: object);
+	constructor(map: Fibjs.AnyObject);
 
 	/**
 	 * 

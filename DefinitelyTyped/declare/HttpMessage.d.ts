@@ -154,7 +154,7 @@ declare class Class_HttpMessage extends Class_Message {
 	 * 
 	 * 
 	 */
-	addHeader(map: object): void;
+	addHeader(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 
@@ -175,7 +175,7 @@ declare class Class_HttpMessage extends Class_Message {
 	 * 
 	 * 
 	 */
-	setHeader(map: object): void;
+	setHeader(map: Fibjs.AnyObject): void;
 
 	/**
 	 * 

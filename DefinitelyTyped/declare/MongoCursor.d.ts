@@ -60,7 +60,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	sort(opts: object): Class_MongoCursor;
+	sort(opts: Fibjs.AnyObject): Class_MongoCursor;
 
 	/**
 	 * 
@@ -80,7 +80,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	next(): object;
+	next(): Fibjs.AnyObject;
 
 	/**
 	 * 
@@ -143,7 +143,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	hint(opts: object): Class_MongoCursor;
+	hint(opts: Fibjs.AnyObject): Class_MongoCursor;
 
 } /** endof class */
 
