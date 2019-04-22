@@ -44,12 +44,12 @@ import _Global = require('global');
 import _Process = require('process');
 
 declare global {
-	var exports: {
-		[k: string]: any
-	};
-	var module: {
-		exports: typeof exports;
-	};
+    var exports: {
+        [k: string]: any
+    };
+    var module: {
+        exports: typeof exports;
+    };
 <% for(var i=0; i<defModules['global'].members.length; i++) {
 	var member = defModules['global'].members[i]
 	console.log(
@@ -60,10 +60,10 @@ declare global {
 		'async:', member.async, '\n',
 	)
 	if (excludedTopLevelVariablesInGlobalModule.includes(member.name)) {%>
-	/** const <%- member.name %>: <%- member.type || 'null' %>; */<%
+	/** declare const <%- member.name %>: <%- member.type || 'null' %>; */<%
 	continue;
 	}%>
-	const <%- member.name %>: typeof _Global.<%- member.name %><%
+    const <%- member.name %>: typeof _Global.<%- member.name %><%
 } /** end of iteration`defModules['global'].members` */ %>
 } /** end of `declare global` */
 <% } else if (filename === '_common') { /** elseif of `if (filename === '_common')` */ %>

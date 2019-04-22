@@ -199,7 +199,7 @@ module.exports = function (defs, baseFolder) {
         var filename = `${cls}.d.ts`;
         var fname = path.join(baseFolder, filename);
 
-        var typeDTs = ejs.compile(fs.readTextFile(path.join(__dirname, './tmpl/type.d.ts.tpl')));
+        var typeDTs = ejs.compile(fs.readTextFile(path.join(__dirname, './tmpl/type.d.ts.ejs')));
         function getTypeDTsParams(def) {
             return {
                 def: def,

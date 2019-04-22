@@ -1,11 +1,11 @@
 {
     "include": [
-        "DefinitelyTyped/**/*.ts",
-        "test.d.ts"
+        "../DefinitelyTyped/**/*.ts",
+        "../test.d.ts"
     ],
     "compilerOptions": {
         "typeRoots" : [
-            "./DefinitelyTyped/**/*.ts"
+            "../DefinitelyTyped/**/*.ts"
         ],
         "types": [
             "@fibjs/types"
