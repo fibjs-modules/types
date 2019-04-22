@@ -113,15 +113,17 @@ declare namespace Fibjs {
 }
 <% } else if (filename === '_test_env') { /** elseif of `if (filename === '_test_env')` */ %>
 /// <reference path="test.d.ts" />
-import test from 'test'
+import test = require('test')
 
 /// <reference path="assert.d.ts" />
-import _assert from 'assert'
+import _assert = require('assert')
 
 declare global {
 <% for(var i=0; i<member_fns.length; i++) { 
 	var fn_in_test_mod = member_fns[i]
 	var fn_name = fn_in_test_mod.name
+    if (fn_name === 'run')
+        continue ;
 %>	const <%- fn_name %>: typeof test.<%- fn_name %>
 <% } /** else of iteration`member_fns` */ %>
 	const assert: typeof _assert

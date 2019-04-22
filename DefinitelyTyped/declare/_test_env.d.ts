@@ -15,10 +15,10 @@
 
 
 /// <reference path="test.d.ts" />
-import test from 'test'
+import test = require('test')
 
 /// <reference path="assert.d.ts" />
-import _assert from 'assert'
+import _assert = require('assert')
 
 declare global {
 	const describe: typeof test.describe
@@ -31,7 +31,6 @@ declare global {
 	const after: typeof test.after
 	const beforeEach: typeof test.beforeEach
 	const afterEach: typeof test.afterEach
-	const run: typeof test.run
 	const setup: typeof test.setup
 
 	const assert: typeof _assert
