@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -80,7 +83,7 @@ declare class Class_HttpResponse extends Class_HttpMessage {
 	 * 
 	 * 
 	 */
-	writeHead(statusCode: number, statusMessage: string, headers?: Object/** = v8::Object::New(isolate)*/): void;
+	writeHead(statusCode: number, statusMessage: string, headers?: object/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 
@@ -91,7 +94,7 @@ declare class Class_HttpResponse extends Class_HttpMessage {
 	 * 
 	 * 
 	 */
-	writeHead(statusCode: number, headers?: Object/** = v8::Object::New(isolate)*/): void;
+	writeHead(statusCode: number, headers?: object/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 
@@ -121,7 +124,7 @@ declare class Class_HttpResponse extends Class_HttpMessage {
 	 * 
 	 * @async
 	 */
-	sendHeader(stm: Class_Stream): void;
+	sendHeader(stm: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

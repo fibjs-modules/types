@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 文件系统处理模块
@@ -249,7 +250,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function exists(path: string): boolean;
+		export function exists(path: string, callback?: Fibjs.AsyncCallback<boolean>/** = function (err: Error, result: boolean) {}*/): boolean;
 	
 		/**
 		 * 
@@ -260,7 +261,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function access(path: string, mode?: number/** = 0*/): void;
+		export function access(path: string, mode?: number/** = 0*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -271,7 +272,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function link(oldPath: string, newPath: string): void;
+		export function link(oldPath: string, newPath: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -281,7 +282,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function unlink(path: string): void;
+		export function unlink(path: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -292,7 +293,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function mkdir(path: string, mode?: number/** = 0777*/): void;
+		export function mkdir(path: string, mode?: number/** = 0777*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -302,7 +303,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function rmdir(path: string): void;
+		export function rmdir(path: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -313,7 +314,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function rename(from: string, to: string): void;
+		export function rename(from: string, to: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -324,7 +325,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function copy(from: string, to: string): void;
+		export function copy(from: string, to: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -335,7 +336,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function chmod(path: string, mode: number): void;
+		export function chmod(path: string, mode: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -346,7 +347,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function lchmod(path: string, mode: number): void;
+		export function lchmod(path: string, mode: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -358,7 +359,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function chown(path: string, uid: number, gid: number): void;
+		export function chown(path: string, uid: number, gid: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -370,7 +371,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function lchown(path: string, uid: number, gid: number): void;
+		export function lchown(path: string, uid: number, gid: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -381,7 +382,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function stat(path: string): Class_Stat;
+		export function stat(path: string, callback?: Fibjs.AsyncCallback<Class_Stat>/** = function (err: Error, result: Class_Stat) {}*/): Class_Stat;
 	
 		/**
 		 * 
@@ -392,7 +393,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function lstat(path: string): Class_Stat;
+		export function lstat(path: string, callback?: Fibjs.AsyncCallback<Class_Stat>/** = function (err: Error, result: Class_Stat) {}*/): Class_Stat;
 	
 		/**
 		 * 
@@ -403,7 +404,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function readlink(path: string): string;
+		export function readlink(path: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -414,7 +415,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function realpath(path: string): string;
+		export function realpath(path: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -426,7 +427,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function symlink(target: string, linkpath: string, type?: string/** = "file"*/): void;
+		export function symlink(target: string, linkpath: string, type?: string/** = "file"*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -437,7 +438,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function truncate(path: string, len: number): void;
+		export function truncate(path: string, len: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -452,7 +453,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function read(fd: number, buffer: Class_Buffer, offset?: number/** = 0*/, length?: number/** = 0*/, position?: number/** = -1*/): number;
+		export function read(fd: number, buffer: Class_Buffer, offset?: number/** = 0*/, length?: number/** = 0*/, position?: number/** = -1*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 	
 		/**
 		 * 
@@ -463,7 +464,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function fchmod(fd: number, mode: number): void;
+		export function fchmod(fd: number, mode: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -475,7 +476,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function fchown(fd: number, uid: number, gid: number): void;
+		export function fchown(fd: number, uid: number, gid: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -485,7 +486,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function fdatasync(fd: number): void;
+		export function fdatasync(fd: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -495,7 +496,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function fsync(fd: number): void;
+		export function fsync(fd: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -506,7 +507,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function readdir(path: string): any[];
+		export function readdir(path: string, callback?: Fibjs.AsyncCallback<any[]>/** = function (err: Error, result: any[]) {}*/): any[];
 	
 		/**
 		 * 
@@ -526,7 +527,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function openFile(fname: string, flags?: string/** = "r"*/): Class_SeekableStream;
+		export function openFile(fname: string, flags?: string/** = "r"*/, callback?: Fibjs.AsyncCallback<Class_SeekableStream>/** = function (err: Error, result: Class_SeekableStream) {}*/): Class_SeekableStream;
 	
 		/**
 		 * 
@@ -547,7 +548,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function open(fname: string, flags?: string/** = "r"*/, mode?: number/** = 0666*/): number;
+		export function open(fname: string, flags?: string/** = "r"*/, mode?: number/** = 0666*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 	
 		/**
 		 * 
@@ -557,7 +558,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function close(fd: number): void;
+		export function close(fd: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -577,7 +578,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function openTextStream(fname: string, flags?: string/** = "r"*/): Class_BufferedStream;
+		export function openTextStream(fname: string, flags?: string/** = "r"*/, callback?: Fibjs.AsyncCallback<Class_BufferedStream>/** = function (err: Error, result: Class_BufferedStream) {}*/): Class_BufferedStream;
 	
 		/**
 		 * 
@@ -588,7 +589,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function readTextFile(fname: string): string;
+		export function readTextFile(fname: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -600,7 +601,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function readFile(fname: string, encoding?: string/** = ""*/): any;
+		export function readFile<T_RESULT = any>(fname: string, encoding?: string/** = ""*/, callback?: Fibjs.AsyncCallback<T_RESULT>/** = function (err: Error, result: T_RESULT) {}*/): T_RESULT;
 	
 		/**
 		 * 
@@ -623,7 +624,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function writeTextFile(fname: string, txt: string): void;
+		export function writeTextFile(fname: string, txt: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -634,7 +635,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function writeFile(fname: string, data: Class_Buffer): void;
+		export function writeFile(fname: string, data: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -645,7 +646,7 @@ declare module "fs" {
 		 * 
 		 * @async
 		 */
-		export function appendFile(fname: string, data: Class_Buffer): void;
+		export function appendFile(fname: string, data: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 

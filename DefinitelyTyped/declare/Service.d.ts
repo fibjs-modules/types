@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -84,7 +87,7 @@ declare class Class_Service extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	constructor(name: string, worker: Function, event?: Object/** = v8::Object::New(isolate)*/);
+	constructor(name: string, worker: Function, event?: object/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

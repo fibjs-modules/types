@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -144,7 +147,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(jsonKey: Object);
+	constructor(jsonKey: object);
 
 	/**
 	 * 
@@ -154,7 +157,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	genRsaKey(size: number): void;
+	genRsaKey(size: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -164,7 +167,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	genEcKey(curve?: string/** = "secp521r1"*/): void;
+	genEcKey(curve?: string/** = "secp521r1"*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -258,7 +261,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	importKey(jsonKey: Object): void;
+	importKey(jsonKey: object): void;
 
 	/**
 	 * 
@@ -299,7 +302,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * 
 	 */
-	exportJson(): Object;
+	exportJson(): object;
 
 	/**
 	 * 
@@ -310,7 +313,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	encrypt(data: Class_Buffer): Class_Buffer;
+	encrypt(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -321,7 +324,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	decrypt(data: Class_Buffer): Class_Buffer;
+	decrypt(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -333,7 +336,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	sign(data: Class_Buffer, alg?: number/** = 0*/): Class_Buffer;
+	sign(data: Class_Buffer, alg?: number/** = 0*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -346,7 +349,7 @@ declare class Class_PKey extends Class__object {
 	 * 
 	 * @async
 	 */
-	verify(data: Class_Buffer, sign: Class_Buffer, alg?: number/** = 0*/): boolean;
+	verify(data: Class_Buffer, sign: Class_Buffer, alg?: number/** = 0*/, callback?: Fibjs.AsyncCallback<boolean>/** = function (err: Error, result: boolean) {}*/): boolean;
 
 } /** endof class */
 

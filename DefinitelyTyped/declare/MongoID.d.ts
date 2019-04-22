@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 

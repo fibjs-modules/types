@@ -17,8 +17,8 @@
 
 
 
-
-
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -195,7 +195,6 @@
 /// <reference path="ZmqSocket.d.ts" />
 
 /// <reference path="object.d.ts" />
-
 
 
 /** module Or Internal Object */

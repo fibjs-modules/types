@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -66,7 +69,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	connect(url: string): void;
+	connect(url: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -78,7 +81,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	command(cmd: string, arg: string): string;
+	command(cmd: string, arg: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 
 	/**
 	 * 
@@ -88,7 +91,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	hello(hostname?: string/** = "localhost"*/): void;
+	hello(hostname?: string/** = "localhost"*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -99,7 +102,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	login(username: string, password: string): void;
+	login(username: string, password: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -109,7 +112,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	from(address: string): void;
+	from(address: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -119,7 +122,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	to(address: string): void;
+	to(address: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -129,7 +132,7 @@ declare class Class_Smtp extends Class__object {
 	 * 
 	 * @async
 	 */
-	data(txt: string): void;
+	data(txt: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 

@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -36,7 +39,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	find(query?: Object/** = v8::Object::New(isolate)*/, projection?: Object/** = v8::Object::New(isolate)*/): Class_MongoCursor;
+	find(query?: object/** = v8::Object::New(isolate)*/, projection?: object/** = v8::Object::New(isolate)*/): Class_MongoCursor;
 
 	/**
 	 * 
@@ -48,7 +51,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	findOne(query?: Object/** = v8::Object::New(isolate)*/, projection?: Object/** = v8::Object::New(isolate)*/): Object;
+	findOne(query?: object/** = v8::Object::New(isolate)*/, projection?: object/** = v8::Object::New(isolate)*/): object;
 
 	/**
 	 * 
@@ -59,7 +62,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	findAndModify(query: Object): Object;
+	findAndModify(query: object): object;
 
 	/**
 	 * 
@@ -79,7 +82,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	insert(document: Object): void;
+	insert(document: object): void;
 
 	/**
 	 * 
@@ -89,7 +92,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	save(document: Object): void;
+	save(document: object): void;
 
 	/**
 	 * 
@@ -102,7 +105,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	update(query: Object, document: Object, upsert?: boolean/** = false*/, multi?: boolean/** = false*/): void;
+	update(query: object, document: object, upsert?: boolean/** = false*/, multi?: boolean/** = false*/): void;
 
 	/**
 	 * 
@@ -114,7 +117,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	update(query: Object, document: Object, options: Object): void;
+	update(query: object, document: object, options: object): void;
 
 	/**
 	 * 
@@ -124,7 +127,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	remove(query: Object): void;
+	remove(query: object): void;
 
 	/**
 	 * 
@@ -135,7 +138,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: Object): Object;
+	runCommand(cmd: object): object;
 
 	/**
 	 * 
@@ -147,7 +150,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	runCommand(cmd: string, arg?: Object/** = v8::Object::New(isolate)*/): Object;
+	runCommand(cmd: string, arg?: object/** = v8::Object::New(isolate)*/): object;
 
 	/**
 	 * 
@@ -166,7 +169,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	ensureIndex(keys: Object, options?: Object/** = v8::Object::New(isolate)*/): void;
+	ensureIndex(keys: object, options?: object/** = v8::Object::New(isolate)*/): void;
 
 	/**
 	 * 
@@ -176,7 +179,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	reIndex(): Object;
+	reIndex(): object;
 
 	/**
 	 * 
@@ -187,7 +190,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	dropIndex(name: string): Object;
+	dropIndex(name: string): object;
 
 	/**
 	 * 
@@ -197,7 +200,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	dropIndexes(): Object;
+	dropIndexes(): object;
 
 	/**
 	 * 
@@ -207,7 +210,7 @@ declare class Class_MongoCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	getIndexes(): Class_MongoCursor;
+	getIndexes(): any[];
 
 	/**
 	 * 

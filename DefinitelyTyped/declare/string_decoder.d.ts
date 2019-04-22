@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 解码 Buffer 到字符串
@@ -212,7 +213,7 @@ declare module "string_decoder" {
 		 * 
 		 * 
 		 */
-		export class StringDecoder extends Class_StringDecoder {}
+		export const StringDecoder: typeof Class_StringDecoder
 		
 		
 		

@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -53,7 +56,7 @@ declare class Class_RedisHash extends Class__object {
 	 * 
 	 * 
 	 */
-	mset(kvs: Object): void;
+	mset(kvs: object): void;
 
 	/**
 	 * 

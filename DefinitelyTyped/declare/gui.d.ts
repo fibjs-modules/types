@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief gui 模块
@@ -293,7 +294,7 @@ declare module "gui" {
 		 * 
 		 * 
 		 */
-		export function open(url: string, opt?: Object/** = v8::Object::New(isolate)*/): Class_WebView;
+		export function open(url: string, opt?: object/** = v8::Object::New(isolate)*/): Class_WebView;
 	
 	} /** end of `module gui` */
 	export = gui

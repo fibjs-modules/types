@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -151,7 +154,7 @@ declare class Class_HttpMessage extends Class_Message {
 	 * 
 	 * 
 	 */
-	addHeader(map: Object): void;
+	addHeader(map: object): void;
 
 	/**
 	 * 
@@ -172,7 +175,7 @@ declare class Class_HttpMessage extends Class_Message {
 	 * 
 	 * 
 	 */
-	setHeader(map: Object): void;
+	setHeader(map: object): void;
 
 	/**
 	 * 

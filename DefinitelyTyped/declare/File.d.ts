@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -58,7 +61,7 @@ declare class Class_File extends Class_SeekableStream {
 	 * 
 	 * @async
 	 */
-	chmod(mode: number): void;
+	chmod(mode: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 常用工具模块
@@ -212,7 +213,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export class Stats extends Class_Stats {}
+		export const Stats: typeof Class_Stats
 		
 		
 		/**
@@ -221,7 +222,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export class LruCache extends Class_LruCache {}
+		export const LruCache: typeof Class_LruCache
 		
 		
 		
@@ -274,7 +275,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function inspect(obj: Object, options?: Object/** = v8::Object::New(isolate)*/): string;
+		export function inspect(obj: object, options?: object/** = v8::Object::New(isolate)*/): string;
 	
 		/**
 		 * 
@@ -685,7 +686,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function pick(v: any, ...objs: any[]): Object;
+		export function pick(v: any, ...objs: any[]): object;
 	
 		/**
 		 * 
@@ -698,7 +699,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function omit(v: any, ...keys: any[]): Object;
+		export function omit(v: any, ...keys: any[]): object;
 	
 		/**
 		 * 
@@ -977,7 +978,7 @@ declare module "util" {
 		 * 
 		 * 
 		 */
-		export function buildInfo(): Object;
+		export function buildInfo(): object;
 	
 	} /** end of `module util` */
 	export = util

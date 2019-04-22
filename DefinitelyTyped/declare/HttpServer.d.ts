@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -143,7 +146,7 @@ declare class Class_HttpServer extends Class_TcpServer {
 	 * 
 	 * 
 	 */
-	onerror(hdlrs: Object): void;
+	onerror(hdlrs: object): void;
 
 	/**
 	 * 

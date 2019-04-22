@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief bson 编码与解码模块
@@ -217,7 +218,7 @@ declare module "bson" {
 		 * 
 		 * 
 		 */
-		export function encode(data: Object): Class_Buffer;
+		export function encode(data: object): Class_Buffer;
 	
 		/**
 		 * 
@@ -228,7 +229,7 @@ declare module "bson" {
 		 * 
 		 * 
 		 */
-		export function decode(data: Class_Buffer): Object;
+		export function decode(data: Class_Buffer): object;
 	
 	} /** end of `module bson` */
 	export = bson

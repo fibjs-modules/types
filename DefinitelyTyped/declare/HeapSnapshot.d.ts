@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -71,7 +74,7 @@ declare class Class_HeapSnapshot extends Class__object {
 	 * 
 	 * 
 	 */
-	diff(before: Class_HeapSnapshot): Object;
+	diff(before: Class_HeapSnapshot): object;
 
 	/**
 	 * 
@@ -92,7 +95,7 @@ declare class Class_HeapSnapshot extends Class__object {
 	 * 
 	 * @async
 	 */
-	save(fname: string): void;
+	save(fname: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

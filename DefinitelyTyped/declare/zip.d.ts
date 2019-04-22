@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief zip 格式文件压缩解压模块
@@ -233,7 +234,7 @@ declare module "zip" {
 		 * 
 		 * @async
 		 */
-		export function isZipFile(filename: string): boolean;
+		export function isZipFile(filename: string, callback?: Fibjs.AsyncCallback<boolean>/** = function (err: Error, result: boolean) {}*/): boolean;
 	
 		/**
 		 * 
@@ -246,7 +247,7 @@ declare module "zip" {
 		 * 
 		 * @async
 		 */
-		export function open(path: string, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/): Class_ZipFile;
+		export function open(path: string, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_ZipFile>/** = function (err: Error, result: Class_ZipFile) {}*/): Class_ZipFile;
 	
 		/**
 		 * 
@@ -259,7 +260,7 @@ declare module "zip" {
 		 * 
 		 * @async
 		 */
-		export function open(data: Class_Buffer, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/): Class_ZipFile;
+		export function open(data: Class_Buffer, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_ZipFile>/** = function (err: Error, result: Class_ZipFile) {}*/): Class_ZipFile;
 	
 		/**
 		 * 
@@ -272,7 +273,7 @@ declare module "zip" {
 		 * 
 		 * @async
 		 */
-		export function open(strm: Class_SeekableStream, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/): Class_ZipFile;
+		export function open(strm: Class_SeekableStream, mod?: string/** = "r"*/, compress_type?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_ZipFile>/** = function (err: Error, result: Class_ZipFile) {}*/): Class_ZipFile;
 	
 	} /** end of `module zip` */
 	export = zip

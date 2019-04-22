@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 超文本传输协议模块，用以支持 http 协议处理，模块别名：https
@@ -284,7 +285,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Request extends Class_HttpRequest {}
+		export const Request: typeof Class_HttpRequest
 		
 		
 		/**
@@ -293,7 +294,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Response extends Class_HttpResponse {}
+		export const Response: typeof Class_HttpResponse
 		
 		
 		/**
@@ -302,7 +303,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Cookie extends Class_HttpCookie {}
+		export const Cookie: typeof Class_HttpCookie
 		
 		
 		/**
@@ -311,7 +312,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Server extends Class_HttpServer {}
+		export const Server: typeof Class_HttpServer
 		
 		
 		/**
@@ -320,7 +321,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Client extends Class_HttpClient {}
+		export const Client: typeof Class_HttpClient
 		
 		
 		/**
@@ -329,7 +330,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class HttpsServer extends Class_HttpsServer {}
+		export const HttpsServer: typeof Class_HttpsServer
 		
 		
 		/**
@@ -338,7 +339,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export class Handler extends Class_HttpHandler {}
+		export const Handler: typeof Class_HttpHandler
 		
 		
 		
@@ -357,7 +358,7 @@ declare module "http" {
 		 * 
 		 * 
 		 */
-		export function fileHandler(root: string, mimes?: Object/** = v8::Object::New(isolate)*/, autoIndex?: boolean/** = false*/): Class_Handler;
+		export function fileHandler(root: string, mimes?: object/** = v8::Object::New(isolate)*/, autoIndex?: boolean/** = false*/): Class_Handler;
 	
 		/**
 		 * 
@@ -369,7 +370,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function request(conn: Class_Stream, req: Class_HttpRequest): Class_HttpResponse;
+		export function request(conn: Class_Stream, req: Class_HttpRequest, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -392,7 +393,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function request(method: string, url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function request(method: string, url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -414,7 +415,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function get(url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function get(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -436,7 +437,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function post(url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function post(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -458,7 +459,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function del(url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function del(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -480,7 +481,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function put(url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function put(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 		/**
 		 * 
@@ -502,7 +503,7 @@ declare module "http" {
 		 * 
 		 * @async
 		 */
-		export function patch(url: string, opts?: Object/** = v8::Object::New(isolate)*/): Class_HttpResponse;
+		export function patch(url: string, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_HttpResponse>/** = function (err: Error, result: Class_HttpResponse) {}*/): Class_HttpResponse;
 	
 	} /** end of `module http` */
 	export = http

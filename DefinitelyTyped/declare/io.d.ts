@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 输入输出处理模块
@@ -212,7 +213,7 @@ declare module "io" {
 		 * 
 		 * 
 		 */
-		export class MemoryStream extends Class_MemoryStream {}
+		export const MemoryStream: typeof Class_MemoryStream
 		
 		
 		/**
@@ -221,7 +222,7 @@ declare module "io" {
 		 * 
 		 * 
 		 */
-		export class BufferedStream extends Class_BufferedStream {}
+		export const BufferedStream: typeof Class_BufferedStream
 		
 		
 		
@@ -237,7 +238,7 @@ declare module "io" {
 		 * 
 		 * @async
 		 */
-		export function copyStream(from: Class_Stream, to: Class_Stream, bytes?: number/** = -1*/): number;
+		export function copyStream(from: Class_Stream, to: Class_Stream, bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 	
 		/**
 		 * 
@@ -248,7 +249,7 @@ declare module "io" {
 		 * 
 		 * @async
 		 */
-		export function bridge(stm1: Class_Stream, stm2: Class_Stream): void;
+		export function bridge(stm1: Class_Stream, stm2: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 	} /** end of `module io` */
 	export = io

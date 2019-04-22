@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -191,7 +193,6 @@
 /// <reference path="ZmqSocket.d.ts" />
 
 /// <reference path="object.d.ts" />
-
 
 
 /** module Or Internal Object */
@@ -451,7 +452,7 @@ declare module "gd" {
 		 * 
 		 * @async
 		 */
-		export function create(width: number, height: number, color?: number/** = undefined*/): Class_Image;
+		export function create(width: number, height: number, color?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 	
 		/**
 		 * 
@@ -462,7 +463,7 @@ declare module "gd" {
 		 * 
 		 * @async
 		 */
-		export function load(data: Class_Buffer): Class_Image;
+		export function load(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 	
 		/**
 		 * 
@@ -473,7 +474,7 @@ declare module "gd" {
 		 * 
 		 * @async
 		 */
-		export function load(stm: Class_SeekableStream): Class_Image;
+		export function load(stm: Class_SeekableStream, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 	
 		/**
 		 * 
@@ -484,7 +485,7 @@ declare module "gd" {
 		 * 
 		 * @async
 		 */
-		export function load(fname: string): Class_Image;
+		export function load(fname: string, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 	
 		/**
 		 * 

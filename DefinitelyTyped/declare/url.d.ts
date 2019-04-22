@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief url 处理模块
@@ -217,7 +218,7 @@ declare module "url" {
 		 * 
 		 * 
 		 */
-		export function format(args: Object): string;
+		export function format(args: object): string;
 	
 		/**
 		 * 

@@ -17,8 +17,8 @@
 
 
 
-
-
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -197,7 +197,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 全局对象，所有脚本均可以访问的基础对象
@@ -258,7 +257,7 @@ declare module "global" {
 		 * 
 		 * 
 		 */
-		export class Buffer extends Class_Buffer {}
+		export const Buffer: typeof Class_Buffer
 		
 		
 		/**
@@ -267,7 +266,7 @@ declare module "global" {
 		 * 
 		 * 
 		 */
-		export class Int64 extends Class_Int64 {}
+		export const Int64: typeof Class_Int64
 		
 		
 		/**

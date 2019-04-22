@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief xml 处理模块
@@ -284,7 +285,7 @@ declare module "xml" {
 		 * 
 		 * 
 		 */
-		export class Document extends Class_XmlDocument {}
+		export const Document: typeof Class_XmlDocument
 		
 		
 		

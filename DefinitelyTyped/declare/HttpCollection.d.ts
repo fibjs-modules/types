@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -75,7 +78,7 @@ declare class Class_HttpCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	add(map: Object): void;
+	add(map: object): void;
 
 	/**
 	 * 
@@ -96,7 +99,7 @@ declare class Class_HttpCollection extends Class__object {
 	 * 
 	 * 
 	 */
-	set(map: Object): void;
+	set(map: object): void;
 
 	/**
 	 * 

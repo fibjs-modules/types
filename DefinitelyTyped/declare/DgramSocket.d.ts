@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -35,7 +38,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	bind(port?: number/** = 0*/, addr?: string/** = ""*/): void;
+	bind(port?: number/** = 0*/, addr?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -45,7 +48,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	bind(opts: Object): void;
+	bind(opts: object, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -58,7 +61,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	send(msg: Class_Buffer, port: number, address?: string/** = ""*/): number;
+	send(msg: Class_Buffer, port: number, address?: string/** = ""*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 
 	/**
 	 * 
@@ -73,7 +76,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	send(msg: Class_Buffer, offset: number, length: number, port: number, address?: string/** = ""*/): number;
+	send(msg: Class_Buffer, offset: number, length: number, port: number, address?: string/** = ""*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 
 	/**
 	 * 

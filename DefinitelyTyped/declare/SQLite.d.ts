@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -57,7 +60,7 @@ declare class Class_SQLite extends Class_DbConnection {
 	 * 
 	 * @async
 	 */
-	backup(fileName: string): void;
+	backup(fileName: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

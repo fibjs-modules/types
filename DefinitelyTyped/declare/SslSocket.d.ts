@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -119,7 +122,7 @@ declare class Class_SslSocket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	connect(s: Class_Stream, server_name?: string/** = ""*/): number;
+	connect(s: Class_Stream, server_name?: string/** = ""*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 
 	/**
 	 * 
@@ -130,7 +133,7 @@ declare class Class_SslSocket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	accept(s: Class_Stream): Class_SslSocket;
+	accept(s: Class_Stream, callback?: Fibjs.AsyncCallback<Class_SslSocket>/** = function (err: Error, result: Class_SslSocket) {}*/): Class_SslSocket;
 
 } /** endof class */
 

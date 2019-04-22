@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -118,7 +121,7 @@ declare class Class_HttpCookie extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(opts?: Object/** = v8::Object::New(isolate)*/);
+	constructor(opts?: object/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 
@@ -130,7 +133,7 @@ declare class Class_HttpCookie extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(name: string, value: string, opts?: Object/** = v8::Object::New(isolate)*/);
+	constructor(name: string, value: string, opts?: object/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

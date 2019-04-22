@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 网络访问模块
@@ -244,7 +245,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export class Socket extends Class_Socket {}
+		export const Socket: typeof Class_Socket
 		
 		
 		/**
@@ -253,7 +254,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export class Smtp extends Class_Smtp {}
+		export const Smtp: typeof Class_Smtp
 		
 		
 		/**
@@ -262,7 +263,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export class TcpServer extends Class_TcpServer {}
+		export const TcpServer: typeof Class_TcpServer
 		
 		
 		/**
@@ -271,7 +272,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export class Url extends Class_UrlObject {}
+		export const Url: typeof Class_UrlObject
 		
 		
 		
@@ -284,7 +285,7 @@ declare module "net" {
 		 * 
 		 * 
 		 */
-		export function info(): Object;
+		export function info(): object;
 	
 		/**
 		 * 
@@ -296,7 +297,7 @@ declare module "net" {
 		 * 
 		 * @async
 		 */
-		export function resolve(name: string, family?: number/** = undefined*/): string;
+		export function resolve(name: string, family?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -307,7 +308,7 @@ declare module "net" {
 		 * 
 		 * @async
 		 */
-		export function ip(name: string): string;
+		export function ip(name: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -318,7 +319,7 @@ declare module "net" {
 		 * 
 		 * @async
 		 */
-		export function ipv6(name: string): string;
+		export function ipv6(name: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 		/**
 		 * 
@@ -330,7 +331,7 @@ declare module "net" {
 		 * 
 		 * @async
 		 */
-		export function connect(url: string, timeout?: number/** = 0*/): Class_Stream;
+		export function connect(url: string, timeout?: number/** = 0*/, callback?: Fibjs.AsyncCallback<Class_Stream>/** = function (err: Error, result: Class_Stream) {}*/): Class_Stream;
 	
 		/**
 		 * 
@@ -342,7 +343,7 @@ declare module "net" {
 		 * 
 		 * @async
 		 */
-		export function openSmtp(url: string, timeout?: number/** = 0*/): Class_Smtp;
+		export function openSmtp(url: string, timeout?: number/** = 0*/, callback?: Fibjs.AsyncCallback<Class_Smtp>/** = function (err: Error, result: Class_Smtp) {}*/): Class_Smtp;
 	
 		/**
 		 * 

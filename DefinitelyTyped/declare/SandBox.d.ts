@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -34,7 +37,7 @@ declare class Class_SandBox extends Class__object {
 	 * @type Object
 	 */
 	
-	global: Object
+	global: object
 	
 	/**
 	 * class prop 
@@ -47,7 +50,7 @@ declare class Class_SandBox extends Class__object {
 	 * @type Object
 	 */
 	
-	modules: Object
+	modules: object
 	
 	
 	
@@ -59,7 +62,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: Object);
+	constructor(mods: object);
 
 	/**
 	 * 
@@ -70,7 +73,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: Object, require: Function);
+	constructor(mods: object, require: Function);
 
 	/**
 	 * 
@@ -81,7 +84,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: Object, global: Object);
+	constructor(mods: object, global: object);
 
 	/**
 	 * 
@@ -93,7 +96,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(mods: Object, require: Function, global: Object);
+	constructor(mods: object, require: Function, global: object);
 
 	/**
 	 * 
@@ -114,7 +117,7 @@ declare class Class_SandBox extends Class__object {
 	 * 
 	 * 
 	 */
-	add(mods: Object): void;
+	add(mods: object): void;
 
 	/**
 	 * 

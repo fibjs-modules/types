@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief dns 域名查询模块
@@ -217,7 +218,7 @@ declare module "dns" {
 		 * 
 		 * @async
 		 */
-		export function resolve(name: string): any[];
+		export function resolve(name: string, callback?: Fibjs.AsyncCallback<any[]>/** = function (err: Error, result: any[]) {}*/): any[];
 	
 		/**
 		 * 
@@ -228,7 +229,7 @@ declare module "dns" {
 		 * 
 		 * @async
 		 */
-		export function lookup(name: string): string;
+		export function lookup(name: string, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 	} /** end of `module dns` */
 	export = dns

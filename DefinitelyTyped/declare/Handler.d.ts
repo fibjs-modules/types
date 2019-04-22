@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -44,7 +47,7 @@ declare class Class_Handler extends Class__object {
 	 * 
 	 * 
 	 */
-	constructor(map: Object);
+	constructor(map: object);
 
 	/**
 	 * 
@@ -65,7 +68,7 @@ declare class Class_Handler extends Class__object {
 	 * 
 	 * @async
 	 */
-	invoke(v: Class__object): Class_Handler;
+	invoke(v: Class__object, callback?: Fibjs.AsyncCallback<Class_Handler>/** = function (err: Error, result: Class_Handler) {}*/): Class_Handler;
 
 } /** endof class */
 

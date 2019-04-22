@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -35,7 +38,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * @async
 	 */
-	has(key: Class_Buffer): boolean;
+	has(key: Class_Buffer, callback?: Fibjs.AsyncCallback<boolean>/** = function (err: Error, result: boolean) {}*/): boolean;
 
 	/**
 	 * 
@@ -46,7 +49,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * @async
 	 */
-	get(key: Class_Buffer): Class_Buffer;
+	get(key: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -68,7 +71,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * @async
 	 */
-	set(key: Class_Buffer, value: Class_Buffer): void;
+	set(key: Class_Buffer, value: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -78,7 +81,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * 
 	 */
-	mset(map: Object): void;
+	mset(map: object): void;
 
 	/**
 	 * 
@@ -98,7 +101,7 @@ declare class Class_LevelDB extends Class__object {
 	 * 
 	 * @async
 	 */
-	remove(key: Class_Buffer): void;
+	remove(key: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 

@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 数据库访问模块
@@ -217,7 +218,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function open(connString: string): Class__object;
+		export function open(connString: string, callback?: Fibjs.AsyncCallback<Class__object>/** = function (err: Error, result: Class__object) {}*/): Class__object;
 	
 		/**
 		 * 
@@ -228,7 +229,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openMySQL(connString: string): Class_MySQL;
+		export function openMySQL(connString: string, callback?: Fibjs.AsyncCallback<Class_MySQL>/** = function (err: Error, result: Class_MySQL) {}*/): Class_MySQL;
 	
 		/**
 		 * 
@@ -239,7 +240,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openMSSQL(connString: string): Class_MSSQL;
+		export function openMSSQL(connString: string, callback?: Fibjs.AsyncCallback<Class_MSSQL>/** = function (err: Error, result: Class_MSSQL) {}*/): Class_MSSQL;
 	
 		/**
 		 * 
@@ -250,7 +251,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openSQLite(connString: string): Class_SQLite;
+		export function openSQLite(connString: string, callback?: Fibjs.AsyncCallback<Class_SQLite>/** = function (err: Error, result: Class_SQLite) {}*/): Class_SQLite;
 	
 		/**
 		 * 
@@ -261,7 +262,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openMongoDB(connString: string): Class_MongoDB;
+		export function openMongoDB(connString: string, callback?: Fibjs.AsyncCallback<Class_MongoDB>/** = function (err: Error, result: Class_MongoDB) {}*/): Class_MongoDB;
 	
 		/**
 		 * 
@@ -272,7 +273,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openLevelDB(connString: string): Class_LevelDB;
+		export function openLevelDB(connString: string, callback?: Fibjs.AsyncCallback<Class_LevelDB>/** = function (err: Error, result: Class_LevelDB) {}*/): Class_LevelDB;
 	
 		/**
 		 * 
@@ -283,7 +284,7 @@ declare module "db" {
 		 * 
 		 * @async
 		 */
-		export function openRedis(connString: string): Class_Redis;
+		export function openRedis(connString: string, callback?: Fibjs.AsyncCallback<Class_Redis>/** = function (err: Error, result: Class_Redis) {}*/): Class_Redis;
 	
 		/**
 		 * 

@@ -11,6 +11,8 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
 
 
@@ -134,7 +136,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	getData(format?: number/** = undefined*/, quality?: number/** = 85*/): Class_Buffer;
+	getData(format?: number/** = undefined*/, quality?: number/** = 85*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -146,7 +148,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	save(stm: Class_Stream, format?: number/** = undefined*/, quality?: number/** = 85*/): void;
+	save(stm: Class_Stream, format?: number/** = undefined*/, quality?: number/** = 85*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -158,7 +160,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	save(fname: string, format?: number/** = undefined*/, quality?: number/** = 85*/): void;
+	save(fname: string, format?: number/** = undefined*/, quality?: number/** = 85*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -619,7 +621,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	colorReplace(src: number, dst: number): void;
+	colorReplace(src: number, dst: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -641,7 +643,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	resample(width: number, height: number): Class_Image;
+	resample(width: number, height: number, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 
 	/**
 	 * 
@@ -655,7 +657,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	crop(x: number, y: number, width: number, height: number): Class_Image;
+	crop(x: number, y: number, width: number, height: number, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 
 	/**
 	 * 
@@ -665,7 +667,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	flip(dir?: number/** = undefined*/): void;
+	flip(dir?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -675,7 +677,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	rotate(dir: number): void;
+	rotate(dir: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -685,7 +687,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	convert(color?: number/** = undefined*/): void;
+	convert(color?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -701,7 +703,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copy(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number): void;
+	copy(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -718,7 +720,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyMerge(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, percent: number): void;
+	copyMerge(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, percent: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -735,7 +737,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyMergeGray(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, percent: number): void;
+	copyMergeGray(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, percent: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -753,7 +755,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyResized(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, dstW: number, dstH: number, srcW: number, srcH: number): void;
+	copyResized(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, dstW: number, dstH: number, srcW: number, srcH: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -771,7 +773,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyResampled(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, dstW: number, dstH: number, srcW: number, srcH: number): void;
+	copyResampled(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, dstW: number, dstH: number, srcW: number, srcH: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -788,7 +790,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyRotated(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, angle: number): void;
+	copyRotated(source: Class_Image, dstX: number, dstY: number, srcX: number, srcY: number, width: number, height: number, angle: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -815,7 +817,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	filter(filterType: number, arg1?: number/** = 0*/, arg2?: number/** = 0*/, arg3?: number/** = 0*/, arg4?: number/** = 0*/): void;
+	filter(filterType: number, arg1?: number/** = 0*/, arg2?: number/** = 0*/, arg3?: number/** = 0*/, arg4?: number/** = 0*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -837,7 +839,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	affine(affine: any[], x?: number/** = -1*/, y?: number/** = -1*/, width?: number/** = -1*/, height?: number/** = -1*/): Class_Image;
+	affine(affine: any[], x?: number/** = -1*/, y?: number/** = -1*/, width?: number/** = -1*/, height?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Image>/** = function (err: Error, result: Class_Image) {}*/): Class_Image;
 
 	/**
 	 * 
@@ -847,7 +849,7 @@ declare class Class_Image extends Class__object {
 	 * 
 	 * @async
 	 */
-	gaussianBlur(radius: number): void;
+	gaussianBlur(radius: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

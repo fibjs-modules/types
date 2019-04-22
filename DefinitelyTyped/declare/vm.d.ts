@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 安全沙箱模块，用于隔离不同安全等级的运行环境
@@ -212,7 +213,7 @@ declare module "vm" {
 		 * 
 		 * 
 		 */
-		export class SandBox extends Class_SandBox {}
+		export const SandBox: typeof Class_SandBox
 		
 		
 		

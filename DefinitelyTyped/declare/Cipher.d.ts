@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -129,7 +132,7 @@ declare class Class_Cipher extends Class__object {
 	 * 
 	 * @async
 	 */
-	encrypt(data: Class_Buffer): Class_Buffer;
+	encrypt(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -140,7 +143,7 @@ declare class Class_Cipher extends Class__object {
 	 * 
 	 * @async
 	 */
-	decrypt(data: Class_Buffer): Class_Buffer;
+	decrypt(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 } /** endof class */
 

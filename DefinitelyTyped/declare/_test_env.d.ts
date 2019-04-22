@@ -38,4 +38,3 @@ declare global {
 }
 /** declare const describe: test.describe; */
 
-

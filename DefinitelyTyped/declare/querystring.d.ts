@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief http query 处理模块
@@ -242,7 +243,7 @@ declare module "querystring" {
 		 * 
 		 * 
 		 */
-		export function parse(str: string, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: Object/** = v8::Object::New(isolate)*/): Class_HttpCollection;
+		export function parse(str: string, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: object/** = v8::Object::New(isolate)*/): Class_HttpCollection;
 	
 		/**
 		 * 
@@ -256,7 +257,7 @@ declare module "querystring" {
 		 * 
 		 * 
 		 */
-		export function stringify(obj: Object, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: Object/** = v8::Object::New(isolate)*/): string;
+		export function stringify(obj: object, sep?: string/** = "&"*/, eq?: string/** = "="*/, opt?: object/** = v8::Object::New(isolate)*/): string;
 	
 	} /** end of `module querystring` */
 	export = querystring

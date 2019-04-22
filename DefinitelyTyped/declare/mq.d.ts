@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 消息队列模块
@@ -212,7 +213,7 @@ declare module "mq" {
 		 * 
 		 * 
 		 */
-		export class Message extends Class_Message {}
+		export const Message: typeof Class_Message
 		
 		
 		/**
@@ -221,7 +222,7 @@ declare module "mq" {
 		 * 
 		 * 
 		 */
-		export class HttpHandler extends Class_HttpHandler {}
+		export const HttpHandler: typeof Class_HttpHandler
 		
 		
 		/**
@@ -252,7 +253,7 @@ declare module "mq" {
 		 * 
 		 * 
 		 */
-		export class Handler extends Class_Handler {}
+		export const Handler: typeof Class_Handler
 		
 		
 		/**
@@ -261,7 +262,7 @@ declare module "mq" {
 		 * 
 		 * 
 		 */
-		export class Chain extends Class_Chain {}
+		export const Chain: typeof Class_Chain
 		
 		
 		/**
@@ -270,7 +271,7 @@ declare module "mq" {
 		 * 
 		 * 
 		 */
-		export class Routing extends Class_Routing {}
+		export const Routing: typeof Class_Routing
 		
 		
 		
@@ -296,7 +297,7 @@ declare module "mq" {
 		 * 
 		 * @async
 		 */
-		export function invoke(hdlr: Class_Handler, v: Class__object): void;
+		export function invoke(hdlr: Class_Handler, v: Class__object, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 	} /** end of `module mq` */
 	export = mq

@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -35,7 +38,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * @async
 	 */
-	skip(num: number): Class_MongoCursor;
+	skip(num: number, callback?: Fibjs.AsyncCallback<Class_MongoCursor>/** = function (err: Error, result: Class_MongoCursor) {}*/): Class_MongoCursor;
 
 	/**
 	 * 
@@ -46,7 +49,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * @async
 	 */
-	limit(size: number): Class_MongoCursor;
+	limit(size: number, callback?: Fibjs.AsyncCallback<Class_MongoCursor>/** = function (err: Error, result: Class_MongoCursor) {}*/): Class_MongoCursor;
 
 	/**
 	 * 
@@ -57,7 +60,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	sort(opts: Object): Class_MongoCursor;
+	sort(opts: object): Class_MongoCursor;
 
 	/**
 	 * 
@@ -77,7 +80,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	next(): Object;
+	next(): object;
 
 	/**
 	 * 
@@ -140,7 +143,7 @@ declare class Class_MongoCursor extends Class__object {
 	 * 
 	 * 
 	 */
-	hint(opts: Object): Class_MongoCursor;
+	hint(opts: object): Class_MongoCursor;
 
 } /** endof class */
 

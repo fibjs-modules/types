@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -191,7 +193,6 @@
 /// <reference path="ZmqSocket.d.ts" />
 
 /// <reference path="object.d.ts" />
-
 
 
 /** module Or Internal Object */
@@ -391,7 +392,7 @@ declare module "console" {
 		 * 
 		 * 
 		 */
-		export function add(cfg: Object): void;
+		export function add(cfg: object): void;
 	
 		/**
 		 * 
@@ -906,7 +907,7 @@ declare module "console" {
 		 * 
 		 * @async
 		 */
-		export function readLine(msg?: string/** = ""*/): string;
+		export function readLine(msg?: string/** = ""*/, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 	
 	} /** end of `module console` */
 	export = console

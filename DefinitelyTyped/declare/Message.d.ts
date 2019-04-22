@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -139,7 +142,7 @@ declare class Class_Message extends Class__object {
 	 * 
 	 * @async
 	 */
-	read(bytes?: number/** = -1*/): Class_Buffer;
+	read(bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -159,7 +162,7 @@ declare class Class_Message extends Class__object {
 	 * 
 	 * @async
 	 */
-	write(data: Class_Buffer): void;
+	write(data: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -216,7 +219,7 @@ declare class Class_Message extends Class__object {
 	 * 
 	 * @async
 	 */
-	sendTo(stm: Class_Stream): void;
+	sendTo(stm: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -226,7 +229,7 @@ declare class Class_Message extends Class__object {
 	 * 
 	 * @async
 	 */
-	readFrom(stm: Class_Stream): void;
+	readFrom(stm: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

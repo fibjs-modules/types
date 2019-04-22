@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -35,7 +38,7 @@ declare class Class_Stream extends Class__object {
 	 * 
 	 * @async
 	 */
-	read(bytes?: number/** = -1*/): Class_Buffer;
+	read(bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -45,7 +48,7 @@ declare class Class_Stream extends Class__object {
 	 * 
 	 * @async
 	 */
-	write(data: Class_Buffer): void;
+	write(data: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -73,7 +76,7 @@ declare class Class_Stream extends Class__object {
 	 * 
 	 * @async
 	 */
-	copyTo(stm: Class_Stream, bytes?: number/** = -1*/): number;
+	copyTo(stm: Class_Stream, bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<number>/** = function (err: Error, result: number) {}*/): number;
 
 } /** endof class */
 

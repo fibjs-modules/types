@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -124,7 +127,7 @@ declare class Class_WebView extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	setHtml(html: string): void;
+	setHtml(html: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -134,7 +137,7 @@ declare class Class_WebView extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	print(mode?: number/** = 1*/): void;
+	print(mode?: number/** = 1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -163,7 +166,7 @@ declare class Class_WebView extends Class_EventEmitter {
 	 * 
 	 * @async
 	 */
-	postMessage(msg: string): void;
+	postMessage(msg: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -127,12 +130,27 @@ declare class Class_WebSocket extends Class_EventEmitter {
 	 * @brief WebSocket 构造函数
 	 * @param url 指定连接的服务器
 	 * @param protocol 指定握手协议，缺省为 ""
-	 * @param origin 指定握手时模拟的源
+	 * @param origin 指定握手时模拟的源，缺省为 ""
 	 * 
 	 * 
 	 * 
 	 */
 	constructor(url: string, protocol?: string/** = ""*/, origin?: string/** = ""*/);
+
+	/**
+	 * 
+	 * @brief WebSocket 构造函数
+	 * @param url 指定连接的服务器
+	 * @param opts 连接选项，缺省是 {}，支持的字段有 "protocol", "origin", "headers", "httpClient"。
+	 * 其中 protocol 指定握手协议，缺省为 ""，
+	 * origin 指定握手时模拟的源，缺省为 ""，
+	 * headers 是 http(s) 连接时携带的 header 缺省为 {}，
+	 * httpClient 使用指定 httpClient 实例的 cookie，缺省为 undefined 默认使用全局 cookie，参见 HttpClient
+	 * 
+	 * 
+	 * 
+	 */
+	constructor(url: string, opts?: object/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

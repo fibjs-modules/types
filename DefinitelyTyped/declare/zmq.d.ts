@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief zeroMQ 消息队列模块
@@ -300,7 +301,7 @@ declare module "zmq" {
 		 * 
 		 * 
 		 */
-		export class Socket extends Class_ZmqSocket {}
+		export const Socket: typeof Class_ZmqSocket
 		
 		
 		

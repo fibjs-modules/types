@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief dgram 模块提供了 UDP 数据包 socket 的实现
@@ -214,7 +215,7 @@ declare module "dgram" {
 		 * 
 		 * 
 		 */
-		export class Socket extends Class_DgramSocket {}
+		export const Socket: typeof Class_DgramSocket
 		
 		
 		
@@ -238,7 +239,7 @@ declare module "dgram" {
 		 * 
 		 * 
 		 */
-		export function createSocket(opts: Object): Class_DgramSocket;
+		export function createSocket(opts: object): Class_DgramSocket;
 	
 		/**
 		 * 
@@ -260,7 +261,7 @@ declare module "dgram" {
 		 * 
 		 * 
 		 */
-		export function createSocket(opts: Object, callback: Function): Class_DgramSocket;
+		export function createSocket(opts: object, callback: Function): Class_DgramSocket;
 	
 		/**
 		 * 

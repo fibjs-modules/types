@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief zlib 压缩解压模块
@@ -313,7 +314,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflate(data: Class_Buffer, level?: number/** = undefined*/): Class_Buffer;
+		export function deflate(data: Class_Buffer, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -325,7 +326,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflateTo(data: Class_Buffer, stm: Class_Stream, level?: number/** = undefined*/): void;
+		export function deflateTo(data: Class_Buffer, stm: Class_Stream, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -337,7 +338,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflateTo(src: Class_Stream, stm: Class_Stream, level?: number/** = undefined*/): void;
+		export function deflateTo(src: Class_Stream, stm: Class_Stream, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -349,7 +350,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflate(data: Class_Buffer, maxSize?: number/** = -1*/): Class_Buffer;
+		export function inflate(data: Class_Buffer, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -361,7 +362,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflateTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function inflateTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -373,7 +374,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflateTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function inflateTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -384,7 +385,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gzip(data: Class_Buffer): Class_Buffer;
+		export function gzip(data: Class_Buffer, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -395,7 +396,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gzipTo(data: Class_Buffer, stm: Class_Stream): void;
+		export function gzipTo(data: Class_Buffer, stm: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -406,7 +407,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gzipTo(src: Class_Stream, stm: Class_Stream): void;
+		export function gzipTo(src: Class_Stream, stm: Class_Stream, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -418,7 +419,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gunzip(data: Class_Buffer, maxSize?: number/** = -1*/): Class_Buffer;
+		export function gunzip(data: Class_Buffer, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -430,7 +431,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gunzipTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function gunzipTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -442,7 +443,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function gunzipTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function gunzipTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -454,7 +455,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflateRaw(data: Class_Buffer, level?: number/** = undefined*/): Class_Buffer;
+		export function deflateRaw(data: Class_Buffer, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -466,7 +467,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflateRawTo(data: Class_Buffer, stm: Class_Stream, level?: number/** = undefined*/): void;
+		export function deflateRawTo(data: Class_Buffer, stm: Class_Stream, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -478,7 +479,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function deflateRawTo(src: Class_Stream, stm: Class_Stream, level?: number/** = undefined*/): void;
+		export function deflateRawTo(src: Class_Stream, stm: Class_Stream, level?: number/** = undefined*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -490,7 +491,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflateRaw(data: Class_Buffer, maxSize?: number/** = -1*/): Class_Buffer;
+		export function inflateRaw(data: Class_Buffer, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -502,7 +503,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflateRawTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function inflateRawTo(data: Class_Buffer, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 		/**
 		 * 
@@ -514,7 +515,7 @@ declare module "zlib" {
 		 * 
 		 * @async
 		 */
-		export function inflateRawTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/): void;
+		export function inflateRawTo(src: Class_Stream, stm: Class_Stream, maxSize?: number/** = -1*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 	} /** end of `module zlib` */
 	export = zlib

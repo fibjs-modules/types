@@ -14,6 +14,21 @@
 
 
 
+/// <reference no-default-lib="true"/>
+
+/// <reference lib="es5"/>
+/// <reference lib="es6"/>
+/// <reference lib="es7"/>
+/// <reference lib="es2015"/>
+/// <reference lib="es2016"/>
+/// <reference lib="es2017"/>
+/// <reference lib="es2018"/>
+/// <reference lib="es2019"/>
+
+/// <reference path="_common.d.ts" />
+/// <reference path="events.d.ts" />
+/// <reference path="ex_stream.d.ts" />
+
 /// <reference path="console.d.ts" />
 /// <reference path="coroutine.d.ts" />
 /// <reference path="global.d.ts" />
@@ -63,17 +78,16 @@
 /// <reference path="xml.d.ts" />
 /// <reference path="constants.d.ts" />
 
-import _Global from 'global';
-import _Process from 'process';
-
-type GlobalExportsType = any;
-interface ModuleType {
-	exports: GlobalExportsType;
-}
+import _Global = require('global');
+import _Process = require('process');
 
 declare global {
-	var exports: GlobalExportsType;
-	const module: ModuleType;
+	var exports: {
+		[k: string]: any
+	};
+	var module: {
+		exports: typeof exports;
+	};
 
 	const Buffer: typeof _Global.Buffer
 	const Int64: typeof _Global.Int64
@@ -81,21 +95,20 @@ declare global {
 	const process: typeof _Global.process
 	const Master: typeof _Global.Master
 	const global: typeof _Global.global
-	/** const run: null; */
+	const run: typeof _Global.run
 	const require: typeof _Global.require
 	const argv: typeof _Global.argv
 	const __filename: typeof _Global.__filename
 	const __dirname: typeof _Global.__dirname
-	/** const setTimeout: Timer; */
-	/** const clearTimeout: null; */
-	/** const setInterval: Timer; */
-	/** const clearInterval: null; */
+	const setTimeout: typeof _Global.setTimeout
+	const clearTimeout: typeof _Global.clearTimeout
+	const setInterval: typeof _Global.setInterval
+	const clearInterval: typeof _Global.clearInterval
 	const setHrInterval: typeof _Global.setHrInterval
 	const clearHrInterval: typeof _Global.clearHrInterval
-	/** const setImmediate: Timer; */
-	/** const clearImmediate: null; */
+	const setImmediate: typeof _Global.setImmediate
+	const clearImmediate: typeof _Global.clearImmediate
 	const GC: typeof _Global.GC
 	const repl: typeof _Global.repl
 } /** end of `declare global` */
-
 

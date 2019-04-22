@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -57,7 +60,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	getinfo(member: string): any;
+	getinfo<T_RESULT = any>(member: string, callback?: Fibjs.AsyncCallback<T_RESULT>/** = function (err: Error, result: T_RESULT) {}*/): T_RESULT;
 
 	/**
 	 * 
@@ -69,7 +72,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	read(member: string, password?: string/** = ""*/): Class_Buffer;
+	read(member: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -80,7 +83,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	readAll(password?: string/** = ""*/): any[];
+	readAll(password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<any[]>/** = function (err: Error, result: any[]) {}*/): any[];
 
 	/**
 	 * 
@@ -92,7 +95,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	extract(member: string, path: string, password?: string/** = ""*/): void;
+	extract(member: string, path: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -104,7 +107,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	extract(member: string, strm: Class_SeekableStream, password?: string/** = ""*/): void;
+	extract(member: string, strm: Class_SeekableStream, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -115,7 +118,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	extractAll(path: string, password?: string/** = ""*/): void;
+	extractAll(path: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -127,7 +130,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	write(filename: string, inZipName: string, password?: string/** = ""*/): void;
+	write(filename: string, inZipName: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -139,7 +142,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	write(data: Class_Buffer, inZipName: string, password?: string/** = ""*/): void;
+	write(data: Class_Buffer, inZipName: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -151,7 +154,7 @@ declare class Class_ZipFile extends Class__object {
 	 * 
 	 * @async
 	 */
-	write(strm: Class_SeekableStream, inZipName: string, password?: string/** = ""*/): void;
+	write(strm: Class_SeekableStream, inZipName: string, password?: string/** = ""*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 

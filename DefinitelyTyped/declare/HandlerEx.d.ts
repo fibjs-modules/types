@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -81,7 +84,7 @@ declare class Class_HandlerEx extends Class_Handler {
 	 * 
 	 * 
 	 */
-	onerror(hdlrs: Object): void;
+	onerror(hdlrs: object): void;
 
 } /** endof class */
 

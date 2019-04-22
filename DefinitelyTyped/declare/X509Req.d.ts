@@ -11,6 +11,8 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
 
 
@@ -146,7 +148,7 @@ declare class Class_X509Req extends Class__object {
 	 * 
 	 * @async
 	 */
-	sign(issuer: string, key: Class_PKey, opts?: Object/** = v8::Object::New(isolate)*/): Class_X509Cert;
+	sign(issuer: string, key: Class_PKey, opts?: object/** = v8::Object::New(isolate)*/, callback?: Fibjs.AsyncCallback<Class_X509Cert>/** = function (err: Error, result: Class_X509Cert) {}*/): Class_X509Cert;
 
 } /** endof class */
 

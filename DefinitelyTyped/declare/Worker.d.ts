@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -47,7 +50,7 @@ declare class Class_Worker extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	constructor(path: string, opts?: Object/** = v8::Object::New(isolate)*/);
+	constructor(path: string, opts?: object/** = v8::Object::New(isolate)*/);
 
 	/**
 	 * 

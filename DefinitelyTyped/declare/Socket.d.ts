@@ -11,6 +11,8 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
 
 
@@ -132,7 +134,7 @@ declare class Class_Socket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	connect(host: string, port: number): void;
+	connect(host: string, port: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -186,7 +188,7 @@ declare class Class_Socket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	recv(bytes?: number/** = -1*/): Class_Buffer;
+	recv(bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 
 	/**
 	 * 
@@ -201,7 +203,7 @@ declare class Class_Socket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	recvfrom(bytes?: number/** = -1*/): any;
+	recvfrom<T_RESULT = any>(bytes?: number/** = -1*/, callback?: Fibjs.AsyncCallback<T_RESULT>/** = function (err: Error, result: T_RESULT) {}*/): T_RESULT;
 
 	/**
 	 * 
@@ -211,7 +213,7 @@ declare class Class_Socket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	send(data: Class_Buffer): void;
+	send(data: Class_Buffer, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -223,7 +225,7 @@ declare class Class_Socket extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	sendto(data: Class_Buffer, host: string, port: number): void;
+	sendto(data: Class_Buffer, host: string, port: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

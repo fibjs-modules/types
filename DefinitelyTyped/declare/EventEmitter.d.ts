@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -56,7 +59,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	on(ev: string, func: Function): Object;
+	on(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -67,7 +70,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	on(map: Object): Object;
+	on(map: object): object;
 
 	/**
 	 * 
@@ -79,7 +82,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	addListener(ev: string, func: Function): Object;
+	addListener(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -90,7 +93,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	addListener(map: Object): Object;
+	addListener(map: object): object;
 
 	/**
 	 * 
@@ -102,7 +105,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependListener(ev: string, func: Function): Object;
+	prependListener(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -113,7 +116,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependListener(map: Object): Object;
+	prependListener(map: object): object;
 
 	/**
 	 * 
@@ -125,7 +128,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	once(ev: string, func: Function): Object;
+	once(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -136,7 +139,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	once(map: Object): Object;
+	once(map: object): object;
 
 	/**
 	 * 
@@ -148,7 +151,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependOnceListener(ev: string, func: Function): Object;
+	prependOnceListener(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -159,7 +162,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	prependOnceListener(map: Object): Object;
+	prependOnceListener(map: object): object;
 
 	/**
 	 * 
@@ -171,7 +174,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(ev: string, func: Function): Object;
+	off(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -182,7 +185,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(ev: string): Object;
+	off(ev: string): object;
 
 	/**
 	 * 
@@ -193,7 +196,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	off(map: Object): Object;
+	off(map: object): object;
 
 	/**
 	 * 
@@ -205,7 +208,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(ev: string, func: Function): Object;
+	removeListener(ev: string, func: Function): object;
 
 	/**
 	 * 
@@ -216,7 +219,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(ev: string): Object;
+	removeListener(ev: string): object;
 
 	/**
 	 * 
@@ -227,7 +230,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeListener(map: Object): Object;
+	removeListener(map: object): object;
 
 	/**
 	 * 
@@ -238,7 +241,7 @@ declare class Class_EventEmitter extends Class__object {
 	 * 
 	 * 
 	 */
-	removeAllListeners(evs?: any[]/** = v8::Array::New(isolate)*/): Object;
+	removeAllListeners(evs?: any[]/** = v8::Array::New(isolate)*/): object;
 
 	/**
 	 * 

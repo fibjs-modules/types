@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/types",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "types for fibjs runtime",
   "types": "DefinitelyTyped/index.d.ts",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/fibjs-modules/types.git"
   },
-  "author": "",
+  "author": "richardo2016@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fibjs-modules/types/issues"

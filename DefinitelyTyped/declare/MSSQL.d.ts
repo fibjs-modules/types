@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -34,7 +37,7 @@ declare class Class_MSSQL extends Class_DbConnection {
 	 * 
 	 * @async
 	 */
-	use(dbName: string): void;
+	use(dbName: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

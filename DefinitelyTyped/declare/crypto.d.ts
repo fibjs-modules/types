@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -191,7 +193,6 @@
 /// <reference path="ZmqSocket.d.ts" />
 
 /// <reference path="object.d.ts" />
-
 
 
 /** module Or Internal Object */
@@ -380,7 +381,7 @@ declare module "crypto" {
 		 * 
 		 * 
 		 */
-		export class Cipher extends Class_Cipher {}
+		export const Cipher: typeof Class_Cipher
 		
 		
 		/**
@@ -389,7 +390,7 @@ declare module "crypto" {
 		 * 
 		 * 
 		 */
-		export class PKey extends Class_PKey {}
+		export const PKey: typeof Class_PKey
 		
 		
 		/**
@@ -398,7 +399,7 @@ declare module "crypto" {
 		 * 
 		 * 
 		 */
-		export class X509Cert extends Class_X509Cert {}
+		export const X509Cert: typeof Class_X509Cert
 		
 		
 		/**
@@ -407,7 +408,7 @@ declare module "crypto" {
 		 * 
 		 * 
 		 */
-		export class X509Crl extends Class_X509Crl {}
+		export const X509Crl: typeof Class_X509Crl
 		
 		
 		/**
@@ -416,7 +417,7 @@ declare module "crypto" {
 		 * 
 		 * 
 		 */
-		export class X509Req extends Class_X509Req {}
+		export const X509Req: typeof Class_X509Req
 		
 		
 		
@@ -500,7 +501,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function randomBytes(size: number): Class_Buffer;
+		export function randomBytes(size: number, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -511,7 +512,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function simpleRandomBytes(size: number): Class_Buffer;
+		export function simpleRandomBytes(size: number, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -522,7 +523,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function pseudoRandomBytes(size: number): Class_Buffer;
+		export function pseudoRandomBytes(size: number, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -550,7 +551,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function pbkdf1(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algo: number): Class_Buffer;
+		export function pbkdf1(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algo: number, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -565,7 +566,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function pbkdf1(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algoName: string): Class_Buffer;
+		export function pbkdf1(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algoName: string, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -580,7 +581,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function pbkdf2(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algo: number): Class_Buffer;
+		export function pbkdf2(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algo: number, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 		/**
 		 * 
@@ -595,7 +596,7 @@ declare module "crypto" {
 		 * 
 		 * @async
 		 */
-		export function pbkdf2(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algoName: string): Class_Buffer;
+		export function pbkdf2(password: Class_Buffer, salt: Class_Buffer, iterations: number, size: number, algoName: string, callback?: Fibjs.AsyncCallback<Class_Buffer>/** = function (err: Error, result: Class_Buffer) {}*/): Class_Buffer;
 	
 	} /** end of `module crypto` */
 	export = crypto

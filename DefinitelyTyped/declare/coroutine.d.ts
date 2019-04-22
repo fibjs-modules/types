@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 并发控制模块
@@ -245,7 +246,7 @@ declare module "coroutine" {
 		 * 
 		 * 
 		 */
-		export class Lock extends Class_Lock {}
+		export const Lock: typeof Class_Lock
 		
 		
 		/**
@@ -254,7 +255,7 @@ declare module "coroutine" {
 		 * 
 		 * 
 		 */
-		export class Semaphore extends Class_Semaphore {}
+		export const Semaphore: typeof Class_Semaphore
 		
 		
 		/**
@@ -263,7 +264,7 @@ declare module "coroutine" {
 		 * 
 		 * 
 		 */
-		export class Condition extends Class_Condition {}
+		export const Condition: typeof Class_Condition
 		
 		
 		/**
@@ -272,7 +273,7 @@ declare module "coroutine" {
 		 * 
 		 * 
 		 */
-		export class Event extends Class_Event {}
+		export const Event: typeof Class_Event
 		
 		
 		/**
@@ -281,7 +282,7 @@ declare module "coroutine" {
 		 * 
 		 * 
 		 */
-		export class Worker extends Class_Worker {}
+		export const Worker: typeof Class_Worker
 		
 		
 		
@@ -365,7 +366,7 @@ declare module "coroutine" {
 		 * 
 		 * @async
 		 */
-		export function sleep(ms?: number/** = 0*/): void;
+		export function sleep(ms?: number/** = 0*/, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 	
 	} /** end of `module coroutine` */
 	export = coroutine

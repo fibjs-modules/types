@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -134,7 +137,7 @@ declare class Class_LruCache extends Class_EventEmitter {
 	 * 
 	 * 
 	 */
-	set(map: Object): void;
+	set(map: object): void;
 
 	/**
 	 * 

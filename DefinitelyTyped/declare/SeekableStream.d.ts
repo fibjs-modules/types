@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -83,7 +86,7 @@ declare class Class_SeekableStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	truncate(bytes: number): void;
+	truncate(bytes: number, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 

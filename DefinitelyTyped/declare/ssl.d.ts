@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief ssl/tls 模块，模块别名：tls
@@ -332,7 +333,7 @@ declare module "ssl" {
 		 * 
 		 * 
 		 */
-		export class Socket extends Class_SslSocket {}
+		export const Socket: typeof Class_SslSocket
 		
 		
 		/**
@@ -341,7 +342,7 @@ declare module "ssl" {
 		 * 
 		 * 
 		 */
-		export class Handler extends Class_SslHandler {}
+		export const Handler: typeof Class_SslHandler
 		
 		
 		/**
@@ -350,7 +351,7 @@ declare module "ssl" {
 		 * 
 		 * 
 		 */
-		export class Server extends Class_SslServer {}
+		export const Server: typeof Class_SslServer
 		
 		
 		
@@ -365,7 +366,7 @@ declare module "ssl" {
 		 * 
 		 * @async
 		 */
-		export function connect(url: string, timeout?: number/** = 0*/): Class_Stream;
+		export function connect(url: string, timeout?: number/** = 0*/, callback?: Fibjs.AsyncCallback<Class_Stream>/** = function (err: Error, result: Class_Stream) {}*/): Class_Stream;
 	
 		/**
 		 * 

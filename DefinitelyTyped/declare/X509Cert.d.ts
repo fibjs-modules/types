@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -236,7 +239,7 @@ declare class Class_X509Cert extends Class__object {
 	 * 
 	 * @async
 	 */
-	verify(cert: Class_X509Cert): boolean;
+	verify(cert: Class_X509Cert, callback?: Fibjs.AsyncCallback<boolean>/** = function (err: Error, result: boolean) {}*/): boolean;
 
 	/**
 	 * 

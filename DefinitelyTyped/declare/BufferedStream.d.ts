@@ -11,7 +11,10 @@
  * @author Richard <richardo2016@gmail.com>
  *
  */
+
+/// <reference path="_common.d.ts" />
 /// <reference path="object.d.ts" />
+
 
 
 
@@ -81,7 +84,7 @@ declare class Class_BufferedStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	readText(size: number): string;
+	readText(size: number, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 
 	/**
 	 * 
@@ -92,7 +95,7 @@ declare class Class_BufferedStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	readLine(maxlen?: number/** = -1*/): string;
+	readLine(maxlen?: number/** = -1*/, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 
 	/**
 	 * 
@@ -115,7 +118,7 @@ declare class Class_BufferedStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	readUntil(mk: string, maxlen?: number/** = -1*/): string;
+	readUntil(mk: string, maxlen?: number/** = -1*/, callback?: Fibjs.AsyncCallback<string>/** = function (err: Error, result: string) {}*/): string;
 
 	/**
 	 * 
@@ -125,7 +128,7 @@ declare class Class_BufferedStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	writeText(txt: string): void;
+	writeText(txt: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 	/**
 	 * 
@@ -135,7 +138,7 @@ declare class Class_BufferedStream extends Class_Stream {
 	 * 
 	 * @async
 	 */
-	writeLine(txt: string): void;
+	writeLine(txt: string, callback?: Fibjs.AsyncCallback<void>/** = function (err: Error, result: void) {}*/): void;
 
 } /** endof class */
 

@@ -15,6 +15,8 @@
 
 
 
+ // give all internal defined classes as reference
+/// <reference path="_common.d.ts" />
 
 /// <reference path="Buffer.d.ts" />
 
@@ -193,7 +195,6 @@
 /// <reference path="object.d.ts" />
 
 
-
 /** module Or Internal Object */
 /**
 	* @brief 操作系统与文件系统处理模块
@@ -236,7 +237,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export class Service extends Class_Service {}
+		export const Service: typeof Class_Service
 		
 		
 		
@@ -380,7 +381,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function userInfo(options?: Object/** = v8::Object::New(isolate)*/): Object;
+		export function userInfo(options?: object/** = v8::Object::New(isolate)*/): object;
 	
 		/**
 		 * 
@@ -390,7 +391,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function networkInterfaces(): Object;
+		export function networkInterfaces(): object;
 	
 		/**
 		 * 
@@ -411,7 +412,7 @@ declare module "os" {
 		 * 
 		 * @async
 		 */
-		export function openPrinter(name: string): Class_BufferedStream;
+		export function openPrinter(name: string, callback?: Fibjs.AsyncCallback<Class_BufferedStream>/** = function (err: Error, result: Class_BufferedStream) {}*/): Class_BufferedStream;
 	
 		/**
 		 * 
@@ -470,7 +471,7 @@ declare module "os" {
 		 * 
 		 * 
 		 */
-		export function memoryUsage(): Object;
+		export function memoryUsage(): object;
 	
 	} /** end of `module os` */
 	export = os
