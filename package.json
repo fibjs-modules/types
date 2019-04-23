@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "types for fibjs runtime",
   "types": "DefinitelyTyped/index.d.ts",
   "main": "index.js",

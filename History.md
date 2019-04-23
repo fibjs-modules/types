@@ -1,7 +1,14 @@
 
-v0.0.2 / 2019-04-23
+v0.0.3 / 2019-04-23
 ==================
 
+  * script fix.
+  * add npm package badge
+
+v0.0.2 / 2019-04-23
+===================
+
+  * Release v0.0.2
   * code, format: add tsconfig.json to adjust vscode, rename `type.d.ts.tpl` to `type.d.ts.ejs`.
   * feat: add Fibjs.AnyObject
   * fix, test: fix global env when importing test.d.ts
