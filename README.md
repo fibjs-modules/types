@@ -1,4 +1,7 @@
 # types
+
+[![NPM version](https://img.shields.io/npm/v/@fibjs/types.svg)](https://www.npmjs.org/package/@fibjs/types)
+
 types for fibjs runtime
 
 ## Usage
