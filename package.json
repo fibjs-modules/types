@@ -7,7 +7,7 @@
   "scripts": {
     "build": "fibjs ./build/bin.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd type-test && npm i"
+    "install-test": "cd type-test && npm i"
   },
   "repository": {
     "type": "git",
