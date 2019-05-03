@@ -1,6 +1,6 @@
 {
-  "name": "@fibjs/types",
-  "version": "0.0.3",
+  "name": "fibjs-types-mono",
+  "version": "0.1.0",
   "description": "types for fibjs runtime",
   "types": "DefinitelyTyped/index.d.ts",
   "main": "index.js",
@@ -22,5 +22,10 @@
   "devDependencies": {
     "ejs": "^2.5.6",
     "pegjs": "^0.10.0"
+  },
+  "dependencies": {
+    "@fibjs/copy": "^1.1.1",
+    "@fibjs/mkdirp": "^1.0.1",
+    "semver": "^6.0.0"
   }
 }
