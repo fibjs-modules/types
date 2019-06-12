@@ -141,7 +141,12 @@ module.exports = function (defs, baseFolder) {
 
         function params2paramList(params, typeMap = typeMap) {
             var latestOptionalIndex = -1
-            return (params || []).map((param, index) => {
+            return (params || []).map((param, index, list) => {
+                var _isLastRestArgs = index >= 1 && isRestArgs(list[index - 1].type);
+
+                if (_isLastRestArgs)
+                    return ``
+
                 var hasDefault = param.default;
                 var _isRestArgs = isRestArgs(param.type);
                 if (hasDefault) {
@@ -160,7 +165,7 @@ module.exports = function (defs, baseFolder) {
                     mappedType = `Fibjs.${param.type}`
 
                 return `${param.name}${isOptional ? '?' : ''}: ${mappedType}${hasDefault ? `/** = ${param.default.value}*/` : ''}`
-            })
+            }).filter(x => x)
         }
 
         function build_refer(def) {

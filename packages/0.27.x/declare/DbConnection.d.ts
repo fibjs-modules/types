@@ -100,7 +100,7 @@ declare class Class_DbConnection extends Class__object {
 	 * 
 	 * @async
 	 */
-	execute(sql: string, ...args: any[], callback?: Fibjs.AsyncCallback<any[]>/** = function (err: Error, result: any[]) {}*/): any[];
+	execute(sql: string, ...args: any[]): any[];
 
 	/**
 	 * 
