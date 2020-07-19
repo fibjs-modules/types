@@ -11,7 +11,10 @@ let installedNodeModules = path.resolve(__dirname, '../../../')
 if (!installedNodeModules || !installedNodeModules.endsWith('node_modules'))
     installedNodeModules = null
 
-const fibjs_version = process.env.FIBJS_VERSION
+let fibjs_version = process.env.FIBJS_VERSION
+
+if (!fibjs_version)
+    fibjs_version = console.readLine("no FIBJS_VERSION set, input version you wanna set: ")
 
 if (!fibjs_version)
     throw `fibjs version required, set property value to environment variable \`FIBJS_VERSION\`.`
@@ -19,9 +22,12 @@ if (!fibjs_version)
 if (!semver.valid(fibjs_version))
     throw `fibjs version invalid, set property value to environment variable \`FIBJS_VERSION\`.`
 
-const fibjs_src = installedNodeModules || process.env.FIBJS_SRC
+let fibjs_src = installedNodeModules || process.env.FIBJS_SRC
 const package_target = mkVersionPkg(fibjs_version)
 const target = path.resolve(package_target, 'declare');
+
+if (!fibjs_src)
+    fibjs_src = console.readLine("no FIBJS_SRC set, input location of fibjs: ")
 
 if (!fibjs_src || !fs.exists(fibjs_src))
     throw `fibjs source location ${fibjs_src} invalid, set property value to environment variable \`FIBJS_SRC\`.`

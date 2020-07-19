@@ -27,5 +27,8 @@
     "@fibjs/copy": "^1.1.1",
     "@fibjs/mkdirp": "^1.0.1",
     "semver": "^6.0.0"
+  },
+  "engines": {
+    "fibjs": ">= 0.29.x"
   }
 }
