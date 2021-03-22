@@ -36,7 +36,7 @@ declare class Class_Buffer extends Class__object {
     * 
     * @type Buffer
     */
-    static Buffer: Class_Buffer    
+    static Buffer: typeof Class_Buffer    
     
 	/**
 	 * class prop 

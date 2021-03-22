@@ -36,7 +36,7 @@ declare class Class_EventEmitter extends Class__object {
     * 
     * @type EventEmitter
     */
-    static EventEmitter: Class_EventEmitter    
+    static EventEmitter: typeof Class_EventEmitter    
     
 	/**
 	 * class prop 

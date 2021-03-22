@@ -446,7 +446,7 @@ declare class <%- _fns.uglifyInternalClassName(className) %> <%- extendClassName
     <% for(var i=0; i<member_self_refs.length; i++) {
 		var selfRef = member_self_refs[i];
         var clsName = `Class_${className}`;
-        var exportLine = `static ${className}: ${_fns.uglifyInternalClassName(className)}`;
+        var exportLine = `static ${className}: typeof ${_fns.uglifyInternalClassName(className)}`;
     %>
 	/**
     * class self ref
