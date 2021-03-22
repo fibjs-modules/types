@@ -1,12 +1,8 @@
 {
     "include": [
-        "../packages/0.27.x/**/*.ts",
         "../test.d.ts"
     ],
     "compilerOptions": {
-        "typeRoots" : [
-            "../packages/0.27.x/**/*.ts"
-        ],
         "types": [
             "@fibjs/types"
         ]

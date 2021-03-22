@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fibjs/types": "file:../packages/0.27.x"
+    "@fibjs/types": "file:../packages/0.32.x"
   }
 }
