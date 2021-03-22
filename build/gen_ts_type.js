@@ -214,6 +214,7 @@ module.exports = function (defs, baseFolder) {
                     , true
                 ),
                 member_objects: def.members.filter(x => x.memType === 'object'),
+                member_self_refs: def.members.filter(m => m.memType === 'object' && m.name === def.declare.name),
                 member_constants: def.members.filter(x => x.memType === 'const'),
                 member_props: def.members.filter(x => x.memType === 'prop'),
                 buildInfo,

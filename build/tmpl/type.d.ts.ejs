@@ -443,7 +443,23 @@ declare module "stream" {
 %>
 <% if (renderClassParentRef) {%>/// <reference path="<%- extendClassName %>.d.ts" /><%}%>
 declare class <%- _fns.uglifyInternalClassName(className) %> <%- extendClassName ? `extends ${_fns.uglifyInternalClassName(extendClassName)}` : '' %> {
-	<% for(var i=0; i<member_props.length; i++) {
+    <% for(var i=0; i<member_self_refs.length; i++) {
+		var selfRef = member_self_refs[i];
+        var clsName = `Class_${className}`;
+        var exportLine = `static ${className}: ${_fns.uglifyInternalClassName(className)}`;
+    %>
+	/**
+    * class self ref
+    *
+    * <% var comments = selfRef.comments.split('\n'); for(var idx=0; idx<comments.length; idx++) {var comment = comments[idx].trim().replace('! @', '@') %>
+    * <%- comment %><% } %>
+    * @static
+    * <%- selfRef.readonly ? '@readonly' : '' %>
+    * @type <%- selfRef.type %>
+    */
+    <%- exportLine -%>
+    <% } %>
+    <% for(var i=0; i<member_props.length; i++) {
 		var memberProp = member_props[i]
 		var propName = memberProp.name 
 		var propType = typeMap[memberProp.type]
@@ -548,19 +564,20 @@ declare module "<%- def.declare.name %>" {
 		export const <%- prop.name %>: <%- finalPropType %><%- hasDefault ? ` = ${prop.default.value}` : ''%>;
 		<% } /** end of iteration 'member_props' */ %>
 		<% for(var i=0; i<member_objects.length; i++) {
-			var internalObj = member_objects[i]
+			var clsMemObject = member_objects[i]
 			
-			var objectName = internalObj.name
-			var objectType = internalObj.type || internalObj.name
-			// var str = JSON.stringify(internalObj)
+			var objectName = clsMemObject.name
+			var objectType = clsMemObject.type || clsMemObject.name
+			// var str = JSON.stringify(clsMemObject)
 			var isInternalClass = !!defObjects[objectType]
 			var isInternalModule = !!defModules[objectType]
+            var isClsSelfRef = className === clsMemObject.name
 		%>
 		/**
-		 * <% var comments = internalObj.comments.split('\n'); for(var idx=0; idx<comments.length; idx++) {var comment = comments[idx].trim().replace('! @', '@') %>
+		 * <% var comments = clsMemObject.comments.split('\n'); for(var idx=0; idx<comments.length; idx++) {var comment = comments[idx].trim().replace('! @', '@') %>
 		 * <%- comment %><% } %>
-		 * <%- internalObj.deprecated ? '@deprecated' : '' %>
-		 * <%- internalObj.async ? '@async' : '' %>
+		 * <%- clsMemObject.deprecated ? '@deprecated' : '' %>
+		 * <%- clsMemObject.async ? '@async' : '' %>
 		 */
 		<% if (isInternalClass) {%>export const <%- objectName %>: typeof <%- _fns.uglifyInternalClassName(objectType) %><%}%>
 		<% if (isInternalModule) {%>export const <%- objectName %>: typeof <%- _fns.getAliasNameForRefModule(objectType) %><%}%>
