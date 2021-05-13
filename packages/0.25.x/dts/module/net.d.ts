@@ -84,9 +84,9 @@ declare module 'net' {
      *      @return 返回连接成功的 Socket 或者 SslSocket 对象
      *      
      */
-    function connect(url: string, timeout: number): Class_Stream;
+    function connect(url: string, timeout?: number): Class_Stream;
 
-    function connect(url: string, timeout: number, callback: (err: Error | undefined | null, retVal: Class_Stream)=>any): void;
+    function connect(url: string, timeout?: number, callback?: (err: Error | undefined | null, retVal: Class_Stream)=>any): void;
 
     /**
      * @description 创建一个 Smtp 对象，参见 Smtp 
@@ -100,9 +100,9 @@ declare module 'net' {
      *      @return 返回连接成功的 Smtp 对象
      *      
      */
-    function openSmtp(url: string, timeout: number): Class_Smtp;
+    function openSmtp(url: string, timeout?: number): Class_Smtp;
 
-    function openSmtp(url: string, timeout: number, callback: (err: Error | undefined | null, retVal: Class_Smtp)=>any): void;
+    function openSmtp(url: string, timeout?: number, callback?: (err: Error | undefined | null, retVal: Class_Smtp)=>any): void;
 
     /**
      * @description 创建一个 TcpServer 对象，参见 TcpServer 
@@ -127,7 +127,7 @@ declare module 'net' {
      *      @return 非合法的 IP 地址，返回 0, 如果是 IPv4 则返回 4，如果是 IPv6 则返回 6
      *     
      */
-    function isIP(ip: string): number;
+    function isIP(ip?: string): number;
 
     /**
      * @description 检测输入是否是 IPv4 地址
@@ -135,7 +135,7 @@ declare module 'net' {
      *      @return 如果是 IPv4 则返回 true.否则返回 false
      *     
      */
-    function isIPv4(ip: string): boolean;
+    function isIPv4(ip?: string): boolean;
 
     /**
      * @description 检测输入是否是 IPv6 地址
@@ -143,7 +143,7 @@ declare module 'net' {
      *      @return 如果是 IPv6 则返回 true.否则返回 false
      *     
      */
-    function isIPv6(ip: string): boolean;
+    function isIPv6(ip?: string): boolean;
 
 }
 

@@ -62,7 +62,7 @@ declare class Class_HttpServer extends Class_TcpServer {
      *      @param allowHeaders 指定接受的 http 头字段
      *      
      */
-    enableCrossOrigin(allowHeaders: string): void;
+    enableCrossOrigin(allowHeaders?: string): void;
 
     /**
      * @description 查询和设置是否允强制使用 gzip 压缩输出，缺省为 false 

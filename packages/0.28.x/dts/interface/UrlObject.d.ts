@@ -25,7 +25,7 @@ declare class Class_UrlObject extends Class_object {
      *      @param slashesDenoteHost  默认为false, 如果设置为true，则从字符串'//'之后到下一个'/'之前的字符串会被解析为host，例如'//foo/bar', 结果应该是{host: 'foo', pathname: '/bar'}而不是{pathname: '//foo/bar'}
      *      
      */
-    constructor(url: string, parseQueryString: boolean, slashesDenoteHost: boolean);
+    constructor(url?: string, parseQueryString?: boolean, slashesDenoteHost?: boolean);
 
     /**
      * @description 解析一个 url 字符串
@@ -34,7 +34,7 @@ declare class Class_UrlObject extends Class_object {
      *      @param slashesDenoteHost  默认为false, 如果设置为true，则从字符串'//'之后到下一个'/'之前的字符串会被解析为host，例如'//foo/bar', 结果应该是{host: 'foo', pathname: '/bar'}而不是{pathname: '//foo/bar'}
      *      
      */
-    parse(url: string, parseQueryString: boolean, slashesDenoteHost: boolean): void;
+    parse(url: string, parseQueryString?: boolean, slashesDenoteHost?: boolean): void;
 
     /**
      * @description 使用指定的参数构造 UrlObject

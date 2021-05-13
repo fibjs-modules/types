@@ -15,7 +15,7 @@ declare class Class_Int64 extends Class_object {
      *      @param num 初始化的值
      *     
      */
-    constructor(num: number);
+    constructor(num?: number);
 
     /**
      * @description Int64 构造函数
@@ -38,7 +38,7 @@ declare class Class_Int64 extends Class_object {
      *      @param base 数字字符串的编码方式，可以接受 2-16, 32, 64，默认为 10，为 10 时自动识别 0x 编码
      *     
      */
-    constructor(num: string, base: number);
+    constructor(num: string, base?: number);
 
     /**
      * @description 高 32 位数值 
@@ -151,7 +151,7 @@ declare class Class_Int64 extends Class_object {
      *       @return 返回转换后的字符串
      *      
      */
-    toString(base: number): string;
+    toString(base?: number): string;
 
 }
 

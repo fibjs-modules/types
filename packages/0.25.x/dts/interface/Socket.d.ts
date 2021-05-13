@@ -70,7 +70,7 @@ declare class Class_Socket extends Class_Stream {
      *      @param allowIPv4 指定是否接受 ipv4 连接，缺省为 true。本参数在 ipv6 时有效，并依赖于操作系统
      *      
      */
-    bind(port: number, allowIPv4: boolean): void;
+    bind(port: number, allowIPv4?: boolean): void;
 
     /**
      * @description 将当前 Socket 绑定至指定地址的指定端口
@@ -79,14 +79,14 @@ declare class Class_Socket extends Class_Stream {
      *      @param allowIPv4 指定是否接受 ipv4 连接，缺省为 true。本参数在 ipv6 时有效，并依赖于操作系统
      *      
      */
-    bind(addr: string, port: number, allowIPv4: boolean): void;
+    bind(addr: string, port: number, allowIPv4?: boolean): void;
 
     /**
      * @description 开始监听连接请求
      *      @param backlog 指定请求队列长度，超出的请求将被拒绝，缺省为 120
      *      
      */
-    listen(backlog: number): void;
+    listen(backlog?: number): void;
 
     /**
      * @description 等待并接受一个连接
@@ -103,9 +103,9 @@ declare class Class_Socket extends Class_Stream {
      *      @return 返回从连接读取的数据
      *      
      */
-    recv(bytes: number): Class_Buffer;
+    recv(bytes?: number): Class_Buffer;
 
-    recv(bytes: number, callback: (err: Error | undefined | null, retVal: Class_Buffer)=>any): void;
+    recv(bytes?: number, callback?: (err: Error | undefined | null, retVal: Class_Buffer)=>any): void;
 
     /**
      * @description 读取一个 UDP 包
@@ -117,9 +117,9 @@ declare class Class_Socket extends Class_Stream {
      *      @return 返回从连接读取的数据包
      *      
      */
-    recvfrom(bytes: number): object;
+    recvfrom(bytes?: number): object;
 
-    recvfrom(bytes: number, callback: (err: Error | undefined | null, retVal: object)=>any): void;
+    recvfrom(bytes?: number, callback?: (err: Error | undefined | null, retVal: object)=>any): void;
 
     /**
      * @description 将给定的数据写入连接，此方法等效于 write 方法

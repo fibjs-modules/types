@@ -119,7 +119,7 @@ declare module 'http' {
      *      @return 返回一个静态文件处理器用于处理 http 消息
      *      
      */
-    function fileHandler(root: string, mimes: object, autoIndex: boolean): Class_Handler;
+    function fileHandler(root: string, mimes?: object, autoIndex?: boolean): Class_Handler;
 
     /**
      * @description 发送 http 请求到指定的流对象，并返回结果
@@ -150,9 +150,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function request(method: string, url: string, opts: object): Class_HttpResponse;
+    function request(method: string, url: string, opts?: object): Class_HttpResponse;
 
-    function request(method: string, url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function request(method: string, url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
     /**
      * @description 用 GET 方法请求指定的 url，并返回结果，等同于 request("GET", ...)
@@ -171,9 +171,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function get(url: string, opts: object): Class_HttpResponse;
+    function get(url: string, opts?: object): Class_HttpResponse;
 
-    function get(url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function get(url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
     /**
      * @description 用 POST 方法请求指定的 url，并返回结果，等同于 request("POST", ...)
@@ -192,9 +192,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function post(url: string, opts: object): Class_HttpResponse;
+    function post(url: string, opts?: object): Class_HttpResponse;
 
-    function post(url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function post(url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
     /**
      * @description 用 DELETE 方法请求指定的 url，并返回结果，等同于 request("DELETE", ...)
@@ -213,9 +213,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function del(url: string, opts: object): Class_HttpResponse;
+    function del(url: string, opts?: object): Class_HttpResponse;
 
-    function del(url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function del(url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
     /**
      * @description 用 PUT 方法请求指定的 url，并返回结果，等同于 request("PUT", ...)
@@ -234,9 +234,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function put(url: string, opts: object): Class_HttpResponse;
+    function put(url: string, opts?: object): Class_HttpResponse;
 
-    function put(url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function put(url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
     /**
      * @description 用 PATCH 方法请求指定的 url，并返回结果，等同于 request("PATCH", ...)
@@ -255,9 +255,9 @@ declare module 'http' {
      *      @return 返回服务器响应
      *      
      */
-    function patch(url: string, opts: object): Class_HttpResponse;
+    function patch(url: string, opts?: object): Class_HttpResponse;
 
-    function patch(url: string, opts: object, callback: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
+    function patch(url: string, opts?: object, callback?: (err: Error | undefined | null, retVal: Class_HttpResponse)=>any): void;
 
 }
 

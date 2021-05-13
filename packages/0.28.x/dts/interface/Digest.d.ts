@@ -19,7 +19,7 @@ declare class Class_Digest extends Class_object {
      *      @return 返回指定编码的摘要表示
      *      
      */
-    digest(codec: string): any;
+    digest(codec?: string): any;
 
     /**
      * @description 查询当前信息摘要算法的摘要字节数 

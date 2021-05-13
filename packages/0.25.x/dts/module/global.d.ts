@@ -46,7 +46,7 @@ declare module 'global' {
      *      @param argv 指定要运行的参数，此参数可在脚本内使用 argv 获取
      *      
      */
-    function run(fname: string, argv: any[]): void;
+    function run(fname: string, argv?: any[]): void;
 
     /**
      * @description 加载一个模块并返回模块对象，更多信息参阅 @ref module
@@ -238,7 +238,7 @@ declare module 'global' {
      *      @param cmds 补充命令
      *      
      */
-    function repl(cmds: any[]): void;
+    function repl(cmds?: any[]): void;
 
     /**
      * @description 进入交互模式，可以交互执行内部命令和代码，仅在启动 js 可以引用
@@ -268,7 +268,7 @@ declare module 'global' {
      *      @param cmds 补充命令
      *      
      */
-    function repl(out: Class_Stream, cmds: any[]): void;
+    function repl(out: Class_Stream, cmds?: any[]): void;
 
 }
 

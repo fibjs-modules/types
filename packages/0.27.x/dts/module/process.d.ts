@@ -140,7 +140,7 @@ declare module 'process' {
      *      @return 返回计时时间，格式为 [seconds, nanoseconds]
      *     
      */
-    function hrtime(diff: any[]): any[];
+    function hrtime(diff?: any[]): any[];
 
     /**
      * @description 退出当前进程，并返回 exitCode 作为进程结果     
@@ -219,7 +219,7 @@ declare module 'process' {
      *      @return 返回包含运行结果的进程对象
      *      
      */
-    function open(command: string, args: any[], opts: object): Class_SubProcess;
+    function open(command: string, args: any[], opts?: object): Class_SubProcess;
 
     /**
      * @description 运行指定的命令行，接管进程输入输出流，并返回进程对象
@@ -236,7 +236,7 @@ declare module 'process' {
      *      @return 返回包含运行结果的进程对象
      *      
      */
-    function open(command: string, opts: object): Class_SubProcess;
+    function open(command: string, opts?: object): Class_SubProcess;
 
     /**
      * @description 运行指定的命令行，并返回进程对象
@@ -254,7 +254,7 @@ declare module 'process' {
      *      @return 返回包含运行结果的进程对象
      *      
      */
-    function start(command: string, args: any[], opts: object): Class_SubProcess;
+    function start(command: string, args: any[], opts?: object): Class_SubProcess;
 
     /**
      * @description 运行指定的命令行，并返回进程对象
@@ -271,7 +271,7 @@ declare module 'process' {
      *      @return 返回包含运行结果的进程对象
      *      
      */
-    function start(command: string, opts: object): Class_SubProcess;
+    function start(command: string, opts?: object): Class_SubProcess;
 
     /**
      * @description 运行指定的命令行，并返回进程的结束代码
@@ -289,7 +289,7 @@ declare module 'process' {
      *      @return 返回命令的运行结果
      *      
      */
-    function run(command: string, args: any[], opts: object): number;
+    function run(command: string, args: any[], opts?: object): number;
 
     /**
      * @description 运行指定的命令行，并返回进程的结束代码
@@ -306,7 +306,7 @@ declare module 'process' {
      *      @return 返回命令的运行结果
      *      
      */
-    function run(command: string, opts: object): number;
+    function run(command: string, opts?: object): number;
 
 }
 

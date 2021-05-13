@@ -38,7 +38,7 @@ declare class Class_WebSocket extends Class_EventEmitter {
      *      @param origin 指定握手时模拟的源
      *     
      */
-    constructor(url: string, protocol: string, origin: string);
+    constructor(url: string, protocol?: string, origin?: string);
 
     /**
      * @description 查询当前对象连接的服务器 
@@ -66,7 +66,7 @@ declare class Class_WebSocket extends Class_EventEmitter {
      *      @param reason 指定关闭的原因，缺省为 ""
      *     
      */
-    close(code: number, reason: string): void;
+    close(code?: number, reason?: string): void;
 
     /**
      * @description 向对方发送一段文本

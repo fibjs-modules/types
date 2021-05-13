@@ -86,9 +86,9 @@ declare module 'ssl' {
      *    @return 返回连接成功的 SslSocket 对象
      *    
      */
-    function connect(url: string, timeout: number): Class_Stream;
+    function connect(url: string, timeout?: number): Class_Stream;
 
-    function connect(url: string, timeout: number, callback: (err: Error | undefined | null, retVal: Class_Stream)=>any): void;
+    function connect(url: string, timeout?: number, callback?: (err: Error | undefined | null, retVal: Class_Stream)=>any): void;
 
     /**
      * @description 设定缺省客户端证书
@@ -105,7 +105,7 @@ declare module 'ssl' {
      *     @param password 解密密码
      *    
      */
-    function loadClientCertFile(crtFile: string, keyFile: string, password: string): void;
+    function loadClientCertFile(crtFile: string, keyFile: string, password?: string): void;
 
     /**
      * @description 加载自带的缺省根证书，等同于 ssl.ca.loadRootCerts

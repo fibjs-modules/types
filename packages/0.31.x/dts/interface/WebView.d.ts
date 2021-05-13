@@ -68,9 +68,9 @@ declare class Class_WebView extends Class_EventEmitter {
      * 	 @param mode 打印参数，0: 快速打印; 1: 标准打印; 2: 打印预览。缺省为 1
      * 	 
      */
-    print(mode: number): void;
+    print(mode?: number): void;
 
-    print(mode: number, callback: (err: Error | undefined | null)=>any): void;
+    print(mode?: number, callback?: (err: Error | undefined | null)=>any): void;
 
     /**
      * @description 关闭当前窗口 

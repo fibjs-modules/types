@@ -20,7 +20,7 @@ declare module 'url' {
      *      @return 返回包含解析数据的对象
      *      
      */
-    function parse(url: string, parseQueryString: boolean, slashesDenoteHost: boolean): Class_UrlObject;
+    function parse(url: string, parseQueryString?: boolean, slashesDenoteHost?: boolean): Class_UrlObject;
 
     /**
      * @description 创建一个 UrlObject 请求对象，参见 UrlObject 
