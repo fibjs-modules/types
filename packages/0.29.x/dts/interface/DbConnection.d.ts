@@ -60,8 +60,6 @@ declare class Class_DbConnection extends Class_object {
      */
     execute(sql: string, ...args: any[]): any[];
 
-    execute(sql: string, ...args: any[], callback: (err: Error | undefined | null, retVal: any[])=>any): void;
-
     /**
      * @description 插入新记录
      * 
