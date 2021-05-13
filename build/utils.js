@@ -1,11 +1,38 @@
 const fs = require('fs')
 const path = require('path')
+const http = require('http')
+
+const ssl = require('ssl');
+ssl.loadRootCerts();
 
 const semver = require('semver')
 
 const ejs = require('ejs')
 
 const copy = require('@fibjs/copy')
+
+exports.getHttpClient = function () {
+    const client = new http.Client();
+
+    let proxy;
+    if (proxy = (process.env.https_proxy || process.env.http_proxy)) {
+        client.proxyAgent = proxy;
+    }
+
+    return client;
+}
+
+exports.mkdirp = function (inputp) {
+    try {
+        if (!fs.exists(inputp))
+            fs.mkdir(inputp);
+    } catch (e) {
+        mkdirp(path.dirname(inputp));
+        try {
+            fs.mkdir(inputp);
+        } catch (e) {}
+    }
+}
 
 exports.mkVersionPkg = function (fibjs_version) {
     const pkgsrc = path.resolve(__dirname, './tmpl/package')

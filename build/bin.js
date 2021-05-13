@@ -1,17 +1,20 @@
 const fs = require('fs')
 const path = require('path')
-
 const semver = require('semver')
-const mkdirp = require('@fibjs/mkdirp')
+
+if (!fs.copy) {
+    fs.copy = fs.copyFile
+}
 
 const { mkVersionPkg } = require('./utils')
-const tsdeclare = require('./tsdeclare')
+const gen_types = require('./gen_types')
 
 let installedNodeModules = path.resolve(__dirname, '../../../')
 if (!installedNodeModules || !installedNodeModules.endsWith('node_modules'))
     installedNodeModules = null
 
 let fibjs_version = process.env.FIBJS_VERSION
+let fibjs_committish = process.env.FIBJS_COMMIT
 
 if (!fibjs_version)
     fibjs_version = console.readLine("no FIBJS_VERSION set, input version you wanna set: ")
@@ -22,22 +25,6 @@ if (!fibjs_version)
 if (!semver.valid(fibjs_version))
     throw `fibjs version invalid, set property value to environment variable \`FIBJS_VERSION\`.`
 
-let fibjs_src = installedNodeModules || process.env.FIBJS_SRC
 const package_target = mkVersionPkg(fibjs_version)
-const target = path.resolve(package_target, 'declare');
 
-if (!fibjs_src)
-    fibjs_src = console.readLine("no FIBJS_SRC set, input location of fibjs: ")
-
-if (!fibjs_src || !fs.exists(fibjs_src))
-    throw `fibjs source location ${fibjs_src} invalid, set property value to environment variable \`FIBJS_SRC\`.`
-
-const idl_src = path.resolve(fibjs_src, './idl/zh-cn');
-
-if (!fs.exists(idl_src))
-    throw `fibjs idl source location ${idl_src} invalid.`
-
-if (!fs.exists(target))
-    mkdirp(target)
-
-tsdeclare(fibjs_src, target);
+gen_types(fibjs_committish, package_target);
