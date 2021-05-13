@@ -299,7 +299,11 @@ function isVoidDomType(type) {
  * @param {import('../../idl/ir').IIDLDefinition['members'][number]['overs']} methodHost 
  * @returns 
  */
-function generateDtsFunction(functionHost, normalParams, returnType, { funcFlags, withOptionalParam = false } = {}) {
+function generateDtsFunction(functionHost, normalParams, returnType, {
+    funcFlags,
+    withOptionalParam = false,
+    withRestArgs = false,
+} = {}) {
     let syncFunc;
     let asyncFunc;
 
@@ -312,7 +316,7 @@ function generateDtsFunction(functionHost, normalParams, returnType, { funcFlags
         funcFlags
     )
 
-    if (functionHost.async) {
+    if (!withRestArgs && functionHost.async) {
         const errorParam = dom.create.parameter('err', dom.create.union([
             dom.create.namedTypeReference('Error'),
             dom.type.undefined,
@@ -327,7 +331,8 @@ function generateDtsFunction(functionHost, normalParams, returnType, { funcFlags
         const params = Array.from(normalParams);
         params.push(
             dom.create.parameter(
-                'callback', callbackType, withOptionalParam ? dom.ParameterFlags.Optional : dom.ParameterFlags.None
+                'callback', callbackType,
+                withOptionalParam ? dom.ParameterFlags.Optional : dom.ParameterFlags.None
             )
         )
 
@@ -350,7 +355,11 @@ function generateDtsFunction(functionHost, normalParams, returnType, { funcFlags
  * @param {import('../../idl/ir').IIDLDefinition['members'][number]['overs']} methodHost 
  * @returns 
  */
-function generateDtsMethod(methodHost, normalParams, returnType, { memFlags, withOptionalParam = false } = {}) {
+function generateDtsMethod(methodHost, normalParams, returnType, {
+    memFlags,
+    withOptionalParam = false,
+    withRestArgs = false
+} = {}) {
     let syncMethod;
     let asyncMethod;
 
@@ -363,7 +372,7 @@ function generateDtsMethod(methodHost, normalParams, returnType, { memFlags, wit
         memFlags
     )
 
-    if (methodHost.async) {
+    if (!withRestArgs && methodHost.async) {
         const errorParam = dom.create.parameter('err', dom.create.union([
             dom.create.namedTypeReference('Error'),
             dom.type.undefined,
@@ -378,7 +387,8 @@ function generateDtsMethod(methodHost, normalParams, returnType, { memFlags, wit
         const params = Array.from(normalParams);
         params.push(
             dom.create.parameter(
-                'callback', callbackType, withOptionalParam ? dom.ParameterFlags.Optional : dom.ParameterFlags.None
+                'callback', callbackType,
+                withOptionalParam ? dom.ParameterFlags.Optional : dom.ParameterFlags.None
             )
         )
 
@@ -484,13 +494,17 @@ function processDeclareInterface(def, {
             }
             case 'method': {
                 let withOptionalParam = false;
+                let withRestArgs = false;
                 function getMethodParam(paramsHost) {
                     return (paramsHost.params || []).map(memParam => {
                         const paramDomInfo = mapParamTypeToDtsType(memParam.type, getMapParamOptions(memParam));
+                        withRestArgs = !!paramDomInfo.isRestArgs;
 
-                        let paramFlag = paramDomInfo.isRestArgs ? dom.ParameterFlags.Rest : dom.ParameterFlags.None;
+                        let paramFlag = withRestArgs ? dom.ParameterFlags.Rest : dom.ParameterFlags.None;
 
-                        if (withOptionalParam || (!!memParam.default && !!memParam.default.value)) {
+                        if (!paramDomInfo.isRestArgs && 
+                            (withOptionalParam || (!!memParam.default && !!memParam.default.value))
+                        ) {
                             withOptionalParam = true;
                             paramFlag |= dom.ParameterFlags.Optional
                         }
@@ -513,7 +527,7 @@ function processDeclareInterface(def, {
                                 over,
                                 getMethodParam(over),
                                 mapMemMethodReturnTypeToDtsType(mem.type, getMapMemberTypeOptions()),
-                                { memFlags, withOptionalParam }
+                                { memFlags, withOptionalParam, withRestArgs }
                             )
 
                             syncMethod.jsDocComment = convertIDLCommentToJSDocComment(over.comments)
@@ -526,7 +540,7 @@ function processDeclareInterface(def, {
                     } else {
                         const { syncMethod, asyncMethod } = generateDtsMethod(
                             mem, getMethodParam(mem), mapMemMethodReturnTypeToDtsType(mem.type, getMapMemberTypeOptions()),
-                            { memFlags, withOptionalParam }
+                            { memFlags, withOptionalParam, withRestArgs }
                         )
 
                         dtsUnitMember = syncMethod;
@@ -663,13 +677,17 @@ function processDeclareModule(def, {
             }
             case 'method': {
                 let withOptionalParam = false;
+                let withRestArgs = false;
                 function getFunctionParams(paramsHost) {
                     return (paramsHost.params || []).map(param => {
                         const paramDomInfo = mapParamTypeToDtsType(param.type, getMapParamOptions(param));
+                        withRestArgs = !!paramDomInfo.isRestArgs;
 
-                        let paramFlag = paramDomInfo.isRestArgs ? dom.ParameterFlags.Rest : dom.ParameterFlags.None;
+                        let paramFlag = withRestArgs ? dom.ParameterFlags.Rest : dom.ParameterFlags.None;
 
-                        if (withOptionalParam || (!!param.default && !!param.default.value)) {
+                        if (!paramDomInfo.isRestArgs && 
+                            (withOptionalParam || (!!param.default && !!param.default.value))
+                        ) {
                             withOptionalParam = true;
                             paramFlag |= dom.ParameterFlags.Optional;
                         }
@@ -689,7 +707,7 @@ function processDeclareModule(def, {
                             over,
                             getFunctionParams(over),
                             mapMemMethodReturnTypeToDtsType(mem.type, getMapMemberTypeOptions()),
-                            { funcFlags: memFlags, withOptionalParam }
+                            { funcFlags: memFlags, withOptionalParam, withRestArgs }
                         )
 
                         syncFunc.jsDocComment = convertIDLCommentToJSDocComment(over.comments)
@@ -703,7 +721,7 @@ function processDeclareModule(def, {
                     const { asyncFunc, syncFunc } = generateDtsFunction(
                         mem,
                         getFunctionParams(mem), mapMemMethodReturnTypeToDtsType(mem.type, getMapMemberTypeOptions()),
-                        { withOptionalParam }
+                        { withOptionalParam, withRestArgs }
                     );
 
                     dtsUnit.members.push(dtsUnitMember = syncFunc);
