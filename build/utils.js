@@ -22,7 +22,7 @@ exports.getHttpClient = function () {
     return client;
 }
 
-exports.mkdirp = function (inputp) {
+const mkdirp = exports.mkdirp = function (inputp) {
     try {
         if (!fs.exists(inputp))
             fs.mkdir(inputp);

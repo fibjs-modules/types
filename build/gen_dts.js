@@ -126,7 +126,7 @@ function generalTypeMap(dataType, {
         }
         case 'NObject':
         case 'Object': {
-            info.type = dom.type.object;
+            info.type = dom.create.namedTypeReference('FIBJS.GeneralObject')
             break;
         }
         case 'String': {
@@ -858,6 +858,13 @@ function gen_fibjs_import_dts({
     ]);
     const typeAlias = dom.create.alias('TypedArray', typedArrayType);
     topDeclarition.members.push(typeAlias);
+
+    const typeGeneralObject = dom.create.interface('GeneralObject');
+    typeGeneralObject.members.push(
+        dom.create.indexSignature('k', 'string', dom.type.any),
+    );
+
+    topDeclarition.members.push(typeGeneralObject)
 
     const commonDeclaration = dom.emit(topDeclarition, {
         rootFlags: dom.DeclarationFlags.None,
