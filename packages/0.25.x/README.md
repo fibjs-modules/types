@@ -7,13 +7,13 @@ types for fibjs runtime
 ## Usage
 
 ```
-fibjs --install @fibjs/types@0.25.6
+fibjs --install @fibjs/types@0.25.7
 ```
 
 ## Contributes
 
 1. Fork this repo, `git clone git@github.com:fibjs-modules/types.git`;
-2. `git checkout -b 0.25.6/my-feat`
+2. `git checkout -b 0.25.7/my-feat`
 3. Modify and commit your changes
 4. Submit one pr 😊
 
