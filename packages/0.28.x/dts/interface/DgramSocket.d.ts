@@ -50,9 +50,9 @@ declare class Class_DgramSocket extends Class_EventEmitter {
      *      @param opts 指定绑定参数
      *     
      */
-    bind(opts: object): void;
+    bind(opts: FIBJS.GeneralObject): void;
 
-    bind(opts: object, callback: (err: Error | undefined | null)=>any): void;
+    bind(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null)=>any): void;
 
     /**
      * @description 在 socket 上发送一个数据包
@@ -85,7 +85,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
      *      @return 返回对象绑定地址
      *     
      */
-    address(): object;
+    address(): FIBJS.GeneralObject;
 
     /**
      * @description 关闭当前 socket 

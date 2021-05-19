@@ -32,9 +32,9 @@ declare class Class_ZipFile extends Class_object {
      * 	 @return 返回文件信息对象
      * 	
      */
-    getinfo(member: string): object;
+    getinfo(member: string): FIBJS.GeneralObject;
 
-    getinfo(member: string, callback: (err: Error | undefined | null, retVal: object)=>any): void;
+    getinfo(member: string, callback: (err: Error | undefined | null, retVal: FIBJS.GeneralObject)=>any): void;
 
     /**
      * @description 返回从压缩文件读取的数据

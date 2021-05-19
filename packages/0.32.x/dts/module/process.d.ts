@@ -63,7 +63,7 @@ declare module 'process' {
     /**
      * @description 返回 fibjs 及组件的版本信息 
      */
-    const versions: object;
+    const versions: FIBJS.GeneralObject;
 
     /**
      * @description 查询当前运行执行文件完整路径 
@@ -73,7 +73,7 @@ declare module 'process' {
     /**
      * @description 查询当前进程的环境变量 
      */
-    const env: object;
+    const env: FIBJS.GeneralObject;
 
     /**
      * @description 查询当前 cpu 环境，可能的结果为 'amd64', 'arm', 'arm64', 'ia32' 
@@ -197,7 +197,7 @@ declare module 'process' {
      *      @return 返回包含内存报告
      *      
      */
-    function memoryUsage(): object;
+    function memoryUsage(): FIBJS.GeneralObject;
 
     /**
      * @description 启动一个纤程

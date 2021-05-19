@@ -38,7 +38,7 @@ declare module 'global' {
     /**
      * @description 全局对象 
      */
-    const global: object;
+    const global: FIBJS.GeneralObject;
 
     /**
      * @description 运行一个脚本

@@ -57,7 +57,7 @@ declare class Class_WebSocket extends Class_EventEmitter {
      *      @param opts 连接选项，缺省是 {}
      *     
      */
-    constructor(url: string, opts: object);
+    constructor(url: string, opts: FIBJS.GeneralObject);
 
     /**
      * @description 查询当前对象连接的服务器 

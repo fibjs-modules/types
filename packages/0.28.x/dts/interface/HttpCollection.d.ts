@@ -38,7 +38,7 @@ declare class Class_HttpCollection extends Class_object {
      *      @param map 指定要添加的键值数据字典
      *      
      */
-    add(map: object): void;
+    add(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 添加一个键值数据，添加数据并不修改已存在的键值的数据
@@ -53,7 +53,7 @@ declare class Class_HttpCollection extends Class_object {
      *      @param map 指定要设定的键值数据字典
      *      
      */
-    set(map: object): void;
+    set(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 设定一个键值数据，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余数据

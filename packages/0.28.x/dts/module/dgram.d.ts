@@ -33,7 +33,7 @@ declare module 'dgram' {
      *      @return 返回创建的 Socket 对象
      *     
      */
-    function createSocket(opts: object): Class_DgramSocket;
+    function createSocket(opts: FIBJS.GeneralObject): Class_DgramSocket;
 
     /**
      * @description 创建一个 dgram.Socket 对象
@@ -52,7 +52,7 @@ declare module 'dgram' {
      *      @return 返回创建的 Socket 对象
      *     
      */
-    function createSocket(opts: object, callback: ()=>any): Class_DgramSocket;
+    function createSocket(opts: FIBJS.GeneralObject, callback: ()=>any): Class_DgramSocket;
 
     /**
      * @description 创建一个 dgram.Socket 对象

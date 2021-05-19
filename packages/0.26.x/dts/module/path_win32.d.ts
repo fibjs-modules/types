@@ -117,13 +117,13 @@ declare module 'path_win32' {
      * @description posix 实现，参见 path_posix
      *      
      */
-    const posix: object;
+    const posix: FIBJS.GeneralObject;
 
     /**
      * @description windows 实现，参见 path_win32
      *      
      */
-    const win32: object;
+    const win32: FIBJS.GeneralObject;
 
 }
 

@@ -152,7 +152,7 @@ declare module 'console' {
      *      @param cfg 输出配置
      *      
      */
-    function add(cfg: object): void;
+    function add(cfg: FIBJS.GeneralObject): void;
 
     /**
      * @description 批量添加 console 输出系统，支持的设备为 console, syslog, event 和 file，最多可以添加 10 个输出

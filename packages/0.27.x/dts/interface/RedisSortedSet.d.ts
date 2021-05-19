@@ -18,7 +18,7 @@ declare class Class_RedisSortedSet extends Class_object {
      *      @param sms 指定要添加的 member/score 对象
      *      @return 被成功添加的新成员的数量，不包括那些被更新的、已经存在的成员 
      */
-    add(sms: object): number;
+    add(sms: FIBJS.GeneralObject): number;
 
     /**
      * @description 将一个或多个 member 元素及其 score 值加入到有序集当中

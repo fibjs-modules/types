@@ -11,7 +11,7 @@ declare class Class_HeapSnapshot extends Class_object {
      *      @return 返回堆快照的比较结果
      *      
      */
-    diff(before: Class_HeapSnapshot): object;
+    diff(before: Class_HeapSnapshot): FIBJS.GeneralObject;
 
     /**
      * @description 根据ID获取堆视图节点

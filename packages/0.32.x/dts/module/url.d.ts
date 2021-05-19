@@ -10,7 +10,7 @@ declare module 'url' {
      *      @return 返回构造成功的字符串
      *      
      */
-    function format(args: object): string;
+    function format(args: FIBJS.GeneralObject): string;
 
     /**
      * @description 解析一个 url 字符串

@@ -50,7 +50,7 @@ declare class Class_WebSocket extends Class_EventEmitter {
      *      httpClient 使用指定 httpClient 实例的 cookie，缺省为 undefined 默认使用全局 cookie，参见 HttpClient
      *     
      */
-    constructor(url: string, opts?: object);
+    constructor(url: string, opts?: FIBJS.GeneralObject);
 
     /**
      * @description 查询当前对象连接的服务器 

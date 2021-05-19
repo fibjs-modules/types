@@ -114,7 +114,7 @@ declare module 'ws' {
      *      @return 返回协议处理器，可与 HttpServer, Chain, Routing 等对接
      *      
      */
-    function upgrade(opts: object, accept: ()=>any): Class_Handler;
+    function upgrade(opts: FIBJS.GeneralObject, accept: ()=>any): Class_Handler;
 
 }
 

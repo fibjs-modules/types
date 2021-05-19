@@ -31,7 +31,7 @@ declare module 'fs' {
     /**
      * ! fs模块的常量对象 
      */
-    const constants: object;
+    const constants: FIBJS.GeneralObject;
 
     /**
      * @description 查询指定的文件或目录是否存在

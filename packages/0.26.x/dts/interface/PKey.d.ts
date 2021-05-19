@@ -79,7 +79,7 @@ declare class Class_PKey extends Class_object {
      *      @param jsonKey JSON 格式的密钥
      *     
      */
-    constructor(jsonKey: object);
+    constructor(jsonKey: FIBJS.GeneralObject);
 
     /**
      * @description 返回当前算法名称 
@@ -193,7 +193,7 @@ declare class Class_PKey extends Class_object {
      *      @param jsonKey JSON 格式的密钥
      *     
      */
-    importKey(jsonKey: object): void;
+    importKey(jsonKey: FIBJS.GeneralObject): void;
 
     /**
      * @description 加载一个 PEM/DER 格式的密钥文件
@@ -222,7 +222,7 @@ declare class Class_PKey extends Class_object {
      *      @return 当前 key 的 DER 格式编码
      *     
      */
-    exportJson(): object;
+    exportJson(): FIBJS.GeneralObject;
 
     /**
      * @description 使用当前算法密码公钥加密数据

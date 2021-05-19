@@ -29,7 +29,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回成功绑定的数量，如果函数已绑定则返回 0
      *    
      */
-    on(ev: string, func: ()=>any): object;
+    on(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象
@@ -37,7 +37,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    on(map: object): object;
+    on(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象
@@ -46,7 +46,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    addListener(ev: string, func: ()=>any): object;
+    addListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象
@@ -54,7 +54,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    addListener(map: object): object;
+    addListener(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -63,7 +63,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回成功绑定的数量，如果函数已绑定则返回 0
      *    
      */
-    prependListener(ev: string, func: ()=>any): object;
+    prependListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -71,7 +71,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回成功绑定的数量，如果函数已绑定则返回 0
      *    
      */
-    prependListener(map: object): object;
+    prependListener(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个一次性事件处理函数到对象，一次性处理函数只会触发一次
@@ -80,7 +80,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    once(ev: string, func: ()=>any): object;
+    once(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个一次性事件处理函数到对象，一次性处理函数只会触发一次
@@ -88,7 +88,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    once(map: object): object;
+    once(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -97,7 +97,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回成功绑定的数量，如果函数已绑定则返回 0
      *    
      */
-    prependOnceListener(ev: string, func: ()=>any): object;
+    prependOnceListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -105,7 +105,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回成功绑定的数量，如果函数已绑定则返回 0
      *    
      */
-    prependOnceListener(map: object): object;
+    prependOnceListener(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 从对象处理队列中取消指定函数
@@ -114,7 +114,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    off(ev: string, func: ()=>any): object;
+    off(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 取消对象处理队列中的全部函数
@@ -122,7 +122,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    off(ev: string): object;
+    off(ev: string): FIBJS.GeneralObject;
 
     /**
      * @description 从对象处理队列中取消指定函数
@@ -130,7 +130,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    off(map: object): object;
+    off(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 从对象处理队列中取消指定函数
@@ -139,7 +139,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    removeListener(ev: string, func: ()=>any): object;
+    removeListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 取消对象处理队列中的全部函数
@@ -147,7 +147,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    removeListener(ev: string): object;
+    removeListener(ev: string): FIBJS.GeneralObject;
 
     /**
      * @description 从对象处理队列中取消指定函数
@@ -155,7 +155,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    removeListener(map: object): object;
+    removeListener(map: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 从对象处理队列中取消所有事件的所有监听器， 如果指定事件，则移除指定事件的所有监听器。
@@ -163,7 +163,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    removeAllListeners(evs?: any[]): object;
+    removeAllListeners(evs?: any[]): FIBJS.GeneralObject;
 
     /**
      *  监听器的默认限制的数量，仅用于兼容

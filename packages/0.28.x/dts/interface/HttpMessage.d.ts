@@ -70,7 +70,7 @@ declare class Class_HttpMessage extends Class_Message {
      *      @param map 指定要添加的键值数据字典
      *      
      */
-    addHeader(map: object): void;
+    addHeader(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 添加一个消息头，添加数据并不修改已存在的键值的消息头
@@ -85,7 +85,7 @@ declare class Class_HttpMessage extends Class_Message {
      *      @param map 指定要设定的键值数据字典
      *      
      */
-    setHeader(map: object): void;
+    setHeader(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 设定一个消息头，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余消息头

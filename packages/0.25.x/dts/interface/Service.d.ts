@@ -11,7 +11,7 @@ declare class Class_Service extends Class_EventEmitter {
      *      @param event 服务事件处理
      *      
      */
-    constructor(name: string, worker: ()=>any, event?: object);
+    constructor(name: string, worker: ()=>any, event?: FIBJS.GeneralObject);
 
     /**
      * @description 开始运行服务实体 

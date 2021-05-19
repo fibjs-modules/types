@@ -69,9 +69,9 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回包含插入的 id，如果引擎不支持则返回 0
      *      
      */
-    insert(opts: object): number;
+    insert(opts: FIBJS.GeneralObject): number;
 
-    insert(opts: object, callback: (err: Error | undefined | null, retVal: number)=>any): void;
+    insert(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null, retVal: number)=>any): void;
 
     /**
      * @description 根据指定的条件查询数据
@@ -80,9 +80,9 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回包含结果记录
      *      
      */
-    find(opts: object): any[];
+    find(opts: FIBJS.GeneralObject): any[];
 
-    find(opts: object, callback: (err: Error | undefined | null, retVal: any[])=>any): void;
+    find(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null, retVal: any[])=>any): void;
 
     /**
      * @description 根据指定的条件统计数据记录数
@@ -91,9 +91,9 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回包含结果记录数
      *      
      */
-    count(opts: object): number;
+    count(opts: FIBJS.GeneralObject): number;
 
-    count(opts: object, callback: (err: Error | undefined | null, retVal: number)=>any): void;
+    count(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null, retVal: number)=>any): void;
 
     /**
      * @description 根据指定的条件更新数据
@@ -102,9 +102,9 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回包含更新的记录数
      *      
      */
-    update(opts: object): number;
+    update(opts: FIBJS.GeneralObject): number;
 
-    update(opts: object, callback: (err: Error | undefined | null, retVal: number)=>any): void;
+    update(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null, retVal: number)=>any): void;
 
     /**
      * @description 根据指定的条件删除数据
@@ -113,9 +113,9 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回包含更新的记录数
      *      
      */
-    remove(opts: object): number;
+    remove(opts: FIBJS.GeneralObject): number;
 
-    remove(opts: object, callback: (err: Error | undefined | null, retVal: number)=>any): void;
+    remove(opts: FIBJS.GeneralObject, callback: (err: Error | undefined | null, retVal: number)=>any): void;
 
     /**
      * @description 格式化一个 sql 命令，并返回格式化结果
@@ -125,7 +125,7 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回格式化之后的 sql 命令
      *      
      */
-    format(method: string, opts: object): string;
+    format(method: string, opts: FIBJS.GeneralObject): string;
 
     /**
      * @description 格式化一个 sql 命令，并返回格式化结果

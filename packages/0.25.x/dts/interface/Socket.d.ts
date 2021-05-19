@@ -117,9 +117,9 @@ declare class Class_Socket extends Class_Stream {
      *      @return 返回从连接读取的数据包
      *      
      */
-    recvfrom(bytes?: number): object;
+    recvfrom(bytes?: number): FIBJS.GeneralObject;
 
-    recvfrom(bytes?: number, callback?: (err: Error | undefined | null, retVal: object)=>any): void;
+    recvfrom(bytes?: number, callback?: (err: Error | undefined | null, retVal: FIBJS.GeneralObject)=>any): void;
 
     /**
      * @description 将给定的数据写入连接，此方法等效于 write 方法

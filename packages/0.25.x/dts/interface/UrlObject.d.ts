@@ -16,7 +16,7 @@ declare class Class_UrlObject extends Class_object {
      *      @param args 指定构造参数的字典对象，支持的字段有：protocol, slashes, username, password, hostname, port, pathname, query, hash
      *      
      */
-    constructor(args: object);
+    constructor(args: FIBJS.GeneralObject);
 
     /**
      * @description UrlObject 对象构造函数，使用 url 字符串构造
@@ -41,7 +41,7 @@ declare class Class_UrlObject extends Class_object {
      *      @param args 指定构造参数的字典对象，支持的字段有：protocol, slashes, username, password, hostname, port, pathname, query, hash
      *      
      */
-    format(args: object): void;
+    format(args: FIBJS.GeneralObject): void;
 
     /**
      * @description 重定位 url 路径，自动识别新路径为相对路径还是绝对路径

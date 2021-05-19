@@ -22,7 +22,7 @@ declare class Class_EventInfo extends Class_object {
     /**
      *  查询触发事件的对象 
      */
-    readonly target: object;
+    readonly target: FIBJS.GeneralObject;
 
 
 }

@@ -26,7 +26,7 @@ declare class Class_MongoDB extends Class_object {
      *     @return 返回命令执行结果
      *    
      */
-    runCommand(cmd: object): object;
+    runCommand(cmd: FIBJS.GeneralObject): FIBJS.GeneralObject;
 
     /**
      * @description 指定一个简单的 MongoDB 数据库命令
@@ -35,7 +35,7 @@ declare class Class_MongoDB extends Class_object {
      *     @return 返回命令执行结果
      *    
      */
-    runCommand(cmd: string, arg: any): object;
+    runCommand(cmd: string, arg: any): FIBJS.GeneralObject;
 
 
     /**

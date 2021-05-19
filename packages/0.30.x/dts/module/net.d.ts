@@ -39,7 +39,7 @@ declare module 'net' {
      *      @return 返回网卡信息
      *     
      */
-    function info(): object;
+    function info(): FIBJS.GeneralObject;
 
     /**
      * @description 查询给定的主机名的地址

@@ -16,7 +16,7 @@ declare class Class_Handler extends Class_object {
      *      @param map 初始化路由参数
      *      
      */
-    constructor(map: object);
+    constructor(map: FIBJS.GeneralObject);
 
     /**
      * @description 创建一个 JavaSvript 消息处理器

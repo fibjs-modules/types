@@ -20,7 +20,7 @@ declare module 'bson' {
      * 	 @return 返回编码的二进制数据
      * 	 
      */
-    function encode(data: object): Class_Buffer;
+    function encode(data: FIBJS.GeneralObject): Class_Buffer;
 
     /**
      * @description 以 bson 方式解码字符串为一个变量
@@ -28,7 +28,7 @@ declare module 'bson' {
      * 	 @return 返回解码的变量
      * 	 
      */
-    function decode(data: Class_Buffer): object;
+    function decode(data: Class_Buffer): FIBJS.GeneralObject;
 
 }
 

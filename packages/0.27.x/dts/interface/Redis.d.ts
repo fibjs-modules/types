@@ -52,7 +52,7 @@ declare class Class_Redis extends Class_object {
      * @description 同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值
      *      @param kvs 指定要设置的 key/value 对象
      */
-    mset(kvs: object): void;
+    mset(kvs: FIBJS.GeneralObject): void;
 
     /**
      * @description 同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值
@@ -64,7 +64,7 @@ declare class Class_Redis extends Class_object {
      * @description 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在
      *      @param kvs 指定要设置的 key/value 对象
      */
-    msetNX(kvs: object): void;
+    msetNX(kvs: FIBJS.GeneralObject): void;
 
     /**
      * @description 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在
@@ -261,7 +261,7 @@ declare class Class_Redis extends Class_object {
      *      @param map 指定频道映射关系，对象属性名称将作为频道名称，属性的值将作为回调函数
      *      
      */
-    sub(map: object): void;
+    sub(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 退订给定的频道的全部回调
@@ -290,7 +290,7 @@ declare class Class_Redis extends Class_object {
      *      @param map 指定频道映射关系，对象属性名称将作为频道名称，属性的值将作为回调函数
      *      
      */
-    unsub(map: object): void;
+    unsub(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 按照模板订阅一组频道的信息，当消息发生时自动调用 func，func 包含三个参数，依次为 channel，message 和 pattern，同一模板同一函数只会回调一次
@@ -305,7 +305,7 @@ declare class Class_Redis extends Class_object {
      *      @param map 指定频道映射关系，对象属性名称将作为频道模板，属性的值将作为回调函数
      *      
      */
-    psub(map: object): void;
+    psub(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 退订给定模板的频道的全部回调
@@ -334,7 +334,7 @@ declare class Class_Redis extends Class_object {
      *      @param map 指定频道映射关系，对象属性名称将作为频道模板，属性的值将作为回调函数
      *      
      */
-    unpsub(map: object): void;
+    unpsub(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 查询和设置错误处理函数，当 sub 出现错误或者网络中断时回调，当回调发生后，本对象的一切 sub 都将中止

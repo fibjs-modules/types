@@ -71,7 +71,7 @@ declare module 'gui' {
      *      @return 返回打开的窗口对象
      * 	
      */
-    function open(url: string, opt?: object): Class_WebView;
+    function open(url: string, opt?: FIBJS.GeneralObject): Class_WebView;
 
 }
 

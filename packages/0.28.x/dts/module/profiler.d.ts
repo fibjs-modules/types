@@ -144,7 +144,7 @@ declare module 'profiler' {
      * 	 @return 返回对比的结果
      * 	 
      */
-    function diff(test: ()=>any): object;
+    function diff(test: ()=>any): FIBJS.GeneralObject;
 
     /**
      * @description 启动一次运行状态采样日志

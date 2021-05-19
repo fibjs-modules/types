@@ -136,9 +136,9 @@ declare class Class_WebView extends Class_EventEmitter {
      *      @return 返回执行的结果
      * 	 
      */
-    executeDevToolsMethod(method: string, params?: object): any;
+    executeDevToolsMethod(method: string, params?: FIBJS.GeneralObject): any;
 
-    executeDevToolsMethod(method: string, params?: object, callback?: (err: Error | undefined | null, retVal: any)=>any): void;
+    executeDevToolsMethod(method: string, params?: FIBJS.GeneralObject, callback?: (err: Error | undefined | null, retVal: any)=>any): void;
 
     /**
      * @description 关闭当前窗口 

@@ -30,7 +30,7 @@ declare class Class_MongoCursor extends Class_object {
      *     @return 返回游标对象本身便于链式调用
      *    
      */
-    sort(opts: object): Class_MongoCursor;
+    sort(opts: FIBJS.GeneralObject): Class_MongoCursor;
 
     /**
      * @description 查询当前游标是否有下一条记录
@@ -44,7 +44,7 @@ declare class Class_MongoCursor extends Class_object {
      *     @return 记录对象，无记录则返回 null
      *    
      */
-    next(): object;
+    next(): FIBJS.GeneralObject;
 
     /**
      * @description 查询游标的记录总数
@@ -89,7 +89,7 @@ declare class Class_MongoCursor extends Class_object {
      *     @return 返回游标对象本身便于链式调用
      *    
      */
-    hint(opts: object): Class_MongoCursor;
+    hint(opts: FIBJS.GeneralObject): Class_MongoCursor;
 
 }
 

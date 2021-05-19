@@ -55,7 +55,7 @@ declare class Class_LevelDB extends Class_object {
      *      @param map 指定要设定的键值数据字典
      *      
      */
-    mset(map: object): void;
+    mset(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 删除一组指定键值的值

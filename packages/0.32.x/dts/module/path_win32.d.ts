@@ -54,7 +54,7 @@ declare module 'path_win32' {
      *      @return 返回格式化后的路径
      *      
      */
-    function format(pathObject: object): string;
+    function format(pathObject: FIBJS.GeneralObject): string;
 
     /**
      * @description 解析路径为路径对象
@@ -63,7 +63,7 @@ declare module 'path_win32' {
      *      @return 返回 pathObject 对象
      *      
      */
-    function parse(path: string): object;
+    function parse(path: string): FIBJS.GeneralObject;
 
     /**
      * @description 查询路径中的目录路径
@@ -145,13 +145,13 @@ declare module 'path_win32' {
      * @description posix 实现，参见 path_posix
      *      
      */
-    const posix: object;
+    const posix: FIBJS.GeneralObject;
 
     /**
      * @description windows 实现，参见 path_win32
      *      
      */
-    const win32: object;
+    const win32: FIBJS.GeneralObject;
 
 }
 

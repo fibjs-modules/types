@@ -72,7 +72,7 @@ declare class Class_LruCache extends Class_EventEmitter {
      *      @param map 指定要设定的键值数据字典
      *      
      */
-    set(map: object): void;
+    set(map: FIBJS.GeneralObject): void;
 
     /**
      * @description 删除指定键值的全部值

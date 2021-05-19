@@ -41,7 +41,7 @@ declare module 'util' {
      *      @return 返回格式化后的字符串
      *      
      */
-    function inspect(obj: object, options?: object): string;
+    function inspect(obj: FIBJS.GeneralObject, options?: FIBJS.GeneralObject): string;
 
     /**
      * @description 封装给定的方法，本方法仅为兼容，并不输出警告
@@ -370,7 +370,7 @@ declare module 'util' {
      *      @return 返回过滤的结果
      *      
      */
-    function pick(v: any, ...objs: any[]): object;
+    function pick(v: any, ...objs: any[]): FIBJS.GeneralObject;
 
     /**
      * @description 返回一个object副本，只过排除指定键的属性值
@@ -380,7 +380,7 @@ declare module 'util' {
      *      @return 返回排除的结果
      *      
      */
-    function omit(v: any, ...keys: any[]): object;
+    function omit(v: any, ...keys: any[]): FIBJS.GeneralObject;
 
     /**
      * @description 获取数组的第一个元素
@@ -616,7 +616,7 @@ declare module 'util' {
      *      @return 返回组件版本对象
      *      
      */
-    function buildInfo(): object;
+    function buildInfo(): FIBJS.GeneralObject;
 
 }
 

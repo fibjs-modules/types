@@ -39,7 +39,7 @@ declare module 'fs' {
     /**
      * ! fs模块的常量对象 
      */
-    const constants: object;
+    const constants: FIBJS.GeneralObject;
 
     /**
      * @description 查询指定的文件或目录是否存在
@@ -451,7 +451,7 @@ declare module 'fs' {
      *      @param options.encoding {enum} default: 'utf8' 指定解析传入的 fname 的字符编码
      *      
      */
-    function watch(fname: string, options: object): Class_FSWatcher;
+    function watch(fname: string, options: FIBJS.GeneralObject): Class_FSWatcher;
 
     /**
      * @description 观察一个文件, 返回对应的 watcher 对象
@@ -463,7 +463,7 @@ declare module 'fs' {
      *      @param callback(evtType: 'change' | 'rename', filename: string) 当文件对象发生变化时的处理回调
      *      
      */
-    function watch(fname: string, options: object, callback: ()=>any): Class_FSWatcher;
+    function watch(fname: string, options: FIBJS.GeneralObject, callback: ()=>any): Class_FSWatcher;
 
     /**
      * @description 观察一个文件, 返回对应的 StatsWatcher 对象
@@ -483,7 +483,7 @@ declare module 'fs' {
      *      @param callback(curStats: Stats, prevStats: Stats) 当文件对象的 stats 发生变化时的处理回调
      *      
      */
-    function watchFile(fname: string, options: object, callback: ()=>any): Class_StatsWatcher;
+    function watchFile(fname: string, options: FIBJS.GeneralObject, callback: ()=>any): Class_StatsWatcher;
 
     /**
      * @description 从观察 fname 的 StatsWatcher 中移除所有观察事件的回调
