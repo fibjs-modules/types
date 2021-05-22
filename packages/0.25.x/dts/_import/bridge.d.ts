@@ -46,6 +46,7 @@
 /// <reference path="../module/zip.d.ts" />
 /// <reference path="../module/zlib.d.ts" />
 /// <reference path="../module/zmq.d.ts" />
+/// <reference path="../module/events.d.ts" />
 declare module '@fibjs/types/bridge' {
 }
 

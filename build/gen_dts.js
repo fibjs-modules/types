@@ -886,10 +886,19 @@ function gen_fibjs_import_dts({
 
     topDeclarition.members.push(typeGeneralObject)
 
-    const commonDeclaration = dom.emit(topDeclarition, {
-        rootFlags: dom.DeclarationFlags.None,
-    });
-    fs.writeTextFile(path.join(basedir, `_fibjs.d.ts`), commonDeclaration);
+    const legacyDeclartion = dom.create.namespace('Fibjs');
+    legacyDeclartion.members.push(dom.create.alias('AnyObject', dom.create.namedTypeReference('FIBJS.GeneralObject')));
+
+    const commonDeclarations = ([
+        dom.emit(topDeclarition, {
+            rootFlags: dom.DeclarationFlags.None,
+        }),
+        dom.emit(legacyDeclartion, {
+            rootFlags: dom.DeclarationFlags.None,
+        })
+    ]);
+
+    fs.writeTextFile(path.join(basedir, `_fibjs.d.ts`), commonDeclarations.join(''));
 }
 
 /**
@@ -929,6 +938,38 @@ function gen_bridge_dts({
  * @param {Record<string, import('../../idl/ir').IIDLDefinition>} defs 
  */
 module.exports = function gen_dts(defs, { DTS_DIST_DIR }) {
+    defs = { ...defs };
+    defs['events'] = {
+        "declare": {
+            "comments": "! @brief 内置的 events 模块 \n",
+            "type": "module",
+            "name": "events",
+            "extend": "object",
+            "module": true,
+            "doc": {
+              "descript": "内置的 events 模块",
+              "detail": [],
+              "params": []
+            }
+          },
+          "members": [
+            {
+              "memType": "object",
+              "comments": "! @brief 创建一个 EventEmitter 对象，参见 EventEmitter ",
+              "deprecated": null,
+              "name": "EventEmitter",
+              "type": "EventEmitter",
+              "newable": true,
+              "doc": {
+                "descript": "创建一个 EventEmitter 对象，参见 EventEmitter",
+                "detail": [],
+                "params": []
+              }
+            }
+          ],
+          "collect": "Utility"
+    };
+
     const {
         allModuleNames,
     } = gen_dts_for_declare(defs, { DTS_DIST_DIR });

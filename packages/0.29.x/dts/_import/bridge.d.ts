@@ -45,6 +45,7 @@
 /// <reference path="../module/vm.d.ts" />
 /// <reference path="../module/xml.d.ts" />
 /// <reference path="../module/constants.d.ts" />
+/// <reference path="../module/events.d.ts" />
 declare module '@fibjs/types/bridge' {
 }
 

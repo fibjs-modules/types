@@ -7,3 +7,8 @@ declare namespace FIBJS {
 
 }
 
+declare namespace Fibjs {
+    type AnyObject = FIBJS.GeneralObject;
+
+}
+
