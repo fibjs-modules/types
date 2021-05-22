@@ -98,7 +98,7 @@ declare module 'ws' {
      *      @return 返回协议处理器，可与 HttpServer, Chain, Routing 等对接
      *      
      */
-    function upgrade(accept: ()=>any): Class_Handler;
+    function upgrade(accept: (...args: any[])=>any): Class_Handler;
 
     /**
      * @description 创建一个 websocket 协议处理器，从 http 接收 upgrade 请求并握手，生成 WebSocket 对象
@@ -114,7 +114,7 @@ declare module 'ws' {
      *      @return 返回协议处理器，可与 HttpServer, Chain, Routing 等对接
      *      
      */
-    function upgrade(opts: FIBJS.GeneralObject, accept: ()=>any): Class_Handler;
+    function upgrade(opts: FIBJS.GeneralObject, accept: (...args: any[])=>any): Class_Handler;
 
 }
 

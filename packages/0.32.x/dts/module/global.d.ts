@@ -128,7 +128,7 @@ declare module 'global' {
      *     @return 返回定时器对象
      *     
      */
-    function setTimeout(callback: ()=>any, timeout?: number, ...args: any[]): Class_Timer;
+    function setTimeout(callback: (...args: any[])=>any, timeout?: number, ...args: any[]): Class_Timer;
 
     /**
      * @description 清除指定的定时器
@@ -145,7 +145,7 @@ declare module 'global' {
      *      @return 返回定时器对象
      *     
      */
-    function setInterval(callback: ()=>any, timeout: number, ...args: any[]): Class_Timer;
+    function setInterval(callback: (...args: any[])=>any, timeout: number, ...args: any[]): Class_Timer;
 
     /**
      * @description 清除指定的定时器
@@ -176,7 +176,7 @@ declare module 'global' {
      *      @return 返回定时器对象
      *     
      */
-    function setHrInterval(callback: ()=>any, timeout: number, ...args: any[]): Class_Timer;
+    function setHrInterval(callback: (...args: any[])=>any, timeout: number, ...args: any[]): Class_Timer;
 
     /**
      * @description 清除指定的定时器
@@ -192,7 +192,7 @@ declare module 'global' {
      *      @return 返回定时器对象
      *     
      */
-    function setImmediate(callback: ()=>any, ...args: any[]): Class_Timer;
+    function setImmediate(callback: (...args: any[])=>any, ...args: any[]): Class_Timer;
 
     /**
      * @description 清除指定的定时器

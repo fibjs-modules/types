@@ -138,7 +138,9 @@ function generalTypeMap(dataType, {
             break;
         }
         case 'Function': {
-            info.type = dom.create.functionType([], dom.type.any);
+            const funcType = dom.create.functionType([], dom.type.any);
+            funcType.parameters.push(dom.create.parameter('args', dom.create.array(dom.type.any), dom.ParameterFlags.Rest))
+            info.type = funcType;
             break;
         }
         case 'Date': {

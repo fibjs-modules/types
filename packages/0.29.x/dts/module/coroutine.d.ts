@@ -47,7 +47,7 @@ declare module 'coroutine' {
      *      @return 返回纤程对象
      *      
      */
-    function start(func: ()=>any, ...args: any[]): Class_Fiber;
+    function start(func: (...args: any[])=>any, ...args: any[]): Class_Fiber;
 
     /**
      * @description 并行执行一组函数，并等待返回
@@ -66,7 +66,7 @@ declare module 'coroutine' {
      *      @return 返回函数执行结果的数组
      *      
      */
-    function parallel(datas: any[], func: ()=>any, fibers?: number): any[];
+    function parallel(datas: any[], func: (...args: any[])=>any, fibers?: number): any[];
 
     /**
      * @description 并行执行一个函数多次，并等待返回
@@ -76,7 +76,7 @@ declare module 'coroutine' {
      *      @return 返回函数执行结果的数组
      *      
      */
-    function parallel(func: ()=>any, num: number, fibers?: number): any[];
+    function parallel(func: (...args: any[])=>any, num: number, fibers?: number): any[];
 
     /**
      * @description 并行执行一组函数，并等待返回

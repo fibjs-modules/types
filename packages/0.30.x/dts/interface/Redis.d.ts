@@ -254,7 +254,7 @@ declare class Class_Redis extends Class_object {
      *      @param func 指定回调函数
      *      
      */
-    sub(channel: Class_Buffer, func: ()=>any): void;
+    sub(channel: Class_Buffer, func: (...args: any[])=>any): void;
 
     /**
      * @description 订阅给定的一组频道的信息，当消息发生时自动调用相应的回调函数，同一频道同一函数只会回调一次
@@ -276,7 +276,7 @@ declare class Class_Redis extends Class_object {
      *      @param func 指定退订的回调函数
      *     
      */
-    unsub(channel: Class_Buffer, func: ()=>any): void;
+    unsub(channel: Class_Buffer, func: (...args: any[])=>any): void;
 
     /**
      * @description 退订一组给定的频道的全部回调
@@ -298,7 +298,7 @@ declare class Class_Redis extends Class_object {
      *      @param func 指定回调函数
      *      
      */
-    psub(pattern: string, func: ()=>any): void;
+    psub(pattern: string, func: (...args: any[])=>any): void;
 
     /**
      * @description 订阅给定的一组频道模板的信息，当消息发生时自动调用相应的 func，同一频道同一函数只会回调一次
@@ -320,7 +320,7 @@ declare class Class_Redis extends Class_object {
      *      @param func 指定退订的回调函数
      *     
      */
-    unpsub(pattern: string, func: ()=>any): void;
+    unpsub(pattern: string, func: (...args: any[])=>any): void;
 
     /**
      * @description 退订一组给定模板的频道的全部回调
@@ -340,7 +340,7 @@ declare class Class_Redis extends Class_object {
      * @description 查询和设置错误处理函数，当 sub 出现错误或者网络中断时回调，当回调发生后，本对象的一切 sub 都将中止
      *      
      */
-    onsuberror: ()=>any;
+    onsuberror: (...args: any[])=>any;
 
     /**
      * @description 将信息 message 发送到指定的频道 channel

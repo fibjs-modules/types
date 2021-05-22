@@ -460,7 +460,7 @@ declare module 'util' {
      *      @return 返回 list 本身
      *      
      */
-    function each(list: any, iterator: ()=>any, context?: any): any;
+    function each(list: any, iterator: (...args: any[])=>any, context?: any): any;
 
     /**
      * @description 通过变换函数（iterator迭代器）把 list 中的每个值映射到一个新的数组中。如果传递了 context 参数，则把 iterator 绑定到 context 对象上。每次调用 iterator 都会传递三个参数：(element, index, list)
@@ -471,7 +471,7 @@ declare module 'util' {
      *      @return 返回变换的结果
      *      
      */
-    function map(list: any, iterator: ()=>any, context?: any): any[];
+    function map(list: any, iterator: (...args: any[])=>any, context?: any): any[];
 
     /**
      * @description 把 list中 元素归结为一个单独的数值。如果传递了 context 参数，则把 iterator 绑定到 context 对象上。每次调用 iterator 都会传递三个参数：(memo, element, index, list)
@@ -483,7 +483,7 @@ declare module 'util' {
      *      @return 返回归结的结果
      *      
      */
-    function reduce(list: any, iterator: ()=>any, memo: any, context?: any): any;
+    function reduce(list: any, iterator: (...args: any[])=>any, memo: any, context?: any): any;
 
     /**
      * @description 数据统计对象，用以构建应用运行时数据收集，参见 Stats 对象。
@@ -560,7 +560,7 @@ declare module 'util' {
      *      @return 返回同步运行的方法
      *      
      */
-    function sync(func: ()=>any, async_func?: boolean): ()=>any;
+    function sync(func: (...args: any[])=>any, async_func?: boolean): (...args: any[])=>any;
 
     /**
      * @description 查询当前引擎及各组件版本信息

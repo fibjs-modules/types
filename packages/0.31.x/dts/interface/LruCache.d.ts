@@ -57,7 +57,7 @@ declare class Class_LruCache extends Class_EventEmitter {
      *      @return 返回键值所对应的值
      *      
      */
-    get(name: string, updater: ()=>any): any;
+    get(name: string, updater: (...args: any[])=>any): any;
 
     /**
      * @description 设定一个键值数据，键值不存在则插入一条新数据
@@ -91,7 +91,7 @@ declare class Class_LruCache extends Class_EventEmitter {
     /**
      * @description 查询和绑定数据超时事件，相当于 on("expire", func); 
      */
-    onexpire: ()=>any;
+    onexpire: (...args: any[])=>any;
 
 }
 

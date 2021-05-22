@@ -442,7 +442,7 @@ declare module 'fs' {
      *      @return FSWatcher 对象
      *      
      */
-    function watch(fname: string, callback: ()=>any): Class_FSWatcher;
+    function watch(fname: string, callback: (...args: any[])=>any): Class_FSWatcher;
 
     /**
      * @description 观察一个文件, 返回对应的 watcher 对象
@@ -479,7 +479,7 @@ declare module 'fs' {
      *      @return FSWatcher 对象
      *      
      */
-    function watch(fname: string, options: FIBJS.GeneralObject, callback: ()=>any): Class_FSWatcher;
+    function watch(fname: string, options: FIBJS.GeneralObject, callback: (...args: any[])=>any): Class_FSWatcher;
 
     /**
      * @description 观察一个文件, 返回对应的 StatsWatcher 对象
@@ -488,7 +488,7 @@ declare module 'fs' {
      *      @return StatsWatcher 对象
      *      
      */
-    function watchFile(fname: string, callback: ()=>any): Class_StatsWatcher;
+    function watchFile(fname: string, callback: (...args: any[])=>any): Class_StatsWatcher;
 
     /**
      * @description 观察一个文件, 返回对应的 StatsWatcher 对象
@@ -507,7 +507,7 @@ declare module 'fs' {
      *      @return StatsWatcher 对象
      *      
      */
-    function watchFile(fname: string, options: FIBJS.GeneralObject, callback: ()=>any): Class_StatsWatcher;
+    function watchFile(fname: string, options: FIBJS.GeneralObject, callback: (...args: any[])=>any): Class_StatsWatcher;
 
     /**
      * @description 从观察 fname 的 StatsWatcher 中移除所有观察事件的回调
@@ -527,7 +527,7 @@ declare module 'fs' {
      *      @return StatsWatcher 对象
      *      
      */
-    function unwatchFile(fname: string, callback: ()=>any): void;
+    function unwatchFile(fname: string, callback: (...args: any[])=>any): void;
 
 }
 

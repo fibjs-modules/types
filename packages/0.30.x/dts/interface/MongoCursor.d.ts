@@ -66,7 +66,7 @@ declare class Class_MongoCursor extends Class_object {
      *     @param func 指定处理函数
      *    
      */
-    forEach(func: ()=>any): void;
+    forEach(func: (...args: any[])=>any): void;
 
     /**
      * @description 遍历处理全部记录，并返回处理结果
@@ -74,7 +74,7 @@ declare class Class_MongoCursor extends Class_object {
      *     @return 返回处理结果数组
      *    
      */
-    map(func: ()=>any): any[];
+    map(func: (...args: any[])=>any): any[];
 
     /**
      * @description 返回当前游标全部记录的数组

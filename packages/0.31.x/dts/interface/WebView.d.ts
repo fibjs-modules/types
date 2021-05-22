@@ -97,7 +97,7 @@ declare class Class_WebView extends Class_EventEmitter {
     /**
      * @description 查询和绑定加载成功事件，相当于 on("load", func); 
      */
-    onload: ()=>any;
+    onload: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定窗口移动事件，相当于 on("move", func); 
@@ -111,7 +111,7 @@ declare class Class_WebView extends Class_EventEmitter {
      * 	 ```
      * 	
      */
-    onmove: ()=>any;
+    onmove: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定窗口尺寸改变事件，相当于 on("size", func);
@@ -125,17 +125,17 @@ declare class Class_WebView extends Class_EventEmitter {
      *      ```
      * 	
      */
-    onresize: ()=>any;
+    onresize: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定窗口关闭事件，WebView 关闭后会触发此时间，相当于 on("closed", func); 
      */
-    onclosed: ()=>any;
+    onclosed: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定接受 webview 内 postMessage 消息事件，相当于 on("message", func); 
      */
-    onmessage: ()=>any;
+    onmessage: (...args: any[])=>any;
 
 }
 

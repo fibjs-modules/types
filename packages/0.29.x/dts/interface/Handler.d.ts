@@ -23,7 +23,7 @@ declare class Class_Handler extends Class_object {
      *      @param hdlr JavaScript 处理器函数
      *      
      */
-    constructor(hdlr: ()=>any);
+    constructor(hdlr: (...args: any[])=>any);
 
     /**
      * @description 构造一个 fileHandler 或者 HttpRepeater

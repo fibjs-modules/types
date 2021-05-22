@@ -31,7 +31,7 @@ declare class Class_SandBox extends Class_object {
      *      @param require 自定义 require 函数，当模块不存在时，先调用自定义函数，无返回再从文件中加载
      *      
      */
-    constructor(mods: FIBJS.GeneralObject, require: ()=>any);
+    constructor(mods: FIBJS.GeneralObject, require: (...args: any[])=>any);
 
     /**
      * @description 构造一个独立 Global 新的安全沙箱对象，并初始化基础模块
@@ -48,7 +48,7 @@ declare class Class_SandBox extends Class_object {
      *      @param global 指定初始化的 Global 属性
      *      
      */
-    constructor(mods: FIBJS.GeneralObject, require: ()=>any, global: FIBJS.GeneralObject);
+    constructor(mods: FIBJS.GeneralObject, require: (...args: any[])=>any, global: FIBJS.GeneralObject);
 
     /**
      * @description 向沙箱中添加一个基础模块

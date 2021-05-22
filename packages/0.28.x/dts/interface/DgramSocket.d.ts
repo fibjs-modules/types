@@ -97,7 +97,7 @@ declare class Class_DgramSocket extends Class_EventEmitter {
      *      @param callback 关闭完成后的回调函数，它相当于为 `close` 事件添加了一个监听器
      *     
      */
-    close(callback: ()=>any): void;
+    close(callback: (...args: any[])=>any): void;
 
     /**
      * @description 查询 socket 接收缓冲区大小 

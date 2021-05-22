@@ -48,7 +48,7 @@ declare class Class_DbConnection extends Class_object {
      *      @return 返回事务是否提交，正常 commit 时返回 true, rollback 时返回 false，如果事务出错则抛出错误
      *     
      */
-    trans(func: ()=>any): boolean;
+    trans(func: (...args: any[])=>any): boolean;
 
     /**
      * @description 执行一个 sql 命令，并返回执行结果，可根据参数格式化字符串

@@ -98,7 +98,7 @@ declare module 'ws' {
      *      @return 返回协议处理器，可与 HttpServer, Chain, Routing 等对接
      *      
      */
-    function upgrade(accept: ()=>any): Class_Handler;
+    function upgrade(accept: (...args: any[])=>any): Class_Handler;
 
 }
 

@@ -89,7 +89,7 @@ declare class Class_LevelDB extends Class_object {
      *      @param func 枚举回调函数
      *      
      */
-    forEach(func: ()=>any): void;
+    forEach(func: (...args: any[])=>any): void;
 
     /**
      * @description 枚举数据库中键值在 from 和 to 之间的键值对
@@ -109,7 +109,7 @@ declare class Class_LevelDB extends Class_object {
      *      @param func 枚举回调函数
      *      
      */
-    between(from: Class_Buffer, to: Class_Buffer, func: ()=>any): void;
+    between(from: Class_Buffer, to: Class_Buffer, func: (...args: any[])=>any): void;
 
     /**
      * @description 在当前数据库上开启一个事务

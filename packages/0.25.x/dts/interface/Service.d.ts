@@ -11,7 +11,7 @@ declare class Class_Service extends Class_EventEmitter {
      *      @param event 服务事件处理
      *      
      */
-    constructor(name: string, worker: ()=>any, event?: FIBJS.GeneralObject);
+    constructor(name: string, worker: (...args: any[])=>any, event?: FIBJS.GeneralObject);
 
     /**
      * @description 开始运行服务实体 
@@ -28,17 +28,17 @@ declare class Class_Service extends Class_EventEmitter {
     /**
      * @description 查询和绑定服务停止事件，相当于 on("stop", func); 
      */
-    onstop: ()=>any;
+    onstop: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定服务暂停事件，相当于 on("pause", func); 
      */
-    onpause: ()=>any;
+    onpause: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定服务恢复事件，相当于 on("continue", func); 
      */
-    oncontinue: ()=>any;
+    oncontinue: (...args: any[])=>any;
 
     /**
      * @description 安装服务到系统

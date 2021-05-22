@@ -196,7 +196,7 @@ declare module 'process' {
      *      @param args 可变参数序列，此序列会在纤程内传递给函数
      *      
      */
-    function nextTick(func: ()=>any, ...args: any[]): void;
+    function nextTick(func: (...args: any[])=>any, ...args: any[]): void;
 
     /**
      * @description 运行指定的命令行，接管进程输入输出流，并返回进程对象

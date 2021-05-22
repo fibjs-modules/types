@@ -34,7 +34,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    on(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    on(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象
@@ -51,7 +51,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    addListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    addListener(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象
@@ -68,7 +68,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    prependListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    prependListener(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -85,7 +85,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    once(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    once(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个一次性事件处理函数到对象，一次性处理函数只会触发一次
@@ -102,7 +102,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    prependOnceListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    prependOnceListener(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 绑定一个事件处理函数到对象起始
@@ -119,7 +119,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    off(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    off(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 取消对象处理队列中的全部函数
@@ -144,7 +144,7 @@ declare class Class_EventEmitter extends Class_object {
      *     @return 返回事件对象本身，便于链式调用
      *    
      */
-    removeListener(ev: string, func: ()=>any): FIBJS.GeneralObject;
+    removeListener(ev: string, func: (...args: any[])=>any): FIBJS.GeneralObject;
 
     /**
      * @description 取消对象处理队列中的全部函数

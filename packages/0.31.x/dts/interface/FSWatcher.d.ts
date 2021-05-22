@@ -29,17 +29,17 @@ declare class Class_FSWatcher extends Class_EventEmitter {
     /**
      * @description 查询和绑定"文件改变"事件，相当于 on("change", func); 
      */
-    onchange: ()=>any;
+    onchange: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定"watcher 关闭"的事件，相当于 on("close", func); 
      */
-    onclose: ()=>any;
+    onclose: (...args: any[])=>any;
 
     /**
      * @description 查询和绑定"错误发生"的事件，相当于 on("error", func); 
      */
-    onerror: ()=>any;
+    onerror: (...args: any[])=>any;
 
     /**
      * @description 关闭该 Watcher, 不再接收对应的文件变化处理事件 

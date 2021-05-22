@@ -429,7 +429,7 @@ declare module 'assert' {
      *      
      */
     /* Illegal function name 'throws' can't be used here
-    function throws(block: ()=>any, msg?: string): void;
+    function throws(block: (...args: any[])=>any, msg?: string): void;
     */
 
     /**
@@ -438,7 +438,7 @@ declare module 'assert' {
      *      @param msg 断言失败时的提示信息
      *      
      */
-    function doesNotThrow(block: ()=>any, msg?: string): void;
+    function doesNotThrow(block: (...args: any[])=>any, msg?: string): void;
 
     /**
      * @description 如果参数为真，则抛出

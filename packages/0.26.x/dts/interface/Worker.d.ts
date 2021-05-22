@@ -23,7 +23,7 @@ declare class Class_Worker extends Class_EventEmitter {
     /**
      * @description 查询和绑定接受 postMessage 消息事件，相当于 on("message", func); 
      */
-    onmessage: ()=>any;
+    onmessage: (...args: any[])=>any;
 
 }
 
