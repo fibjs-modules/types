@@ -1,1 +1,1 @@
-/// <reference path="./DefinitelyTyped/declare/_test_env.d.ts" />
+/// <reference path="./packages/0.32.x/test.d.ts" />
