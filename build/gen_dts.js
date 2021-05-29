@@ -616,7 +616,9 @@ function processDeclareInterface(def, {
 /**
  * @param {import('../../idl/ir').IIDLDefinition} def
  * @param {*} configuration
- * @param {*} retValue
+ * @param {{
+ *  dtsUnit: import('dts-dom').ModuleDeclaration
+ * }} retValue
  */
 function processDeclareModule(def, {
     unitName,
@@ -624,10 +626,15 @@ function processDeclareModule(def, {
     allInterfacesNames,
     allModuleNames,
 }, {
-    dtsUnit,
+    dtsUnit: declareDtsUnit,
     tripleSlashDirectiveMap,
 }) {
+    const moduleName = declareDtsUnit.name;
     const addRefToTripleSlashDirectivesHost = getAddRefToTripleSlashDirectivesHost(tripleSlashDirectiveMap, { allInterfacesNames, allModuleNames });
+
+    const shouldReExport = [/* 'process' */].includes(moduleName);
+
+    const dtsUnit = shouldReExport ? /* dtsUnitInternal */dom.create.module(`int_${moduleName}`) : declareDtsUnit;
 
     def.members.forEach(mem => {
         let memFlags = 0;
@@ -768,8 +775,26 @@ function processDeclareModule(def, {
 
     dtsUnit.jsDocComment = convertIDLCommentToJSDocComment(def.declare.comments || '');
 
+    /* deal with some special module */
+    if (dtsUnit !== declareDtsUnit) { // means dtsUnitInternal used, we should re-export it.
+        declareDtsUnit.members.push(dtsUnit)
+
+        switch (def.declare.name) {
+            case 'process': {
+                const exp2 = dom.create.intersection([
+                    dom.create.namedTypeReference(`int_${moduleName}`),
+                    dom.create.namedTypeReference(`Class_EventEmitter`)
+                ]);
+                declareDtsUnit.members.push(dom.create.alias(`exp2_${moduleName}`, exp2))
+                declareDtsUnit.members.push(dom.create.exportEquals(`exp2_${moduleName}`))
+                addRefToTripleSlashDirectivesHost('module', { refNmae: 'EventEmitter', refType: 'EventEmitter', refHostName: 'process' })
+                break;
+            }
+        }
+    }
+
     // console.notice(`:--- try to emit dts for ${unitCategory}: ${unitName} ---->`)
-    return dom.emit(dtsUnit, {
+    return dom.emit(declareDtsUnit, {
         // rootFlags: dom.ContextFlags.Module,
         tripleSlashDirectives: Object.values(tripleSlashDirectiveMap),
     });
