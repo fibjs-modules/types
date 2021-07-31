@@ -1,5 +1,5 @@
 /// <reference path="../_common.d.ts" />
-/// <reference path="../../dts/module/events.d.ts" />
+/// <reference path="../../../dts/module/events.d.ts" />
 
 declare module "stream" {
     import * as events from "events";

@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/types",
-  "version": "0.28.13",
+  "version": "0.28.14",
   "description": "types for fibjs runtime",
   "types": "index.d.ts",
   "author": "richardo2016@gmail.com",
