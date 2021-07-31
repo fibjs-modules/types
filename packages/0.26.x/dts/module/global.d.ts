@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/Buffer.d.ts" />
 /// <reference path="../interface/Int64.d.ts" />
 /// <reference path="../module/console.d.ts" />

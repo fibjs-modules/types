@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/StringDecoder.d.ts" />
 /**
  * @description 解码 Buffer 到字符串

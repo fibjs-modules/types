@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/Message.d.ts" />
 /// <reference path="../interface/HttpCollection.d.ts" />
 /// <reference path="../interface/Stream.d.ts" />

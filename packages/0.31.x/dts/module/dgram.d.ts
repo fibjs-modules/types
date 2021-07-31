@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/DgramSocket.d.ts" />
 /**
  * @description dgram 模块提供了 UDP 数据包 socket 的实现

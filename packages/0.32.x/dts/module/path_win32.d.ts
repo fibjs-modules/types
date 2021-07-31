@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /**
  * @description 文件路径处理模块
  * 

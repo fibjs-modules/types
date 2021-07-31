@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/XmlNode.d.ts" />
 /**
  * @description XmlProcessingInstruction 对象表示 xml 处理指令

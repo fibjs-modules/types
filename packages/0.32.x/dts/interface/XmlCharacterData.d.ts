@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/XmlNode.d.ts" />
 /**
  * @description XmlCharacterData 接口提供了 XmlText 和 XmlComment 节点的常用功能

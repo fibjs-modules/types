@@ -842,7 +842,7 @@ function gen_dts_for_declare(defs, { DTS_DIST_DIR }) {
                 : dom.create.module(`${unitName}`)
             const tripleSlashDirectiveMap = {};
 
-            tripleSlashDirectiveMap['_fibjs.d.ts'] = dom.create.tripleSlashReferencePathDirective(`../_import/_fibjs.d.ts`)
+            tripleSlashDirectiveMap['import.d.ts'] = dom.create.tripleSlashReferencePathDirective(`../../dts/_import/index.d.ts`)
 
             const processOptions = {
                 unitName,
@@ -872,58 +872,6 @@ function gen_dts_for_declare(defs, { DTS_DIST_DIR }) {
         allInterfacesNames,
         allModuleNames
     }
-}
-
-/**
- * 
- * @param {{
- *  allModuleNames: Set<string>
- * }} param0 
- */
-function gen_fibjs_import_dts({
-    DTS_DIST_DIR
-}) {
-    const basedir = path.resolve(DTS_DIST_DIR, './_import');
-    if (!fs.exists(basedir)) {
-        fs.mkdir(basedir);
-    }
-
-    const topDeclarition = dom.create.namespace('FIBJS');
-
-    const typedArrayType = dom.create.union([
-        dom.create.namedTypeReference('Int8Array'),
-        dom.create.namedTypeReference('Uint8Array'),
-        dom.create.namedTypeReference('Int16Array'),
-        dom.create.namedTypeReference('Uint16Array'),
-        dom.create.namedTypeReference('Int32Array'),
-        dom.create.namedTypeReference('Uint32Array'),
-        dom.create.namedTypeReference('Uint8ClampedArray'),
-        dom.create.namedTypeReference('Float32Array'),
-        dom.create.namedTypeReference('Float64Array'),
-    ]);
-    const typeAlias = dom.create.alias('TypedArray', typedArrayType);
-    topDeclarition.members.push(typeAlias);
-
-    const typeGeneralObject = dom.create.interface('GeneralObject');
-    typeGeneralObject.members.push(
-        dom.create.indexSignature('k', 'string', dom.type.any),
-    );
-
-    topDeclarition.members.push(typeGeneralObject)
-
-    const legacyDeclartion = dom.create.namespace('Fibjs');
-    legacyDeclartion.members.push(dom.create.alias('AnyObject', dom.create.namedTypeReference('FIBJS.GeneralObject')));
-
-    const commonDeclarations = ([
-        dom.emit(topDeclarition, {
-            rootFlags: dom.DeclarationFlags.None,
-        }),
-        dom.emit(legacyDeclartion, {
-            rootFlags: dom.DeclarationFlags.None,
-        })
-    ]);
-
-    fs.writeTextFile(path.join(basedir, `_fibjs.d.ts`), commonDeclarations.join(''));
 }
 
 /**
@@ -999,6 +947,5 @@ module.exports = function gen_dts(defs, { DTS_DIST_DIR }) {
         allModuleNames,
     } = gen_dts_for_declare(defs, { DTS_DIST_DIR });
 
-    gen_fibjs_import_dts({ DTS_DIST_DIR });
     gen_bridge_dts({ allModuleNames, DTS_DIST_DIR });
 }

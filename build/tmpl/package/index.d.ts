@@ -9,7 +9,7 @@
 /// <reference lib="es2018"/>
 /// <reference lib="es2019"/>
 
-/// <reference path="./dts/_import/bridge.d.ts" />
+/// <reference path="./dts/_import/index.d.ts" />
 
 import _Global = require('global');
 

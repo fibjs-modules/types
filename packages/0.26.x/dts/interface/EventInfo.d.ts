@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/object.d.ts" />
 /**
  * @description 事件信息对象，用于在事件中传递信息 

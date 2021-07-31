@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/object.d.ts" />
 /**
  * @description 数据统计对象，用以构建应用运行时数据收集

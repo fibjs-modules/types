@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/HttpServer.d.ts" />
 /// <reference path="../interface/Handler.d.ts" />
 /// <reference path="../interface/X509Cert.d.ts" />

@@ -1,4 +1,4 @@
-/// <reference path="../_import/_fibjs.d.ts" />
+/// <reference path="../../dts/_import/index.d.ts" />
 /// <reference path="../interface/object.d.ts" />
 /**
  * @description http Cookie 对象，用于添加和处理 cookie 
