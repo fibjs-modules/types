@@ -58,7 +58,7 @@ declare class Class_HttpCookie extends Class_object {
     /**
      * @description 查询和设置 cookie 的过期时间 
      */
-    expires: typeof Date;
+    expires: Date;
 
     /**
      * @description 查询和设置 cookie 是否仅允许 http 请求，缺省 false 

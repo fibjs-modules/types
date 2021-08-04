@@ -144,7 +144,8 @@ function generalTypeMap(dataType, {
             break;
         }
         case 'Date': {
-            info.type = dom.create.typeof('Date');
+            // info.type = dom.create.typeof('Date');
+            info.type = dom.create.namedTypeReference('Date');
             break;
         }
         // fibjs's cpp stream, not js stream 

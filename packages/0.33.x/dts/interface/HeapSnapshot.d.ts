@@ -33,7 +33,7 @@ declare class Class_HeapSnapshot extends Class_object {
     /**
      * @description 时间信息 
      */
-    readonly time: typeof Date;
+    readonly time: Date;
 
     /**
      * @description 堆视图的根节点 

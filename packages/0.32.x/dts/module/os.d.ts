@@ -162,7 +162,7 @@ declare module 'os' {
      *      @return 返回 javascript Date 对象
      *      
      */
-    function time(tmString?: string): typeof Date;
+    function time(tmString?: string): Date;
 
     /**
      * @description 时间计算函数，根据 part 指定计算时间
@@ -172,7 +172,7 @@ declare module 'os' {
      *      @return 返回 javascript Date 对象
      *      
      */
-    function dateAdd(d: typeof Date, num: number, part: string): typeof Date;
+    function dateAdd(d: Date, num: number, part: string): Date;
 
     /**
      * @description 查询当前运行执行文件完整路径 

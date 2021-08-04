@@ -83,12 +83,12 @@ declare class Class_X509Crl extends Class_object {
     /**
      * @description 获取证书的本次更新时间 
      */
-    readonly thisUpdate: typeof Date;
+    readonly thisUpdate: Date;
 
     /**
      * @description 获取证书的下次更新时间 
      */
-    readonly nextUpdate: typeof Date;
+    readonly nextUpdate: Date;
 
     /**
      * @description 获取证书链中得下一个证书 

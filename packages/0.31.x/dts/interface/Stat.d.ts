@@ -65,7 +65,7 @@ declare class Class_Stat extends Class_object {
     /**
      * @description 文件最后修改时间 
      */
-    readonly mtime: typeof Date;
+    readonly mtime: Date;
 
     /**
      * @description 文件最后修改时间(ms) 
@@ -75,7 +75,7 @@ declare class Class_Stat extends Class_object {
     /**
      * @description 文件最后访问时间 
      */
-    readonly atime: typeof Date;
+    readonly atime: Date;
 
     /**
      * @description 文件最后访问时间(ms) 
@@ -85,7 +85,7 @@ declare class Class_Stat extends Class_object {
     /**
      * @description 文件创建时间 
      */
-    readonly ctime: typeof Date;
+    readonly ctime: Date;
 
     /**
      * @description 文件创建时间(ms) 
@@ -95,7 +95,7 @@ declare class Class_Stat extends Class_object {
     /**
      * @description 文件产生时间 
      */
-    readonly birthtime: typeof Date;
+    readonly birthtime: Date;
 
     /**
      * @description 文件产生时间(ms) 

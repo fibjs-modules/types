@@ -110,12 +110,12 @@ declare class Class_X509Cert extends Class_object {
     /**
      * @description 获取证书的生效时间 
      */
-    readonly notBefore: typeof Date;
+    readonly notBefore: Date;
 
     /**
      * @description 获取证书的到期时间 
      */
-    readonly notAfter: typeof Date;
+    readonly notAfter: Date;
 
     /**
      * @description 获取证书是否是 ca 证书 

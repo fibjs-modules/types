@@ -25,17 +25,17 @@ declare class Class_Stat extends Class_object {
     /**
      * @description 文件最后修改时间 
      */
-    readonly mtime: typeof Date;
+    readonly mtime: Date;
 
     /**
      * @description 文件最后访问时间 
      */
-    readonly atime: typeof Date;
+    readonly atime: Date;
 
     /**
      * @description 文件创建时间 
      */
-    readonly ctime: typeof Date;
+    readonly ctime: Date;
 
     /**
      * @description 文件拥有者的id 
