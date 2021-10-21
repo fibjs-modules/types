@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "fibjs ./build/bin.js",
+    "pub": "lerna publish patch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-test": "cd type-test && npm i"
   },
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/fibjs-modules/types#readme",
   "devDependencies": {
     "ejs": "^2.5.6",
+    "lerna": "^4.0.0",
     "pegjs": "^0.10.0"
   },
   "dependencies": {

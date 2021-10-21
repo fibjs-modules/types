@@ -34,11 +34,16 @@ const mkdirp = exports.mkdirp = function (inputp) {
     }
 }
 
-exports.mkVersionPkg = function (fibjs_version) {
+exports.mkVersionPkg = function (fibjs_version, is_latest = false) {
     const pkgsrc = path.resolve(__dirname, './tmpl/package')
-    const mono_version = [ semver.major(fibjs_version), semver.minor(fibjs_version), 'x' ].join('.')
+    const sver = {
+        major: semver.major(fibjs_version),
+        minor: semver.minor(fibjs_version),
+        patch: semver.patch(fibjs_version),
+    }
+    const pkgdirName = is_latest ? 'latest' : [ sver.major, sver.minor, 'x' ].join('.')
 
-    const target = getVersionedPkgLocation(mono_version)
+    const target = getVersionedPkgLocation(pkgdirName)
 
     copy(pkgsrc, target)
 
@@ -52,8 +57,16 @@ exports.mkVersionPkg = function (fibjs_version) {
         )
     )
 
-    renderEjs(target, './package.json.ejs', {version: fibjs_version})
-    renderEjs(target, './README.md.ejs', {version: fibjs_version})
+    const verisionInPkgName = [sver.major, sver.minor, 0].join('-');
+    const pkgName = is_latest ?  '@fibjs/types' : `@fibjs/types-${verisionInPkgName}`;
+
+    const renderCtx = {
+        version: fibjs_version,
+        pkgName: pkgName,
+        pkgdirName: pkgdirName,
+    };
+    renderEjs(target, './package.json.ejs', renderCtx)
+    renderEjs(target, './README.md.ejs', renderCtx)
 
     return target
 }
@@ -66,7 +79,9 @@ function renderEjs (ejsFilebase, ejsSrcFilename, ctx) {
     const src = path.resolve(ejsFilebase, ejsSrcFilename)
     const compiler = ejs.compile(fs.readTextFile(src));
     const pkgJson = compiler({
-        version: ctx.version
+        version: ctx.version,
+        pkgName: ctx.pkgName,
+        pkgdirName: ctx.pkgdirName,
     });
 
     const ejsTargetFilename = ejsSrcFilename.replace('.ejs', '')

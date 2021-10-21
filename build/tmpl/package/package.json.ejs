@@ -1,5 +1,5 @@
 {
-  "name": "@fibjs/types",
+  "name": "<%- pkgName %>",
   "version": "<%- version %>",
   "description": "types for fibjs runtime",
   "types": "index.d.ts",
@@ -8,10 +8,13 @@
   "bugs": {
     "url": "https://github.com/fibjs-modules/types/issues"
   },
-  "homepage": "https://github.com/fibjs-modules/types#readme",
+  "homepage": "https://github.com/fibjs-modules/types/tree/master/packages/<%- pkgdirName %>#readme",
   "files": [
     "*.d.ts",
     "dts"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
   

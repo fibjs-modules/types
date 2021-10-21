@@ -22,9 +22,19 @@ if (!fibjs_version)
 if (!fibjs_version)
     throw `fibjs version required, set property value to environment variable \`FIBJS_VERSION\`.`
 
-if (!semver.valid(fibjs_version))
+
+if (fibjs_version === 'latest') {
+    fibjs_version = [
+        semver.major(fibjs_committish),
+        semver.minor(fibjs_committish),
+        semver.patch(fibjs_committish),
+    ].join('.');
+    
+    const package_target = mkVersionPkg(fibjs_version, true)
+    gen_types(fibjs_committish, package_target);
+} else if (!semver.valid(fibjs_version)) {
     throw `fibjs version invalid, set property value to environment variable \`FIBJS_VERSION\`.`
-
-const package_target = mkVersionPkg(fibjs_version)
-
-gen_types(fibjs_committish, package_target);
+} else {
+    const package_target = mkVersionPkg(fibjs_version)
+    gen_types(fibjs_committish, package_target);
+}

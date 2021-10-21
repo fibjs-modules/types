@@ -1,19 +1,19 @@
 # types
 
-[![NPM version](https://img.shields.io/npm/v/@fibjs/types.svg)](https://www.npmjs.org/package/@fibjs/types)
+[![NPM version](https://img.shields.io/npm/v/@fibjs/types-0-29-0.svg)](https://www.npmjs.org/package/@fibjs/types-0-29-0)
 
 types for fibjs runtime
 
 ## Usage
 
 ```
-fibjs --install @fibjs/types@0.29.15
+fibjs --install @@fibjs/types-0-29-0
 ```
 
 ## Contributes
 
 1. Fork this repo, `git clone git@github.com:fibjs-modules/types.git`;
-2. `git checkout -b 0.29.15/my-feat`
+2. `git checkout -b 0.29.0/my-feat`
 3. Modify and commit your changes
 4. Submit one pr 😊
 
