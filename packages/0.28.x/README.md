@@ -7,7 +7,7 @@ types for fibjs runtime
 ## Usage
 
 ```
-fibjs --install @@fibjs/types-0-28-0
+fibjs --install @fibjs/types-0-28-0
 ```
 
 ## Contributes
