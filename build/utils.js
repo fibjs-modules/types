@@ -1,6 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
+const util = require('util');
+const co = require('coroutine');
+const assert = require('assert');
+const readdir = require('@fibjs/fs-readdir-recursive');
 
 const ssl = require('ssl');
 ssl.loadRootCerts();
@@ -8,8 +12,6 @@ ssl.loadRootCerts();
 const semver = require('semver')
 
 const ejs = require('ejs')
-
-const copy = require('@fibjs/copy')
 
 exports.getHttpClient = function () {
     const client = new http.Client();
@@ -45,7 +47,12 @@ exports.mkVersionPkg = function (fibjs_version, is_latest = false) {
 
     const target = getVersionedPkgLocation(pkgdirName)
 
-    copy(pkgsrc, target)
+    try {
+        copy(pkgsrc, target)
+    } catch (e) {
+        console.warn(`[mkVersionPkg] errored on copy ${pkgsrc} to ${target}`)
+        console.error(e)
+    }
 
     ;[
         '.gitignore',
@@ -89,3 +96,40 @@ function renderEjs (ejsFilebase, ejsSrcFilename, ctx) {
     fs.writeTextFile(target, pkgJson);
     fs.unlink(src)
 }
+
+const limit = 20;
+const copy = exports.copy = (src, target, processor) => {
+  assert(fs.exists(src), 'the source path must exists!');
+  const dirs = readdir(src).map(dir => {
+    return {
+      src: path.join(src, dir),
+      target: path.join(target, dir),
+    };
+  });
+
+  if (processor) {
+    assert(util.isFunction(processor), 'the processor must be Function');
+    co.parallel(dirs, dir => {
+      let data = fs.readFile(dir.src);
+      let res = processor(data, dir);
+      if (res === false) {
+        return;
+      } else if (res !== true) {
+        data = res;
+      }
+      const dirname = path.dirname(dir.target);
+      if (!fs.exists(dirname)) {
+        mkdirp(dirname);
+      }
+      fs.writeFile(dir.target, data);
+    }, limit);
+  } else {
+    co.parallel(dirs, dir => {
+      const dirname = path.dirname(dir.target);
+      if (!fs.exists(dirname)) {
+        mkdirp(dirname);
+      }
+      fs.copy(dir.src, dir.target);
+    }, limit);
+  }
+};

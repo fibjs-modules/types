@@ -26,8 +26,7 @@
     "pegjs": "^0.10.0"
   },
   "dependencies": {
-    "@fibjs/copy": "^1.1.1",
-    "@fibjs/mkdirp": "^1.0.1",
+    "@fibjs/fs-readdir-recursive": "^1.0.2",
     "dts-dom": "^3.6.0",
     "semver": "^6.0.0"
   },
