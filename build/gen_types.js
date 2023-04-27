@@ -8,11 +8,13 @@ function getCommittishLocal (fibjsCommitsh = 'dev') {
     const url = `https://github.com/fibjs/fibjs/archive/${fibjsCommitsh}.zip`;
     const versionFileUrl = `https://raw.githubusercontent.com/fibjs/fibjs/${fibjsCommitsh}/fibjs/include/version.h`
     const targetDir = path.resolve(__dirname, `../tmp/${fibjsCommitsh}`);
+    const localZipFile = path.resolve(__dirname, `../tmp/fibjs-${fibjsCommitsh.replace(/^v/, '')}.zip`);
 
     return {
         url,
         targetDir,
         versionFileUrl,
+        localZipFile,
     }
 }
 
@@ -21,17 +23,26 @@ function getFibjsVersion (str) {
 }
 
 function downloadFibjsZip (fibjsCommitsh = 'dev') {
-    const { url, versionFileUrl, targetDir } = getCommittishLocal(fibjsCommitsh);
+    const { url, versionFileUrl, targetDir, localZipFile } = getCommittishLocal(fibjsCommitsh);
 
     const client = getHttpClient();
 
     let fibjsVersion
     if (!fs.exists(targetDir)) {
-        console.warn(`[downloadFibjsZip] start download git archive zip from ${url}`)
-        const zipResp = client.get(url);
-        console.notice('[downloadFibjsZip] downloaded git archive zip!')
+        let zipBuf;
+        if (fs.exists(localZipFile)) {
+            console.notice(`[downloadFibjsZip] [commit:${fibjsCommitsh}] read archive file from ${localZipFile}!`)
+            zipBuf = fs.readFile(localZipFile);
+        } else {
+            console.warn(`[downloadFibjsZip] [commit:${fibjsCommitsh}] start download git archive zip from ${url}`)
+            if (client.proxyAgent) {
+                console.notice(`[downloadFibjsZip] [commit:${fibjsCommitsh}] http client use proxy ${client.proxyAgent}`)
+            }
+            console.notice(`[downloadFibjsZip] [commit:${fibjsCommitsh}] downloaded git archive zip!`)
+            fs.write(localZipFile, client.get(url).readAll());
+        }
 
-        const zipFile = zip.open(zipResp.readAll())
+        const zipFile = zip.open(zipBuf)
         // const archiveRoot = `fibjs-${fibjsCommitsh}`;
         const archiveRoot = zipFile.namelist()[0].split('/')[0];
         console.notice(`[downloadFibjsZip] archiveRoot is ${archiveRoot}!`)
