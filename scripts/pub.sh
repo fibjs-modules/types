@@ -1,3 +1,5 @@
+# deprecated script, publish packages with `lerna publish`
+
 DIR=$(pwd);
 
 cd $DIR/packages/0.25.x && npm publish --registry=https://registry.npmjs.org;
